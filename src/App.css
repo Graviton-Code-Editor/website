@@ -1,33 +1,101 @@
+:root{
+  --secondary-color:#363636;
+  --primary-color:#212121;
+};
+
 .App {
-  text-align: center;
+  background-color: var(--primary-color);
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
+  padding: 12px;
+  min-height: 50px;
+  max-height: auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  box-shadow: 0px 5px 7px rgba(0,0,0,0.3);
+  margin-bottom: 15px;
+  overflow: auto;
+}
+.navbar *{
+  color:white;
+  margin:3px;
+  padding: 5px 10px;
+  text-decoration: none;
+  background: var(--primary-color);
+  border-radius: 4px;
+  line-height: 27px;
+  font-size: 17px;
+  white-space: nowrap;
+}
+.navbar > .exclude{
+  color: gray;
+  font-size: 17px;
 }
 
-.App-link {
-  color: #61dafb;
+
+.navbar *:not(.exclude):hover{
+  background: var(--secondary-color);
+}
+.header * {
+  max-width: 100px;
+  max-height: 50px;
+  display: inline-block;
+  white-space: nowrap;
+}
+.content{
+  padding: 20px;
+}
+.markown-container{
+  color:white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.docs{
+  display: flex;
+}
+.docs .sidebar{
+ min-width: 20%;
+}
+.docs .sidebar > ul *{
+  display: block;
+  padding: 0;
+  color: white;
+  text-decoration: none;
+  padding: 3px;
+  margin:3px;
+}
+.docs .sidebar > ul *:hover{
+  color:gray;
+}
+.docs .markown-container{
+ min-width: auto;
+}
+.button{
+  font-size: 15px;
+  padding: 10px 20px;
+  border: 0;
+  background: var(--secondary-color);
+  color:white;
+  border-radius: 4px;
+  margin:8px;
+  text-decoration: none;
+  line-height: 20px;}
+.button:hover{
+  box-shadow: 0px 3px 5px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+.title{
+  font-size: 60px;
+  color:white;
+  line-height: 45px;
+  margin: 40px 0px;
+  margin-top:20px;
+}
+.text{
+  color: white;
+  line-height: 30px;
+}
+.center{
+  align-content: center;
+  justify-content: center;
 }
