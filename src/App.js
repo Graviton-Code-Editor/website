@@ -8,6 +8,7 @@ import Navbar from './views/navbar.js';
 
 import Page1 from "./docs/page1.js";
 import Page2 from "./docs/page2.js";
+import Page3 from "./docs/page3.js";
 
 
 function Docs() {
@@ -16,13 +17,15 @@ function Docs() {
      <Router>
         <div className="sidebar">
           <ul>
-            <Link to="/page1/">Page1</Link>
-            <Link to="/page2/">Page2</Link>
+            <Link to="/page1/">.graviton</Link>
+            <Link to="/page2/">Extensions installation</Link>
+            <Link to="/page3/">Making a plugin</Link>
           </ul>
         </div>
         <div className="content markdown-container">
           <Route path="/page1/" component={Page1} />
           <Route path="/page2/" component={Page2} />
+          <Route path="/page3/" component={Page3} />
         </div>
       </Router>
     </div>
@@ -46,18 +49,35 @@ function Download() {
   </div>
   );
 }
+function Contribute() {
+  return (
+  <div>
+    <p class="text">There are many ways of contributing to Graviton:</p>
+    <ul class="text">
+      <li>Adding or improving existing languages</li>
+      <li>Revise the commits</li>
+      <li>Opening issues or help on answering them</li>
+      <li>Request features</li>
+      <li>Revise documentation</li>
+      <li><a class="text" href="https://www.paypal.me/mkenzo8">Donating</a></li>
+    </ul>
+  </div>
+  );
+}
 function openDownloads(){
   window.open("https://github.com/Graviton-Code-Editor/Graviton-App/releases")
 }
 function Home() {
   return (
-  <div className="center" >
-    <header>
-      <p className="title">Graviton</p>
-      <p className="text"> A new code editor.</p>
-    </header>
-    <Link className="button important" to="/download/">Download</Link>
-    <button className="button "> Source code</button>
+  <div>
+    <div className="section center" >
+      <header>
+        <p className="title">Graviton</p>
+        <p className="text"> A cross-platform code editor.</p>
+      </header>
+      <Link className="button important" to="/download/">Download</Link>
+      <button className="button "> Source code</button>
+    </div>
   </div>
   );
 }
@@ -67,9 +87,10 @@ function App() {
    <Router>
     <div className="App">
       <Navbar />
+      <Route path="/" exact component={Home} />
       <div className="content">
-        <Route path="/" exact component={Home} />
         <Route path="/docs/" component={Docs} />
+        <Route path="/contribute/" component={Contribute} />
         <Route path="/download/" component={Download} />
         <Route path="/contact/" component={Contact} />
       </div> 

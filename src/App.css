@@ -7,7 +7,21 @@
 .App {
   background-color: var(--primary-color);
 }
-
+.section{
+  padding: 20px;
+}
+.d-flex{
+  display: flex;
+}
+.d-flex > div{
+  flex:1;
+  white-space: nowrap;
+  margin: 0 auto;
+  text-align: center;
+}
+*[background~=second]{
+  background: var(--secondary-color);
+}
 .navbar {
   padding: 12px;
   min-height: 50px;
@@ -55,8 +69,14 @@
   display: flex;
 }
 .docs .sidebar{
- min-width: 20%;
+  min-width:20%;
+  max-width: 20%;
 }
+.docs .sidebar > ul {
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  }
 .docs .sidebar > ul *{
   display: block;
   padding: 0;
@@ -69,7 +89,13 @@
   color:gray;
 }
 .docs .markown-container{
- min-width: auto;
+  min-width: 70%;
+  max-width: auto;
+  white-space: pre-wrap;
+  overflow: auto;
+}
+.markown-container *{
+  white-space: pre-wrap;
 }
 .button{
   font-size: 15px;
