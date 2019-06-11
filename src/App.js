@@ -51,12 +51,13 @@ function openDownloads(){
 }
 function Home() {
   return (
-  <div class="center" >
+  <div className="center" >
     <header>
       <p className="title">Graviton</p>
+      <p className="text"> A new code editor.</p>
     </header>
-    <Link className="button" to="/download/">Download</Link>
-    <button className="button"> Source code</button>
+    <Link className="button important" to="/download/">Download</Link>
+    <button className="button "> Source code</button>
   </div>
   );
 }

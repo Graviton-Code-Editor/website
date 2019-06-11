@@ -1,6 +1,7 @@
 :root{
   --secondary-color:#363636;
   --primary-color:#212121;
+  --accent-color:#FF0048;
 };
 
 .App {
@@ -17,7 +18,7 @@
   margin-bottom: 15px;
   overflow: auto;
 }
-.navbar *{
+.navbar a{
   color:white;
   margin:3px;
   padding: 5px 10px;
@@ -79,23 +80,42 @@
   border-radius: 4px;
   margin:8px;
   text-decoration: none;
-  line-height: 20px;}
+  line-height: 20px;
+}
 .button:hover{
   box-shadow: 0px 3px 5px rgba(0,0,0,0.3);
   cursor: pointer;
 }
+.important{
+  padding: 8px 17px;
+  background: var(--primary-color);
+  border: 2px solid var(--accent-color);
+}
+
 .title{
   font-size: 60px;
   color:white;
   line-height: 45px;
-  margin: 40px 0px;
+  margin: 40px 5px;
   margin-top:20px;
 }
 .text{
   color: white;
   line-height: 30px;
+  margin: 10px;
 }
 .center{
-  align-content: center;
-  justify-content: center;
+  position: relative;
+  margin: auto;
+  top:100%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.logo{
+  width:40px; 
+  height:40px;
+  margin: 0 10px;
+  cursor: pointer;
 }
