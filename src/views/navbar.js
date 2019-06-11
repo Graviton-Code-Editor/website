@@ -15,7 +15,7 @@ function Navbar(){
       <Link to="/download/">Download</Link>
       <Link to="/contribute/">Contribute</Link>
       <Link to="/contact/">Contact</Link>
-      <a className="exclude">1.0.0 - Beta</a>
+      <a className="exclude">1.0.1 - Beta</a>
     </div>
 
   );
