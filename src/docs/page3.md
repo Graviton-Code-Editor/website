@@ -14,6 +14,8 @@ Now, move inside your plugin and create two files, like:
 	|-- package.json
 	|-- main.js
 
+Inside package.json copy this:
+
 ```
 {
 	"name":"myPlugin",
@@ -26,3 +28,26 @@ Now, move inside your plugin and create two files, like:
 	"css":[]
 }   
 ```
+Inside main.js copy this:
+
+```
+const myPluginInstace = new Plugin({
+  name: "myPlugin"
+})
+const myPluginDropMenu = new dropMenu({
+	id:"my_plugin_dm"
+});
+myPluginDropMenu.setList({
+  "button": "My Plugin!",
+  "list":{
+  	"Click me!":"coolNotification();"
+  }
+})
+
+function coolNotification(){
+	new Notification('Whoah!!','A notification!');
+}
+
+```
+
+Reboot Graviton and check the Toolbar! 🚀
