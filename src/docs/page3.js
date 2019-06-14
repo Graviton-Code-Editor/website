@@ -1,19 +1,18 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import React, { Component } from 'react';
 import ReactMarkdown from "react-markdown";
+import AppMarkdown from './page3.md';
 
-function Page3() {
-	const data = `
-
-## Making a plugin
-
-Still on testing...
-
-     
-
-	`;
-  return (
-    <ReactMarkdown className="markown-container" source={data} />
-  );
+class Page3 extends Component {
+	constructor() {
+    super();
+    this.state = { markdown: '' };
+  }
+  componentWillMount() {
+    fetch(AppMarkdown).then(res => res.text()).then(text => this.setState({ markdown: text }));
+  }
+  render() {
+    const { markdown } = this.state;
+    return <ReactMarkdown className="markdown-container" source={markdown} />;
+  }
 }
 export default Page3;

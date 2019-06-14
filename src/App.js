@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import ReactMarkdown from "react-markdown";
+
 
 import './App.css';
 
@@ -52,7 +52,8 @@ function Download() {
 function Contribute() {
   return (
   <div>
-    <p class="text">There are many ways of contributing to Graviton:</p>
+    <p class="text">I really like to see people collaborating to Graviton, it's really cool.
+    Here, there are some ways you choose:</p>
     <ul class="text">
       <li>Adding or improving existing languages</li>
       <li>Revise the commits</li>
@@ -61,11 +62,15 @@ function Contribute() {
       <li>Revise documentation</li>
       <li><a class="text" href="https://www.paypal.me/mkenzo8">Donating</a></li>
     </ul>
+    <p>Other kind of collarborations are welcomed 🚀🙏 </p>
   </div>
   );
 }
 function openDownloads(){
   window.open("https://github.com/Graviton-Code-Editor/Graviton-App/releases")
+}
+function openSources(){
+  window.open("https://github.com/Graviton-Code-Editor/Graviton-App")
 }
 function Home() {
   return (
@@ -76,7 +81,7 @@ function Home() {
         <p className="text"> A cross-platform code editor.</p>
       </header>
       <Link className="button important" to="/download/">Download</Link>
-      <button className="button "> Source code</button>
+      <button onClick={openSources} className="button "> Source code</button>
     </div>
   </div>
   );

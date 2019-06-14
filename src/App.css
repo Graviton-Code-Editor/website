@@ -32,7 +32,7 @@
   margin-bottom: 15px;
   overflow: auto;
 }
-.navbar a{
+.navbar a ,.navbar span{
   color:white;
   margin:3px;
   padding: 5px 10px;
@@ -61,8 +61,9 @@
 .content{
   padding: 20px;
 }
-.markown-container{
+.markdown-container *{
   color:white;
+  white-space: pre-wrap;
 }
 
 .docs{
@@ -98,6 +99,7 @@
   white-space: pre-wrap;
 }
 .button{
+  transition: 0.1s;
   font-size: 15px;
   padding: 10px 20px;
   border: 0;
@@ -109,6 +111,7 @@
   line-height: 20px;
 }
 .button:hover{
+  transition: 0.1s;
   box-shadow: 0px 3px 5px rgba(0,0,0,0.3);
   cursor: pointer;
 }

@@ -1,35 +1,19 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import React, { Component } from 'react';
 import ReactMarkdown from "react-markdown";
+import AppMarkdown from './page1.md';
 
-function Page1() {
-	const data = `
+class Page1 extends Component {
+  constructor() {
+    super();
+    this.state = { markdown: '' };
+  }
 
-## .graviton explanation
-     
-When Graviton is installed in a machine, it creates a folder (.graviton) which contains basic data, as configuration, recents projects, plugins, etc...
-The structure looks like:
-
-|-.graviton
-  |-- highlights
-  |-- plugins
-  |-- plugins_db
-  |-- themes
-  |-- config.json
-  |-- log.json
-
-
-The path where is installed varies on every operative system:
-
-| OS   			| Path |
-| --------- | ---- |
-| Windows   | C:\\Users\\username\\AppData\\Roaming\\\\\.graviton |
-| Linux 		| /home/username/.config/.graviton |
-| MacOS     | /users/username/library/applications support/.graviton |
-
-	`;
-  return (
-    <ReactMarkdown className="markown-container" source={data} />
-  );
+  componentWillMount() {
+    fetch(AppMarkdown).then(res => res.text()).then(text => this.setState({ markdown: text }));
+  }
+  render() {
+    const { markdown } = this.state;
+    return <ReactMarkdown className="markdown-container" source={markdown} />;
+  }
 }
 export default Page1;
