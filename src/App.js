@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-
 import './App.css';
 
 import Navbar from './views/navbar.js';
@@ -9,7 +8,7 @@ import Navbar from './views/navbar.js';
 import Page1 from "./docs/page1.js";
 import Page2 from "./docs/page2.js";
 import Page3 from "./docs/page3.js";
-
+import Page4 from "./docs/page4.js";
 
 function Docs() {
   return (
@@ -20,12 +19,15 @@ function Docs() {
             <Link to="/page1/">.graviton</Link>
             <Link to="/page2/">Extensions installation</Link>
             <Link to="/page3/">Making a plugin</Link>
+            <Link to="/page4/">Plugins API</Link>
           </ul>
         </div>
         <div className="content markdown-container">
+        <b>The docs are not completed yet!!</b>
           <Route path="/page1/" component={Page1} />
           <Route path="/page2/" component={Page2} />
           <Route path="/page3/" component={Page3} />
+          <Route path="/page4/" component={Page4} />
         </div>
       </Router>
     </div>

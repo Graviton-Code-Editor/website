@@ -18,19 +18,19 @@ Inside package.json copy this:
 
 ```
 {
-	"name":"myPlugin",
-	"version":"0.0.1",
-	"author":"Marc Espín",
-	"description":"A super plugin!",
-	"folder":"myPlugin",
-	"main":"main.js",
-	"javascript":[],
-	"css":[]
+"name":"myPlugin",
+"version":"0.0.1",
+"author":"Marc Espín",
+"description":"A super plugin!",
+"folder":"myPlugin",
+"main":"main.js",
+"javascript":[],
+"css":[]
 }   
 ```
 Inside main.js copy this:
 
-```
+```js
 const myPluginInstace = new Plugin({
   name: "myPlugin"
 })
