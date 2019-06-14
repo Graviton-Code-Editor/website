@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 
 function Page1() {
@@ -23,7 +22,7 @@ The path where is installed varies on every operative system:
 
 | OS   			| Path |
 | --------- | ---- |
-| Windows   | C:\\Users\\username\\AppData\\Roaming\\\\\.graviton |
+| Windows   | C:\\Users\\username\\AppData\\Roaming\\.graviton |
 | Linux 		| /home/username/.config/.graviton |
 | MacOS     | /users/username/library/applications support/.graviton |
 

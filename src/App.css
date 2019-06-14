@@ -32,7 +32,7 @@
   margin-bottom: 15px;
   overflow: auto;
 }
-.navbar a{
+.navbar a ,.navbar span{
   color:white;
   margin:3px;
   padding: 5px 10px;
