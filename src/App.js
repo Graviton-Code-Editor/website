@@ -62,9 +62,10 @@ function Contribute() {
       <li>Opening issues or help on answering them</li>
       <li>Request features</li>
       <li>Revise documentation</li>
-      <li><a class="text" href="https://www.paypal.me/mkenzo8">Donating</a></li>
+      <li><a class="text" href="https://www.paypal.me/mkenzo8">Paypal</a></li>
+      <li><a class="text" >BTC address: 1HCBeYD564Y3AjQ3Ci6Fp2zosfZvevJuu6</a></li>
     </ul>
-    <p>Other kind of collarborations are welcomed 🚀🙏 </p>
+    <p class="text">Other kind of collarborations are welcomed 🚀🙏 </p>
   </div>
   );
 }
