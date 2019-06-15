@@ -1,6 +1,6 @@
 :root{
   --secondary-color:#363636;
-  --primary-color:#212121;
+  --primary-color:white;
   --accent-color:#FF0048;
 };
 
@@ -24,16 +24,17 @@
 }
 .navbar {
   padding: 12px;
-  min-height: 50px;
+  min-height: 45px;
   max-height: auto;
   display: flex;
-  color: white;
+  color: black;
   box-shadow: 0px 5px 7px rgba(0,0,0,0.3);
   margin-bottom: 15px;
   overflow: auto;
 }
 .navbar a ,.navbar span{
-  color:white;
+  transition: 0.2s;
+  color:black;
   margin:3px;
   padding: 5px 10px;
   text-decoration: none;
@@ -43,14 +44,13 @@
   font-size: 17px;
   white-space: nowrap;
 }
+.navbar a:hover{
+  transition: 0.2s;
+  color:gray;
+}
 .navbar > .exclude{
   color: gray;
   font-size: 17px;
-}
-
-
-.navbar *:not(.exclude):hover{
-  background: var(--secondary-color);
 }
 .header * {
   max-width: 100px;
@@ -60,10 +60,6 @@
 }
 .content{
   padding: 20px;
-}
-.markdown-container *{
-  color:white;
-  white-space: pre-wrap;
 }
 
 .docs{
@@ -81,7 +77,7 @@
 .docs .sidebar > ul *{
   display: block;
   padding: 0;
-  color: white;
+  color: black;
   text-decoration: none;
   padding: 3px;
   margin:3px;
@@ -100,15 +96,18 @@
 }
 .button{
   transition: 0.1s;
-  font-size: 15px;
-  padding: 10px 20px;
+  padding: 13px 17px;
   border: 0;
-  background: var(--secondary-color);
-  color:white;
+  background: var(--primary-color);
+  color:black;
   border-radius: 4px;
   margin:8px;
   text-decoration: none;
-  line-height: 20px;
+  line-height: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 14px;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.1);
 }
 .button:hover{
   transition: 0.1s;
@@ -116,22 +115,27 @@
   cursor: pointer;
 }
 .important{
-  padding: 8px 17px;
-  background: var(--primary-color);
-  border: 2px solid var(--accent-color);
+  background: #006DFC;
+  color:white;
 }
-
 .title{
   font-size: 60px;
-  color:white;
+  color:black;
   line-height: 45px;
-  margin: 40px 5px;
+  margin: 30px 5px;
   margin-top:20px;
+  font-weight: bold;
 }
 .text{
-  color: white;
+  color: black;
   line-height: 30px;
   margin: 10px;
+}
+.text2{
+  color: black;
+  line-height: 30px;
+  margin: 10px;
+  margin-bottom: 20px;
 }
 .center{
   position: relative;
@@ -141,10 +145,24 @@
   transform: translateX(-50%);
   text-align: center;
 }
+.vertical * {
+  display: block;
+  position: relative;
+  margin: 10px auto;
+  width: auto;
+  white-space: pre-wrap;
+}
 
 .logo{
-  width:40px; 
-  height:40px;
-  margin: 0 10px;
+  width:35px; 
+  height:35px;
+  margin: 5px 10px;
   cursor: pointer;
+}
+
+.flex {
+  display: flex;
+}
+.flex > div{
+  flex: 1;
 }

@@ -37,17 +37,8 @@ function Docs() {
 function Contact() {
   return (
   <div>
+    <p class="text2">You can email me on mespinsanz@gmail.com </p>
     <a className="button" href="https://github.com/marc2332">Github</a>
-    <p class="text">You can email me on mespinsanz@gmail.com </p>
-  </div>
-  );
-}
-function Download() {
-  return (
-  <div>
-    <button onClick={openDownloads} className="button">Windows</button>
-    <button onClick={openDownloads} className="button">Linux</button>
-    <button onClick={openDownloads} className="button">MacOS</button>
   </div>
   );
 }
@@ -77,14 +68,16 @@ function openSources(){
 }
 function Home() {
   return (
-  <div>
-    <div className="section center" >
+  <div className="center">
+    <div className="section" >
       <header>
         <p className="title">Graviton</p>
-        <p className="text"> A cross-platform code editor.</p>
+        <p className="text2"> A modern editor for modern users.</p>
       </header>
-      <Link className="button important" to="/download/">Download</Link>
-      <button onClick={openSources} className="button "> Source code</button>
+      <div className="vertical" >
+        <button onClick={openDownloads} className="button important">Download</button>
+        <button onClick={openSources} className="button "> Source code</button>
+      </div>
     </div>
   </div>
   );
@@ -99,7 +92,6 @@ function App() {
       <div className="content">
         <Route path="/docs/" component={Docs} />
         <Route path="/contribute/" component={Contribute} />
-        <Route path="/download/" component={Download} />
         <Route path="/contact/" component={Contact} />
       </div> 
     </div>

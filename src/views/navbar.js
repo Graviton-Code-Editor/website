@@ -12,7 +12,6 @@ function Navbar(){
     	<img  alt="Graviton"  onClick={goHome} className="logo exclude" src={Logo}/>
    	 	<Link to="/">Home</Link>
       <Link to="/docs/">Docs</Link>
-      <Link to="/download/">Download</Link>
       <Link to="/contribute/">Contribute</Link>
       <Link to="/contact/">Contact</Link>
       <span className="exclude">1.0.1 - Beta</span>
