@@ -1,9 +1,13 @@
 :root{
   --secondary-color:#363636;
-  --primary-color:white;
+  --primary-color:black;
   --accent-color:#FF0048;
+  --text:white;
+  --logo:visible;
 };
-
+*{
+  color:red;
+}
 .App {
   background-color: var(--primary-color);
 }
@@ -23,26 +27,27 @@
   background: var(--secondary-color);
 }
 .navbar {
-  padding: 12px;
-  min-height: 45px;
+  padding: 10px;
+  min-height: auto;
+  min-width: auto;
   max-height: auto;
   display: flex;
-  color: black;
-  box-shadow: 0px 5px 7px rgba(0,0,0,0.3);
-  margin-bottom: 15px;
-  overflow: auto;
+  overflow: visible;
+  justify-content: center;
+  margin:15px;
 }
 .navbar a ,.navbar span{
   transition: 0.2s;
-  color:black;
-  margin:3px;
+  color: var(--text);
+  margin:7px;
   padding: 5px 10px;
   text-decoration: none;
-  background: var(--primary-color);
+  background: transparent;
   border-radius: 4px;
-  line-height: 27px;
-  font-size: 17px;
-  white-space: nowrap;
+  line-height: 50px;
+  font-size: 15px;
+  white-space: pre-wrap;
+  left: 0;
 }
 .navbar a:hover{
   transition: 0.2s;
@@ -66,18 +71,20 @@
   display: flex;
 }
 .docs .sidebar{
-  min-width:20%;
-  max-width: 20%;
+  position: relative;
+  overflow: auto;
+  min-width:30%;
+  max-width:30%;
 }
 .docs .sidebar > ul {
   margin: 0;
   padding: 0;
   overflow: auto;
-  }
+}
 .docs .sidebar > ul *{
   display: block;
   padding: 0;
-  color: black;
+  color: var(--text);
   text-decoration: none;
   padding: 3px;
   margin:3px;
@@ -91,7 +98,7 @@
   white-space: pre-wrap;
   overflow: auto;
 }
-.markown-container *{
+.markown-container  *{
   white-space: pre-wrap;
 }
 .button{
@@ -99,7 +106,7 @@
   padding: 13px 17px;
   border: 0;
   background: var(--primary-color);
-  color:black;
+  color: var(--text);
   border-radius: 4px;
   margin:8px;
   text-decoration: none;
@@ -116,48 +123,78 @@
 }
 .important{
   background: #006DFC;
-  color:white;
+  color: var(--text);
 }
 .title{
   font-size: 60px;
-  color:black;
-  line-height: 45px;
-  margin: 30px 5px;
+  color: var(--text);
+  margin: 5px 5px;
   margin-top:20px;
   font-weight: bold;
+  width: auto;
+}
+.graviton{
+  background: rgba(255,0,94,1);
+  background: -moz-linear-gradient(-45deg, rgba(255,0,94,1) 0%, rgba(255,0,94,1) 24%, rgba(249,224,1,1) 84%, rgba(249,224,1,1) 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(255,0,94,1)), color-stop(24%, rgba(255,0,94,1)), color-stop(84%, rgba(249,224,1,1)), color-stop(100%, rgba(249,224,1,1)));
+  background: -webkit-linear-gradient(-45deg, rgba(255,0,94,1) 0%, rgba(255,0,94,1) 24%, rgba(249,224,1,1) 84%, rgba(249,224,1,1) 100%);
+  background: -o-linear-gradient(-45deg, rgba(255,0,94,1) 0%, rgba(255,0,94,1) 24%, rgba(249,224,1,1) 84%, rgba(249,224,1,1) 100%);
+  background: -ms-linear-gradient(-45deg, rgba(255,0,94,1) 0%, rgba(255,0,94,1) 24%, rgba(249,224,1,1) 84%, rgba(249,224,1,1) 100%);
+  background: linear-gradient(135deg, rgba(255,0,94,1) 0%, rgba(255,0,94,1) 24%, rgba(249,224,1,1) 84%, rgba(249,224,1,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff005e', endColorstr='#f9e001', GradientType=1 );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .text{
-  color: black;
   line-height: 30px;
   margin: 10px;
 }
 .text2{
-  color: black;
   line-height: 30px;
   margin: 10px;
   margin-bottom: 20px;
 }
 .center{
-  position: relative;
-  margin: auto;
-  top:100%;
-  left: 50%;
-  transform: translateX(-50%);
+  position: absolute;
+  min-width: 100%;
+  min-height: auto;
+  height: 80%;
   text-align: center;
+  transform: translateX(-50%);
+  left: 50%;
+  justify-content: center;
+  vertical-align: middle;
 }
+.center > div{
+  position: absolute;
+  top:45%;
+  transform: translate(-50%,-60%);
+  left: 50%;
+}
+.vertical{
+  width: 250px;
+  margin: 0 auto;
+
+}
+
 .vertical * {
   display: block;
   position: relative;
-  margin: 10px auto;
+  margin-bottom:5px;
   width: auto;
+  overflow: auto;
   white-space: pre-wrap;
+  margin-left: auto;
+  margin-right: 5px;
 }
 
 .logo{
-  width:35px; 
-  height:35px;
-  margin: 5px 10px;
+  width:var(--logo); 
+  height:38px;
+  margin: 0;
+  padding: 0;
   cursor: pointer;
+  margin: 20px;
 }
 
 .flex {
@@ -165,4 +202,46 @@
 }
 .flex > div{
   flex: 1;
+}
+
+.link{
+  color:var(--text);
+  cursor: pointer;
+}
+.link:hover{
+  color:darkgray;
+}
+
+html,body,head,#root,.App{
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (max-device-width : 640px) {
+  #logo{
+    visibility: hidden;
+    width: 0;
+  }
+  .navbar {
+    justify-content: flex-start;
+    overflow: auto;
+  }
+  .navbar a ,.navbar span{
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-device-width: 768px) {
+  #logo{
+    visibility: hidden;
+    width: 0;
+  }
+  .navbar {
+    justify-content: flex-start;
+    overflow: auto;
+  }
+  .navbar a ,.navbar span{
+    white-space: nowrap;
+  }
 }

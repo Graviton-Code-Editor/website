@@ -10,11 +10,14 @@ import Page2 from "./docs/page2.js";
 import Page3 from "./docs/page3.js";
 import Page4 from "./docs/page4.js";
 
+
+
 function Docs() {
+document.documentElement.style.setProperty('--logo', 'auto');
   return (
     <div className="content docs">
      <Router>
-        <div className="sidebar">
+        <div className=" content sidebar ">
           <ul>
             <Link to="/page1/">.graviton</Link>
             <Link to="/page2/">Extensions installation</Link>
@@ -22,8 +25,7 @@ function Docs() {
             <Link to="/page4/">Plugins API</Link>
           </ul>
         </div>
-        <div className="content markdown-container">
-        <b>The docs are not completed yet!!</b>
+        <div className=" markdown-container">
           <Route path="/page1/" component={Page1} />
           <Route path="/page2/" component={Page2} />
           <Route path="/page3/" component={Page3} />
@@ -35,16 +37,18 @@ function Docs() {
 }
 
 function Contact() {
+  document.documentElement.style.setProperty('--logo', 'auto');
   return (
-  <div>
+  <div className="content">
     <p class="text2">You can email me on mespinsanz@gmail.com </p>
     <a className="button" href="https://github.com/marc2332">Github</a>
   </div>
   );
 }
 function Contribute() {
+  document.documentElement.style.setProperty('--logo', 'auto');
   return (
-  <div>
+  <div className="content">
     <p class="text">I really like to see people collaborating to Graviton, it's really cool.
     Here, there are some ways you choose:</p>
     <ul class="text">
@@ -67,16 +71,15 @@ function openSources(){
   window.open("https://github.com/Graviton-Code-Editor/Graviton-App")
 }
 function Home() {
+  document.documentElement.style.setProperty('--logo', '0px');
   return (
-  <div className="center">
+  <div page="home" className="center">
     <div className="section" >
       <header>
-        <p className="title">Graviton</p>
-        <p className="text2"> A modern editor for modern users.</p>
+        <p className="title graviton">graviton</p>
       </header>
-      <div className="vertical" >
-        <button onClick={openDownloads} className="button important">Download</button>
-        <button onClick={openSources} className="button "> Source code</button>
+      <div className="vertical d-flex" content="right" >
+        <span className="link" onClick={openDownloads} >download ></span>
       </div>
     </div>
   </div>
@@ -89,7 +92,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Route path="/" exact component={Home} />
-      <div className="content">
+      <div >
         <Route path="/docs/" component={Docs} />
         <Route path="/contribute/" component={Contribute} />
         <Route path="/contact/" component={Contact} />
