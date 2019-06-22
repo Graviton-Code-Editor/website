@@ -73,8 +73,8 @@
 .docs .sidebar{
   position: relative;
   overflow: auto;
-  min-width:30%;
-  max-width:30%;
+  min-width:23%;
+  max-width:23%;
 }
 .docs .sidebar > ul {
   margin: 0;
@@ -134,18 +134,7 @@
   width: auto;
 }
 .graviton{
-  
-background: rgba(242,12,104,1);
-background: -moz-linear-gradient(-45deg, rgba(242,12,104,1) 0%, rgba(242,12,104,1) 7%, rgba(255,219,38,1) 94%, rgba(255,219,38,1) 100%);
-background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(242,12,104,1)), color-stop(7%, rgba(242,12,104,1)), color-stop(94%, rgba(255,219,38,1)), color-stop(100%, rgba(255,219,38,1)));
-background: -webkit-linear-gradient(-45deg, rgba(242,12,104,1) 0%, rgba(242,12,104,1) 7%, rgba(255,219,38,1) 94%, rgba(255,219,38,1) 100%);
-background: -o-linear-gradient(-45deg, rgba(242,12,104,1) 0%, rgba(242,12,104,1) 7%, rgba(255,219,38,1) 94%, rgba(255,219,38,1) 100%);
-background: -ms-linear-gradient(-45deg, rgba(242,12,104,1) 0%, rgba(242,12,104,1) 7%, rgba(255,219,38,1) 94%, rgba(255,219,38,1) 100%);
-background: linear-gradient(135deg, rgba(242,12,104,1) 0%, rgba(242,12,104,1) 7%, rgba(255,219,38,1) 94%, rgba(255,219,38,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f20c68', endColorstr='#ffdb26', GradientType=1 );
-
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  height:60px;
 }
 .text{
   line-height: 30px;

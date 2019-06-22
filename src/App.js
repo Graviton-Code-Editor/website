@@ -10,6 +10,8 @@ import Page2 from "./docs/page2.js";
 import Page3 from "./docs/page3.js";
 import Page4 from "./docs/page4.js";
 
+import Logo from "./logo.svg"
+
 
 
 function Docs() {
@@ -76,7 +78,7 @@ function Home() {
   <div page="home" className="center">
     <div className="section" >
       <header>
-        <p className="title graviton">graviton</p>
+        <img  alt="Graviton"  className="graviton" src={Logo}/>
       </header>
       <div className="vertical d-flex" content="right" >
         <span className="link" onClick={openDownloads} >download ></span>

@@ -100,3 +100,101 @@ graviton.addContextMenu({
 
 ```
 
+#### toggleFullScreen()
+
+Maximize or no by passing a value
+
+Example:
+```
+graviton.toggleFullScreen(false)
+
+```
+
+#### toggleZenMode()
+
+Toggle the editor mode.
+
+Example:
+```
+graviton.toggleZenMode();
+
+//Mode = zen
+
+graviton.toggleZenMode();
+
+//Mode = normal
+```
+
+#### deleteLog()
+
+Delete the recents projects history
+
+Example:
+```
+graviton.deleteLog()
+
+```
+
+#### toggleAutoCompletation()
+
+Invert the current status:
+
+Example:
+```
+graviton.toggleAutoCompletation()
+//ON
+
+graviton.toggleAutoCompletation()
+//OFF
+```
+
+#### toggleLineWrapping()
+
+Invert the current status:
+
+Example:
+```
+graviton.toggleLineWrapping()
+//ON
+
+graviton.toggleLineWrapping()
+//OFF
+```
+
+#### toggleHighlighting()
+
+Invert the current status:
+
+Example:
+```
+graviton.toggleHighlighting()
+//OFF
+
+graviton.toggleHighlighting()
+//ON
+```
+#### useSystemAccent()
+
+Use the system's accent color if is available.
+
+Example:
+```
+graviton.useSystemAccent()
+//ON
+
+graviton.useSystemAccent()
+//OFF
+```
+
+#### toggleAnimations()
+
+Invert the current status:
+
+Example:
+```
+graviton.toggleAnimations()
+//OFF
+
+graviton.toggleAnimations()
+//ON
+```
