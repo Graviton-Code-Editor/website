@@ -41,7 +41,7 @@ function Contact() {
   return (
   <div className="content">
     <p class="text2">You can email me on mespinsanz@gmail.com </p>
-    <a className="button" href="https://github.com/marc2332">Github</a>
+    <a className="link" href="https://github.com/marc2332">Github</a>
   </div>
   );
 }
@@ -57,7 +57,7 @@ function Contribute() {
       <li>Opening issues or help on answering them</li>
       <li>Request features</li>
       <li>Revise documentation</li>
-      <li><a class="text" href="https://www.paypal.me/mkenzo8">Paypal</a></li>
+      <li><a class="link" href="https://www.paypal.me/mkenzo8">Paypal</a></li>
       <li><a class="text" >BTC address: 1HCBeYD564Y3AjQ3Ci6Fp2zosfZvevJuu6</a></li>
     </ul>
     <p class="text">Other kind of collarborations are welcomed 🚀🙏 </p>
