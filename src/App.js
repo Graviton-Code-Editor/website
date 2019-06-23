@@ -9,6 +9,7 @@ import Page1 from "./docs/page1.js";
 import Page2 from "./docs/page2.js";
 import Page3 from "./docs/page3.js";
 import Page4 from "./docs/page4.js";
+import Page5 from "./docs/page5.js";
 
 import Logo from "./logo.svg"
 
@@ -21,10 +22,11 @@ document.documentElement.style.setProperty('--logo', 'auto');
      <Router>
         <div className=" content sidebar ">
           <ul>
-            <Link to="/page1/">.graviton</Link>
+            <Link to="/page1/">Explaining .graviton</Link>
             <Link to="/page2/">Extensions installation</Link>
             <Link to="/page3/">Making a plugin</Link>
-            <Link to="/page4/">Plugins API</Link>
+            <Link to="/page4/">Graviton API 1</Link>
+            <Link to="/page5/">Graviton API 2</Link>
           </ul>
         </div>
         <div className=" markdown-container">
@@ -32,6 +34,7 @@ document.documentElement.style.setProperty('--logo', 'auto');
           <Route path="/page2/" component={Page2} />
           <Route path="/page3/" component={Page3} />
           <Route path="/page4/" component={Page4} />
+          <Route path="/page5/" component={Page5} />
         </div>
       </Router>
     </div>

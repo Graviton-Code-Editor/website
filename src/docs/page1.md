@@ -1,4 +1,4 @@
-## .graviton explanation
+## Explaining .graviton 
      
 When Graviton is installed in a machine, it creates a folder (.graviton) which contains basic data, as configuration, recents projects, plugins, etc...
 The structure looks like:

@@ -1,4 +1,4 @@
-## API
+## API 1
 
 ### graviton (object)
 
@@ -197,4 +197,76 @@ graviton.toggleAnimations()
 
 graviton.toggleAnimations()
 //ON
+```
+
+### Events Listeners
+
+#### File saved
+
+Returns the HTML object:
+
+```
+document.addEventListener("file_saved",function(e){
+	console.log(e.detail.object)
+})
+```
+
+#### File modified
+
+Through the Codemirror API:
+
+```
+editor.on("change",function(){
+	console.log("Editor modified ID's:"+graviton.getCurrentEditor().id)
+})
+```
+
+#### Tab created
+
+Returns the new Tab HTML element created:
+
+```
+document.addEventListener("tab_created",function(e){
+	console.log("New tab's ID:"+e.detail.tab.id)
+})
+```
+
+#### Tab loaded
+
+Returns the loaded Tab HTML element created:
+
+```
+document.addEventListener("tab_loaded",function(e){
+	console.log("Loaded tab's ID:"+e.detail.tab.id)
+})
+```
+
+#### Tab closed
+
+Returns the closed Tab HTML element created:
+
+```
+document.addEventListener("tab_closed",function(e){
+	console.log("Closed tab's ID:"+e.detail.tab.id)
+})
+```
+
+#### Splitted screen
+
+Returns the splitted screen element:
+
+```
+document.addEventListener("split_screen",function(e){
+	console.log("Splitted screen id:"+e.detail.screen.id)
+})
+```
+
+#### Closed screen
+
+Returns the closed screen element:
+
+```
+document.addEventListener("closed_screen",function(e){
+	console.log("Closed screen id:"+e.detail.screen.id)
+})
 ```
