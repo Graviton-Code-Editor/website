@@ -13,28 +13,36 @@ import Page5 from "./docs/page5.js";
 
 import Logo from "./logo.svg"
 
-
+function showDocs() {
+  return(
+    <div>
+      <p>Navigate through the docs by clicking on the left-side list</p>
+      <p>Something missing or wrong? Create a pull request or contact me.</p>
+    </div>
+    )
+}
 
 function Docs() {
-document.documentElement.style.setProperty('--logo', 'auto');
+  document.documentElement.style.setProperty('--logo', 'auto');
   return (
     <div className="content docs">
      <Router>
         <div className=" content sidebar ">
           <ul>
-            <Link to="/page1/">Explaining .graviton</Link>
-            <Link to="/page2/">Extensions installation</Link>
-            <Link to="/page3/">Making a plugin</Link>
-            <Link to="/page4/">Graviton API 1</Link>
-            <Link to="/page5/">Graviton API 2</Link>
+            <Link to="/docs/page1/">Explaining .graviton</Link>
+            <Link to="/docs/page2/">Extensions installation</Link>
+            <Link to="/docs/page3/">Making a plugin</Link>
+            <Link to="/docs/page4/">Graviton API 1</Link>
+            <Link to="/docs/page5/">Graviton API 2</Link>
           </ul>
         </div>
         <div className=" markdown-container">
-          <Route path="/page1/" component={Page1} />
-          <Route path="/page2/" component={Page2} />
-          <Route path="/page3/" component={Page3} />
-          <Route path="/page4/" component={Page4} />
-          <Route path="/page5/" component={Page5} />
+          <Route path="/docs/" exact component={showDocs} />
+          <Route path="/docs/page1/" exact component={Page1} />
+          <Route path="/docs/page2/" component={Page2} />
+          <Route path="/docs/page3/" component={Page3} />
+          <Route path="/docs/page4/" component={Page4} />
+          <Route path="/docs/page5/" component={Page5} />
         </div>
       </Router>
     </div>
