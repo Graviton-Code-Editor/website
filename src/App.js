@@ -36,7 +36,7 @@ function Docs() {
             <Link to="/docs/page5/">Graviton API 2</Link>
           </ul>
         </div>
-        <div className=" markdown-container">
+        <div className=" markdown">
           <Route path="/docs/" exact component={showDocs} />
           <Route path="/docs/page1/" exact component={Page1} />
           <Route path="/docs/page2/" component={Page2} />

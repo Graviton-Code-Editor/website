@@ -6,7 +6,6 @@ There we have the folder plugins and themes.
 ### Plugins
 Let's supose we have a plugin installed, the plugins directory would look like:
 
-
 -plugins
   |-- installedPlugin
   	|-- package.json

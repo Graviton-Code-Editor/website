@@ -61,7 +61,7 @@
   max-width: 100px;
   max-height: 50px;
   display: inline-block;
-  white-space: nowrap;
+  white-space: pre-wrap;
 }
 .content{
   padding: 20px;
@@ -97,6 +97,9 @@
   max-width: auto;
   white-space: pre-wrap;
   overflow: auto;
+}
+.markdown * {
+  white-space: pre-wrap;
 }
 .markown-container  *{
   white-space: pre-wrap;
