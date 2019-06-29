@@ -20,7 +20,7 @@ Inside package.json copy this:
 {
 "name":"myPlugin",
 "version":"0.0.1",
-"author":"Marc Espín",
+"author":"An hero",
 "description":"A super plugin!",
 "folder":"myPlugin",
 "main":"main.js",

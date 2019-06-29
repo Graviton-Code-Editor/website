@@ -11,6 +11,8 @@ import Page3 from "./docs/page3.js";
 import Page4 from "./docs/page4.js";
 import Page5 from "./docs/page5.js";
 
+import FAQS from "./faqs.js";
+
 import Logo from "./logo.svg"
 
 function showDocs() {
@@ -109,6 +111,7 @@ function App() {
         <Route path="/docs/" component={Docs} />
         <Route path="/contribute/" component={Contribute} />
         <Route path="/contact/" component={Contact} />
+        <Route path="/faqs/" component={FAQS} />
       </div> 
     </div>
     </Router>

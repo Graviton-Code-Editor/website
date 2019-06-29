@@ -27,6 +27,7 @@ function Navbar(){
       <Link to="/docs/">Docs</Link>
       <Link to="/contribute/">Contribute</Link>
       <Link to="/contact/">Contact</Link>
+      <Link to="/faqs/">FAQs</Link>
       <span onClick={theming} className="link">Invert colors</span>
     </div>
 
