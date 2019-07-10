@@ -16,7 +16,7 @@ Now, move inside your plugin and create two files, like:
 
 Inside package.json copy this:
 
-```
+```json
 {
 "name":"myPlugin",
 "version":"0.0.1",
@@ -30,7 +30,7 @@ Inside package.json copy this:
 ```
 Inside main.js copy this:
 
-```js
+```javascript
 const myPluginInstace = new Plugin({
   name: "myPlugin"
 })
@@ -40,13 +40,14 @@ const myPluginDropMenu = new dropMenu({
 myPluginDropMenu.setList({
   "button": "My Plugin!",
   "list":{
-  	"Click me!":"coolNotification();"
+  	"Click me!":{
+		  click:function(){
+			  new Notification('Whoah!!','A notification!');
+		  }
+	  }
   }
 })
 
-function coolNotification(){
-	new Notification('Whoah!!','A notification!');
-}
 
 ```
 
