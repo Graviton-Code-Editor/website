@@ -3,4 +3,4 @@ Graviton Website
 
 Made for Graviton Badge:
 
-![for_graviton](src/badges/for_graviton.svg)
+![made_for_graviton](src/badges/made_for_graviton.svg)
