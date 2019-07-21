@@ -19,12 +19,15 @@ function theming(){
     theme = "dark";
   }
 }
+function Docs() {
+  window.open("https://github.com/Graviton-Code-Editor/Graviton-App/wiki")
+}
 function Navbar(){
     return (
     <div className="navbar">
       <img  alt="Graviton"  onClick={goHome} className="logo exclude" src={Logo}/>
       <Link to="/">Home</Link>
-      <Link to="/docs/">Docs</Link>
+      <span onClick={Docs} className="link">Docs</span>
       <Link to="/contribute/">Contribute</Link>
       <Link to="/contact/">Contact</Link>
       <Link to="/faqs/">FAQs</Link>

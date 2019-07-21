@@ -5,11 +5,6 @@ import './App.css';
 
 import Navbar from './views/navbar.js';
 
-import Page1 from "./docs/page1.js";
-import Page2 from "./docs/page2.js";
-import Page3 from "./docs/page3.js";
-import Page4 from "./docs/page4.js";
-import Page5 from "./docs/page5.js";
 
 import FAQS from "./faqs.js";
 
@@ -24,39 +19,14 @@ function showDocs() {
     )
 }
 
-function Docs() {
-  document.documentElement.style.setProperty('--logo', 'auto');
-  return (
-    <div className="content docs">
-     <Router>
-        <div className=" content sidebar ">
-          <ul>
-            <Link to="/docs/page1/">Explaining .graviton</Link>
-            <Link to="/docs/page2/">Extensions installation</Link>
-            <Link to="/docs/page3/">Making a plugin</Link>
-            <Link to="/docs/page4/">Graviton API 1</Link>
-            <Link to="/docs/page5/">Graviton API 2</Link>
-          </ul>
-        </div>
-        <div className=" markdown">
-          <Route path="/docs/" exact component={showDocs} />
-          <Route path="/docs/page1/" exact component={Page1} />
-          <Route path="/docs/page2/" component={Page2} />
-          <Route path="/docs/page3/" component={Page3} />
-          <Route path="/docs/page4/" component={Page4} />
-          <Route path="/docs/page5/" component={Page5} />
-        </div>
-      </Router>
-    </div>
-  );
-}
+
 
 function Contact() {
   document.documentElement.style.setProperty('--logo', 'auto');
   return (
   <div className="content">
-    <p class="text2">You can email me on mespinsanz@gmail.com </p>
-    <a className="link" href="https://github.com/marc2332">Github</a>
+    <p className="text2">You can email me on mespinsanz@gmail.com </p>
+    <a className="text2 link" href="https://github.com/marc2332">Github</a>
   </div>
   );
 }
@@ -64,8 +34,8 @@ function Contribute() {
   document.documentElement.style.setProperty('--logo', 'auto');
   return (
   <div className="content">
-    <p class="text">I really like to see people collaborating to Graviton, it's really cool.
-    Here, there are some ways you choose:</p>
+    <p class="text2">I really like to see people collaborating to Graviton, it's really cool.
+    Here, there are some ways you can choose:</p>
     <ul class="text">
       <li>Adding or improving existing languages</li>
       <li>Revise the commits</li>
@@ -73,9 +43,9 @@ function Contribute() {
       <li>Request features</li>
       <li>Revise documentation</li>
       <li><a class="link" href="https://www.paypal.me/mkenzo8">Paypal</a></li>
-      <li><a class="text" >BTC address: 1HCBeYD564Y3AjQ3Ci6Fp2zosfZvevJuu6</a></li>
+      <li><a class="text3" >BTC address: 1HCBeYD564Y3AjQ3Ci6Fp2zosfZvevJuu6</a></li>
     </ul>
-    <p class="text">Other kind of collarborations are welcomed 🚀🙏 </p>
+    <p class="text2">Other kind of collarborations are welcomed 🚀🙏 </p>
   </div>
   );
 }
@@ -108,7 +78,6 @@ function App() {
       <Navbar />
       <Route path="/" exact component={Home} />
       <div >
-        <Route path="/docs/" component={Docs} />
         <Route path="/contribute/" component={Contribute} />
         <Route path="/contact/" component={Contact} />
         <Route path="/faqs/" component={FAQS} />
