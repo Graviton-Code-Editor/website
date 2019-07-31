@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 import Logo from "../logo.svg"
 
 let theme = "dark";
@@ -9,7 +9,7 @@ function goHome(){
 }
 function theming(){
   console.log(theme)
-  if(theme=="dark"){
+  if(theme==="dark"){
     document.documentElement.style.setProperty('--text', 'black');
     document.documentElement.style.setProperty('--primary-color', 'white');
     theme = "light";
@@ -22,6 +22,7 @@ function theming(){
 function Docs() {
   window.open("https://github.com/Graviton-Code-Editor/Graviton-App/wiki")
 }
+
 function Navbar(){
     return (
     <div className="navbar">

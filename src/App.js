@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import './App.css';
 
@@ -19,7 +19,9 @@ function showDocs() {
     )
 }
 
-
+function SourceCode() {
+  window.open("https://github.com/Graviton-Code-Editor/Graviton-App")
+}
 
 function Contact() {
   document.documentElement.style.setProperty('--logo', 'auto');
@@ -34,6 +36,8 @@ function Contribute() {
   document.documentElement.style.setProperty('--logo', 'auto');
   return (
   <div className="content">
+    <p onClick={SourceCode} className="text2 link">Source code</p>
+    
     <p class="text2">I really like to see people collaborating to Graviton, it's really cool.
     Here, there are some ways you can choose:</p>
     <ul class="text">
