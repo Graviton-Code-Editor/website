@@ -27,7 +27,7 @@ function Contact() {
   document.documentElement.style.setProperty('--logo', 'auto');
   return (
   <div className="content">
-    <p className="text2">You can email me on mespinsanz@gmail.com </p>
+    <p className="text2">You can email me at mespinsanz@gmail.com </p>
     <a className="text2 link" href="https://github.com/marc2332">Github</a>
   </div>
   );
