@@ -15,20 +15,23 @@ class IndexPage extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO
-          title="Home"
-          keywords={[`blog`, `graviton`, `javascript`, `nodejs`]}
-        />
-        <img src="./graviton.png" alt="Graviton Screenshot"  />
-        <FlexAlign>
-          <p >A modern code editor.</p>
-        </FlexAlign>
-        <FlexAlign>
-          <Button onClick={openDownloads} background="#0066FF">Download</Button>
-        </FlexAlign>
+        <div>
+          <SEO
+            title="Home"
+            keywords={[`blog`, `graviton`, `javascript`, `nodejs`]}
+          />
+          <img  src='assets/graviton.png'  alt="Graviton Screenshot"  />
+          <FlexAlign>
+            <p >A modern code editor.</p>
+          </FlexAlign>
+          <FlexAlign>
+            <Button onClick={openDownloads} background="#0066FF">Download</Button>
+          </FlexAlign>
+        </div>
       </Layout>
     )
   }
 }
+
 
 export default IndexPage
