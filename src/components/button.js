@@ -6,6 +6,7 @@ const Button = props => (
 )
 
 const ButtonWrapper = styled.button`
+  transition:0.4s;
   display: block;
   border: none;
   text-align: center;
@@ -21,11 +22,18 @@ const ButtonWrapper = styled.button`
   font-size: ${props => props.props.fontSize || "15px"};
   font-weight: ${props => props.props.fontWeight || "600"};
   border-radius: ${props => props.props.radius || "6px"};
-  margin-top: ${props => props.props.marginTop};
-  margin-bottom: ${props => props.props.marginBottom};
-
-  &:hover {
+  border: ${props => props.props.border || "none"};
+  margin:5px;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+  outline:0;
+  :hover {
+    transition:0.2s;
     box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.25);
+  }
+  :active {
+    transition:0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+    transform:scale(0.95);
   }
 `
 

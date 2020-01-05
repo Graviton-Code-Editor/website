@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import styled from "styled-components"
 import {Navbar} from './navbar'
 import { rhythm, scale } from "../utils/typography"
@@ -10,7 +10,7 @@ class Layout extends React.Component {
     const rootPath = `${__PATH_PREFIX__}/`
     const blogPath = `${__PATH_PREFIX__}/blog/`
     const aboutPath = `${__PATH_PREFIX__}/about/`
-
+    const siteAuthor = " Marc Espín Sanz" 
     let header
 
     if (location.pathname === rootPath || location.pathname === blogPath || location.pathname === aboutPath) {
@@ -42,15 +42,7 @@ class Layout extends React.Component {
     } else {
       header = (    
         <div>
-          <h1
-            style={{
-              ...scale(0.8),
-              fontFamily: `Montserrat, sans-serif`,
-              marginTop: 0,
-              textAlign:'center',
-              fontWeight:800
-            }}
-          >
+          <BackButton>
             <Link
               style={{
                 boxShadow: `none`,
@@ -59,9 +51,9 @@ class Layout extends React.Component {
               }}
               to={`/blog/`}
             >
-              {title}
+              Go back
             </Link>
-          </h1>
+          </BackButton>
         </div>  
       )
     }
@@ -81,7 +73,7 @@ class Layout extends React.Component {
         <Footer>
           © {new Date().getFullYear()}, Made by 
           {` `}
-          <a href="https://github.com/marc2332">Marc Espín</a>
+          <a href="https://github.com/marc2332">{siteAuthor}</a>
         </Footer>
       </Wrapper>
     )
@@ -98,4 +90,27 @@ const Footer = styled.footer`
   font-family:Montserrat, sans-serif;
 `
 
+const BackButton = styled.h2`
+  font-family: Montserrat, sans-serif;
+  margin-top: 0;
+  text-align:left;
+  font-weight:800;
+  font-size:20px;
+  text-decoration:none;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+  :hover{
+    color:gray;
+  }
+`
+
 export default Layout
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        author
+      }
+    }
+  }
+`

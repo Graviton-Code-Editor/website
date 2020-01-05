@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Graviton Website`,
+    title: `Graviton Editor`,
     author: `Marc Espín`,
-    description: `Graviton's website.`,
+    description: `Graviton Editor's website.`,
     siteUrl: `https://graviton.ml/`,
     social: {
       twitter: `mkenzo_8`,

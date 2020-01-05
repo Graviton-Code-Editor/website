@@ -23,7 +23,7 @@ const StyledNavBar = styled.div`
     border:0;
     padding:10px;
     margin-bottom:15px;
-    > a {
+    a {
         font-family:Montserrat, sans-serif;
         padding:10px 15px;
         border:0;
@@ -32,14 +32,26 @@ const StyledNavBar = styled.div`
         background:transparent;
         color:black;
         box-shadow:none;
+        outline:0;
+        -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
     }
-    > a:not(.active):hover {
+    a.active{
+        background:#0066FF;
+        color:white;
+    }
+
+    a:not(.active):hover {
         box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.25);
         color:gray;
     }
-    .active{
-        background:#0066FF;
-        color:white;
+    a.active:hover {
+        box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.25);
+    }   
+    a:active {
+        transition:0.2s;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+        transform:scale(0.95);
+        
     }
 `
 

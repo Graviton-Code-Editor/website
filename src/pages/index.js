@@ -11,18 +11,24 @@ function openDownloads(){
 
 class IndexPage extends React.Component {
   render() {
-    const siteTitle = "Graviton Editor"
-
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout location={this.props.location} >
         <div>
+          <FlexAlign>
+            <img src='assets/graviton-logo.png'  alt="Graviton Screenshot" style={{
+              width:'200px'
+            }}  />
+          </FlexAlign>
+          <FlexAlign>
+            <p >A modern <b>code editor.</b></p>
+          </FlexAlign>
           <SEO
             title="Home"
             keywords={[`blog`, `graviton`, `javascript`, `nodejs`]}
           />
           <img  src='assets/graviton.png'  alt="Graviton Screenshot"  />
           <FlexAlign>
-            <p >A modern code editor.</p>
+            <p >Available for Windows, MacOS and Linux.</p>
           </FlexAlign>
           <FlexAlign>
             <Button onClick={openDownloads} background="#0066FF">Download</Button>

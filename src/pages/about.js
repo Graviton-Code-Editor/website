@@ -15,6 +15,9 @@ class AboutPage extends React.Component {
           <p >Graviton is a simple and modern code editor.</p>
         </FlexAlign>
         <FlexAlign>
+          <p>Author: <b>Marc Espín Sanz</b></p>
+        </FlexAlign>
+        <FlexAlign>
           <a href="https://github.com/Graviton-Code-Editor/Graviton-App" >Source code</a>
         </FlexAlign>
       </Layout>
