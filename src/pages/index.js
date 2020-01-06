@@ -10,6 +10,14 @@ function openDownloads(){
     window.open('https://github.com/Graviton-Code-Editor/Graviton-App/releases')
 }
 
+function openTwitter(){
+  window.open('https://twitter.com/gravitoneditor')
+}
+
+function openGithub(){
+  window.open('https://github.com/Graviton-Code-Editor/Graviton-App')
+}
+
 class IndexPage extends React.Component {
   render() {
     return (
@@ -32,8 +40,8 @@ class IndexPage extends React.Component {
           }} />
           <FlexAlign>
             <ImageButton>
-              <img src='assets/github_mark.png'  alt="Github link"/>
-              <img src='assets/twitter.svg'  alt="Twitter link" style={{
+              <img src='assets/github_mark.png' onClick={openGithub} alt="Github link"/>
+              <img src='assets/twitter.svg'  onClick={openTwitter} alt="Twitter link" style={{
                 transform:'scale(1.5)'
               }}/>
             </ImageButton>
