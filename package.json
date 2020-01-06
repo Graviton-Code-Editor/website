@@ -2,8 +2,8 @@
   "name": "graviton-website",
   "private": true,
   "description": "Graviton Website",
-  "version": "0.0.1",
-  "author": "Marc Espín <mespinsanz@gmail.com>",
+  "version": "1.0.0",
+  "author": "Marc Espín Sanz <mespinsanz@gmail.com>",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },

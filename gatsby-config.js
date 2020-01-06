@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: `Graviton Editor`,
-    author: `Marc Espín`,
+    author: `Marc Espín Sanz`,
     description: `Graviton Editor's website.`,
     siteUrl: `https://graviton.ml/`,
     social: {
-      twitter: `mkenzo_8`,
+      github: `marc2332`,
     }
   },
   plugins: [
