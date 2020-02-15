@@ -2,7 +2,7 @@
   "name": "graviton-website",
   "private": true,
   "description": "Graviton Website",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Marc Espín Sanz <mespinsanz@gmail.com>",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
@@ -36,6 +36,7 @@
     "react-helmet": "^5.2.0",
     "react-switch": "^5.0.0",
     "react-typography": "^0.16.19",
+    "sharp": "^0.24.1",
     "styled-components": "^4.2.0",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.54",
