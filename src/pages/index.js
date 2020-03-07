@@ -29,7 +29,9 @@ class IndexPage extends React.Component {
           />
           <FlexAlign>
             <img src='assets/graviton-logo.png'  alt="Graviton Screenshot" style={{
-              width:'200px'
+              width:'200px',
+              height:'auto',
+              maxHeight:'50.3px'
             }}  />
           </FlexAlign>
           <FlexAlign>
