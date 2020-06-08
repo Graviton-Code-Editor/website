@@ -6,7 +6,9 @@ import graviton from '../../static/assets/graviton-logo.png'
 function Navbar(){
 	return(
 		<StyledNavBar>
-			<img src={graviton}  alt="Graviton Screenshot" />
+			<Link to="/" activeClassName="active" className="img">
+				<img src={graviton} alt="Graviton Screenshot" />
+			</Link>
 			<Link to="/" activeClassName="active">
 				Home
 			</Link>
@@ -23,16 +25,18 @@ function Navbar(){
 const StyledNavBar = styled.div`
 	display:flex;
 	border:0;
-	padding:15px;
+	padding:15px 40px;
 	margin-bottom:25px;
 	align-items: center;
 	border-bottom: 1px solid rgb(180,180,180);
-	img {
-		width:150px;
-		height:auto;
-		max-height:50.3px;
-		margin:0px;
-		margin-right: 60px;
+	.img {
+		flex: 4;
+		img {
+			width: 130px;
+			height: auto;
+			max-height:100%;
+			margin:0px;
+		}
 	}
 	a {
 		font-family: 'Inter', sans-serif;
@@ -46,6 +50,8 @@ const StyledNavBar = styled.div`
 		outline:0;
 		-webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
 		font-weight: 500;
+		display: flex;
+		align-items: center;
 	}
 	a.active{
 		color:black;
