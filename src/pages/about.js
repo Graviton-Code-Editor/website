@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 
 class AboutPage extends React.Component {
   render() {
-    const siteTitle = "About graviton"
+    const siteTitle = "About"
 
     return (
       <Layout location={this.props.location} title={siteTitle}>

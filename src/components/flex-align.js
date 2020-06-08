@@ -15,7 +15,7 @@ const StyledDiv = styled.div`
     display:flex;
     justify-content: center;
     text-align:center;
-    font-family:Montserrat, sans-serif;
+    font-family: 'Inter', sans-serif;
 `
 
  export default FlexAlign

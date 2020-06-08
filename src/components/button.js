@@ -6,17 +6,17 @@ const Button = props => (
 )
 
 const ButtonWrapper = styled.button`
-  transition:0.4s;
+  transition:0.25s;
   display: block;
   border: none;
   text-align: center;
   box-sizing: border-box;
   text-decoration: none;
-  padding: 10px 25px;
+  padding: 8px 20px;
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-family:Montserrat, sans-serif;
+  font-family: 'Inter', sans-serif;
   background: ${props => props.props.background || "black"};
   color: ${props => props.props.color || "rgb(255, 255, 255)"};
   font-size: ${props => props.props.fontSize || "15px"};

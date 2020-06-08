@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
+import styled from "styled-components"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -10,7 +11,7 @@ import { rhythm, scale } from "../utils/typography"
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.mdx
-    const siteTitle = this.props.data.site.siteMetadata.title
+    const siteTitle = 'Blog'
     const { previous, next } = this.props.pageContext
 
     return (
@@ -19,10 +20,12 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <h1 style={{
-          fontWeight:800
+        <h2 style={{
+          fontWeight:800,
+          fontFamily: 'Inter',
+          marginBottom: '40px'
           }}
-        >{post.frontmatter.title}</h1>
+        >{post.frontmatter.title}</h2>
         <p
           style={{
             ...scale(-1 / 5),
@@ -33,7 +36,7 @@ class BlogPostTemplate extends React.Component {
         >
           {post.frontmatter.date}
         </p>
-        <MDXRenderer>{post.body}</MDXRenderer>
+        <Customizer><MDXRenderer>{post.body}</MDXRenderer></Customizer>
         <hr
           style={{
             marginBottom: rhythm(1),
@@ -92,3 +95,15 @@ export const pageQuery = graphql`
     }
   }
 `
+
+const Customizer = styled.div`
+	.gatsby-resp-image-background-image{
+		border-radius:10px !important;
+		img{
+			border-radius:10px !important;
+			margin-top:100px;
+			box-shadow:0px 2px 5px rgba(0,0,0,0.6) !important;
+		}
+	}
+`
+

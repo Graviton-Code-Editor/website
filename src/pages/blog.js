@@ -1,14 +1,12 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
 
 class Blog extends React.Component {
   render() {
     const { data } = this.props
-    const siteTitle ="Graviton Blog"
+    const siteTitle = "Blog"
     const posts = data.allMdx.edges
     const postAuthor = data.site.siteMetadata.author
 
@@ -19,21 +17,41 @@ class Blog extends React.Component {
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
-              <div key={node.fields.slug}>
+              <div key={node.fields.slug} style={{
+                    border: '2px solid rgba(220,220,220)',
+                    borderRadius: '7px',
+                    padding: '20px',
+                    margin: '5px 0px'
+                  }}>
                 <h3
                   style={{
-                    marginBottom: rhythm(1 / 4),
+                    marginTop: '5px',
+                     marginBottom: '5px',
+                    fontFamily: 'Inter, sans-serif',
+                    fontWeight: '700'
                   }}
                 >
                   <Link
-                    style={{ boxShadow: `none` }}
+                    style={{ 
+                       boxShadow: `none`,
+                       fontFamily: 'Inter, sans-serif'
+                    }}
                     to={`blog${node.fields.slug}`}
                   >
                     {title}
                   </Link>
                 </h3>
-                <small>{node.frontmatter.date} · {postAuthor}</small>
-                <p
+                <small  style={{ 
+                       boxShadow: `none`,
+                       fontFamily: 'Inter, sans-serif'
+                    }}>
+                  {node.frontmatter.date} · {postAuthor}</small>
+                <p 
+                  style={{ 
+                       boxShadow: `none`,
+                       fontFamily: 'Inter, sans-serif',
+                       marginBottom: '5px'
+                    }}
                   dangerouslySetInnerHTML={{
                     __html: node.frontmatter.description || node.excerpt,
                   }}
