@@ -3,7 +3,7 @@ module.exports = {
     title: `Graviton Editor`,
     author: `Marc Espín Sanz`,
     description: `Graviton Editor's website.`,
-    siteUrl: `https://graviton.netlify.ml/`,
+    siteUrl: `https://graviton.netlify.app/`,
     social: {
       github: `marc2332`,
     }

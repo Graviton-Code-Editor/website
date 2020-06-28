@@ -1,18 +1,18 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import { MDXRenderer } from "gatsby-plugin-mdx"
+import React from "react";
+import { Link, graphql } from "gatsby";
+import { MDXRenderer } from "gatsby-plugin-mdx";
 
-import styled from "styled-components"
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { rhythm, scale } from "../utils/typography"
+import styled from "styled-components";
+import Bio from "../components/bio";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import { rhythm, scale } from "../utils/typography";
 
 class BlogPostTemplate extends React.Component {
   render() {
-    const post = this.props.data.mdx
-    const siteTitle = 'Blog'
-    const { previous, next } = this.props.pageContext
+    const post = this.props.data.mdx;
+    const siteTitle = "Blog";
+    const { previous, next } = this.props.pageContext;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -20,12 +20,15 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <h2 style={{
-          fontWeight:800,
-          fontFamily: 'Inter',
-          marginBottom: '40px'
+        <h2
+          style={{
+            fontWeight: 800,
+            fontFamily: "Inter",
+            marginBottom: "40px"
           }}
-        >{post.frontmatter.title}</h2>
+        >
+          {post.frontmatter.title}
+        </h2>
         <p
           style={{
             ...scale(-1 / 5),
@@ -36,10 +39,12 @@ class BlogPostTemplate extends React.Component {
         >
           {post.frontmatter.date}
         </p>
-        <Customizer><MDXRenderer>{post.body}</MDXRenderer></Customizer>
+        <Customizer>
+          <MDXRenderer>{post.body}</MDXRenderer>
+        </Customizer>
         <hr
           style={{
-            marginBottom: rhythm(1),
+            marginBottom: rhythm(1)
           }}
         />
         <Bio />
@@ -50,7 +55,7 @@ class BlogPostTemplate extends React.Component {
             flexWrap: `wrap`,
             justifyContent: `space-between`,
             listStyle: `none`,
-            padding: 0,
+            padding: 0
           }}
         >
           <li>
@@ -69,11 +74,11 @@ class BlogPostTemplate extends React.Component {
           </li>
         </ul>
       </Layout>
-    )
+    );
   }
 }
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
@@ -94,16 +99,15 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 
 const Customizer = styled.div`
-	.gatsby-resp-image-background-image{
-		border-radius:10px !important;
-		img{
-			border-radius:10px !important;
-			margin-top:100px;
-			box-shadow:0px 2px 5px rgba(0,0,0,0.6) !important;
-		}
-	}
-`
-
+  .gatsby-resp-image-background-image {
+    border-radius: 10px !important;
+    img {
+      border-radius: 10px !important;
+      margin-top: 100px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6) !important;
+    }
+  }
+`;

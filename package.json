@@ -5,7 +5,7 @@
 	"version": "1.0.1",
 	"author": "Marc Espín Sanz <mespinsanz@gmail.com>",
 	"bugs": {
-		"url": "https://github.com/gatsbyjs/gatsby/issues"
+		"url": "https://github.com/Graviton-Code-Editor/website/issues"
 	},
 	"dependencies": {
 		"@mdx-js/mdx": "^1.5.1",
