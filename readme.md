@@ -1,5 +1,5 @@
 ## 🎡 Graviton Editor's Website
-Graviton Editor's website, hosted in https://github.com/marc2332/website-1
+Graviton Editor's website, hosted in https://gv-fork.netlify.app/
 
 ### 🎭 Badges
 
