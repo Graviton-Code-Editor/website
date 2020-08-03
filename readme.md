@@ -1,5 +1,5 @@
 ## 🎡 Graviton Editor's Website
-Graviton Editor's website, hosted in https://jovial-keller-f525de.netlify.app/
+Graviton Editor's website, hosted in https://github.com/marc2332/website-1
 
 ### 🎭 Badges
 
