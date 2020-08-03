@@ -8,6 +8,7 @@ const BlogCard = styled.div`
 	margin: 10px;
 	border-radius: 3px;
 	transition: 0.25s;
+	display: inline-block;
 	& * {
 		font-size: 12px;
 	}
