@@ -1,0 +1,12 @@
+{
+	"name": "gv-web",
+	"folders": [
+		{
+			"name": "next",
+			"path": "C:\\\\Users\\\\mespi\\\\Projects\\\\next"
+		}
+	],
+	"settings":{
+		"editorExcludedDirs":[".next"]
+	}
+}

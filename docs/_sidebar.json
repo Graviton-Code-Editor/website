@@ -1,0 +1,28 @@
+{
+	"list": [
+		{
+			"label": "Introduction",
+			"slug": ""
+		},
+		{
+			"label": "Concepts",
+			"slug": "concepts",
+			"list":[
+				{
+					"label": ".graviton",
+					"slug": "concepts/graviton2"
+				}
+			]
+		},
+		{
+			"label": "Tutorials",
+			"slug": "tutorials",
+			"list":[
+				{
+					"label": "Sample plugin",
+					"slug": "tutorials/sample_plugin"
+				}
+			]
+		}
+	]
+}
