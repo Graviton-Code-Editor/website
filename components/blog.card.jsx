@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 
 const BlogCard = styled.div`
-	padding: 20px;
+	padding: 15px;
 	width: 100%;
 	cursor: pointer;
 	max-width: 300px;
@@ -14,6 +14,7 @@ const BlogCard = styled.div`
 	}
 	& img {
 		width: 100%;
+		border-radius: 5px;
 	}
 	& h4 {
 		margin-bottom: 15px;
