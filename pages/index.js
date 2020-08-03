@@ -7,9 +7,9 @@ function Home() {
 		<HomeLayout>
 			<Navbar/>
 			<div>
-				<div>
+				<div class="container">
 					<p>A <b>modern</b> code editor.</p>
-					<div>
+					<div class="image">
 						<img src="screenshot.png"/>
 					</div>
 				</div>

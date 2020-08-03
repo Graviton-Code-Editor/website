@@ -37,10 +37,9 @@ const NavBarContainer = styled.div`
 			}
 		}
 		& > div {
-			padding: 0px 15px;	
 			flex: 1;
+			min-width: 40%;
 			& > img {
-				min-width: 30%;
 				width: 50%;
 				max-width: 140px;
 			}
