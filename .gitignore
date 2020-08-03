@@ -2,3 +2,6 @@
 node_modules
 dist
 out
+out_functions
+out_publish
+404.html
