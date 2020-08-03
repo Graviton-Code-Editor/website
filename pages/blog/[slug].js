@@ -10,16 +10,14 @@ import markdown from 'remark-parse'
 import highlight from 'remark-highlight.js'
 import html from 'remark-html'
 
-
 function Post({ title, content }) {
 	return (
 		<Layout>
 			<Navbar/>
-			<Title>Blog</Title>
+			<Title>{title}</Title>
 			<BlogLayout>
 				<div>
-					<h3>{title}</h3>
-					<div dangerouslySetInnerHTML={{ __html: content}}/>
+					<div class="markdown-container" dangerouslySetInnerHTML={{ __html: content}}/>
 				</div>
 			</BlogLayout>
 			
@@ -43,7 +41,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }) {
-	const { content, data} =  matter(fs.readFileSync(`${process.cwd()}/blog/${slug}.md`, 'UTF-8'))
+	const { content, data } =  matter(fs.readFileSync(`${process.cwd()}/blog/${slug}.md`, 'UTF-8'))
 
 	const result = await unified()
 		.use(markdown)

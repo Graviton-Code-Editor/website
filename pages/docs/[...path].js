@@ -12,16 +12,16 @@ import markdown from 'remark-parse'
 import highlight from 'remark-highlight.js'
 import html from 'remark-html'
 
-const Post = ({ content }) => {
+const Post = ({ content, title }) => {
 	const { pathname, query } = useRouter()
 	const { path } = query
 	return (
 		<div style={{height: '100%'}}>
 			<Navbar/>
-			<Title>Documentation</Title>
+			<Title>{title}</Title>
 			<DocsLayout>
 				<Sidebar/>
-				<div dangerouslySetInnerHTML={{ __html: content }}/>
+				<div class="markdown-container" dangerouslySetInnerHTML={{ __html: content }}/>
 			</DocsLayout>
 		</div>
 	)
@@ -32,7 +32,7 @@ const getContentByPath = (docs, paths) => {
 }
 
 export async function getStaticProps({ params: { path } }) {
-	const { content } =  matter(fs.readFileSync(`${process.cwd()}/docs/${path.join('//')}.md`, 'UTF-8'))
+	const { content, data } =  matter(fs.readFileSync(`${process.cwd()}/docs/${path.join('//')}.md`, 'UTF-8'))
 	const result = await unified()
 		.use(markdown)
 		.use(highlight) 
@@ -40,6 +40,7 @@ export async function getStaticProps({ params: { path } }) {
 		.process(content)
 	return {
 		props: {
+			...data,
 			content: result.toString()
 		}
 	}

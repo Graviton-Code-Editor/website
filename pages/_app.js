@@ -1,4 +1,4 @@
-import '../styles/app.css'
+import '../styles/app.scss'
 import '../node_modules/highlight.js/styles/atelier-seaside-light.css'
 
 function MyApp({ Component, pageProps }) {

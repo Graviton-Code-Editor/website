@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+
+body * {
+	font-family: 'Inter', sans-serif;
+}
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+#__next{
+	height: 100%;
+	max-height: 100%;
+}
+html {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+.markdown-container {
+	li {
+		line-height: 25px;
+	}
+	h2 {
+		padding-bottom: 15px;
+		border-bottom: 1px solid rgb(140,140,140);
+	}
+	code {
+		border-radius: 5px;
+		padding: 7px;
+		font-family: 'Roboto Mono', monospace;
+		background: #eee;
+	}
+	pre code {
+		border-radius: 5px;
+		padding: 13px;
+		font-family: 'Roboto Mono', monospace;
+		background: rgb(244, 251, 244);
+		* {
+			font-family: inherit;
+		}
+	}
+	table {
+		& th, & td {
+			padding:  3px;
+		}
+	}
+}

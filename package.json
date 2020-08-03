@@ -4,8 +4,8 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "next",
-		"build":"next build",
+		"dev": "next",
+		"build": "next build",
 		"postbuild": "next-on-netlify",
 		"build:static": "next build && next export -o dist",
 		"start": "next start"
@@ -14,7 +14,8 @@
 	"license": "ISC",
 	"devDependencies": {
 		"babel-plugin-styled-components": "^1.11.0",
-		"marked": "^1.1.1"
+		"marked": "^1.1.1",
+		"sass": "^1.26.10"
 	},
 	"dependencies": {
 		"@emotion/core": "^10.0.28",
