@@ -23,5 +23,5 @@ npm run install
 
 Run locally:
 ```
-npm start
+npm nun dev
 ```

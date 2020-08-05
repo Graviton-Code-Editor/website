@@ -1,16 +1,34 @@
 {
 	"list": [
 		{
-			"label": "Introduction",
+			"label": "👋 Introduction",
 			"slug": ""
 		},
 		{
-			"label": "Concepts",
-			"slug": "concepts",
+			"label": "🚦 Fundamentals",
+			"slug": "fundamentals",
 			"list":[
 				{
-					"label": ".graviton",
-					"slug": "concepts/graviton2"
+					"label": "🧰 .graviton2",
+					"slug": "fundamentals/graviton2"
+				},
+				{
+					"label": "🐧 Puffin",
+					"slug": "fundamentals/puffin"
+				}
+			]
+		},
+		{
+			"label": "🎨 API",
+			"slug": "api",
+			"list":[
+				{
+					"label": "🏃‍♂️ RunningConfig",
+					"slug": "api/runningconfig"
+				},
+				{
+					"label": "🔩 StaticConfig",
+					"slug": "api/staticconfig"
 				}
 			]
 		},
