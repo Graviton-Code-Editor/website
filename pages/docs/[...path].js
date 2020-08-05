@@ -32,7 +32,7 @@ const getContentByPath = (docs, paths) => {
 }
 
 export async function getStaticProps({ params: { path } }) {
-	const { content, data } =  matter(fs.readFileSync(`${process.cwd()}/docs/${path.join('//')}.md`, 'UTF-8'))
+	const { content, data } =  matter(fs.readFileSync(`${process.cwd()}/docs/${path.join('/')}.md`, 'UTF-8'))
 	const result = await unified()
 		.use(markdown)
 		.use(highlight) 
