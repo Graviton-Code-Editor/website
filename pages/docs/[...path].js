@@ -57,8 +57,8 @@ const getDirList = where => {
 				const { data } =  matter(fs.readFileSync(path.join(where, file), 'UTF-8'))
 				tree.push({
 					params:{
-						path: [...data.slug.split('/')],
-						slug: data.slug,
+						path: [...data.slug.toLowerCase().split('/')],
+						slug: data.slug.toLowerCase(),
 					}
 				})
 				
