@@ -1,7 +1,6 @@
 import styled from '@emotion/styled'
 
 const BlogList = styled.div`
-	padding: 0 10%;
 	display: flex;
 	justify-content: center;
 	& > div {
