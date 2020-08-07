@@ -27,6 +27,7 @@ html {
 		padding: 1px 3px;
 		font-family: 'Roboto Mono', monospace;
 		background: #eee;
+		color: gray;
 	}
 	pre code {
 		border-radius: 5px;
@@ -41,5 +42,14 @@ html {
 		& th, & td {
 			padding:  3px;
 		}
+	}
+	.type{
+		display: inline-block;
+		padding: 6px;
+		background: rgb(244,251, 244);
+		color: rgb(35,35,35);
+		font-size: 12px;
+		margin: 5px;
+		font-weight: 600;
 	}
 }

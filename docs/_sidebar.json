@@ -13,6 +13,24 @@
 					"slug": "fundamentals/graviton2"
 				},
 				{
+					"label": "📦 Plugins",
+					"slug": "fundamentals/plugins",
+					"list":[
+						{
+							"label": "🎲 Dynamic",
+							"slug": "fundamentals/plugins/dynamic"
+						},
+						{
+							"label": "🎨 Themes",
+							"slug": "fundamentals/plugins/themes"
+						},
+						{
+							"label": "🎭 Iconpacks",
+							"slug": "fundamentals/plugins/iconpacks"
+						}
+					]
+				},
+				{
 					"label": "🐧 Puffin",
 					"slug": "fundamentals/puffin"
 				}
@@ -29,11 +47,15 @@
 				{
 					"label": "🔩 StaticConfig",
 					"slug": "api/staticconfig"
+				},
+				{
+					"label": "👓 Dialog",
+					"slug": "api/dialog"
 				}
 			]
 		},
 		{
-			"label": "Tutorials",
+			"label": "📚 Tutorials",
 			"slug": "tutorials",
 			"list":[
 				{

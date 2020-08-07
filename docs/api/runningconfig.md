@@ -16,53 +16,79 @@ Example:
 RunningConfig.data.openedWindows
 ``` 
 
-### focusedTab: `HTMLElement | null`
+It's data interface:
+```ts
+interface RunningConfigData{
+	focusedTab: HTMLElement | null,
+	focusedPanel: HTMLElement,
+	focusedEditor: { client, instance } | null,
+	workspacePath: string | null,
+	iconpack: {},
+	isDebug: boolean,
+	isDev: boolean,
+	workspaceConfig: {
+		name: string,
+		folders: string[],
+	},
+	globalCommandPrompt: Array<{ label: string, action: () => void }>,
+	notifications: Array<{ title: string, content: string, element: HTMLElement }>,
+	editorsRank: EditorClients[],
+	openedWindows: number,
+	arguments: string[],
+	currentStaticConfig: {},
+	envs: [],
+	projectServices: [],
+	languageServers: [],
+}
+```
+
+### focusedTab: <div class="type"> HTMLElement | null </div>
 Refers refers to the focused tab. If there isn't any, it will be null.
 
-### focusedPanel: `HTMLElement`
+### focusedPanel: <div class="type"> HTMLElement </div>
 Refers refers to the focused panel.
 
-### focusedEditor: `{ client, instance } | null`
+### focusedEditor: <div class="type"> { client, instance } | null </div>
 Refers to the focused editor. If there isn't any, it will be null.
    * `client: string`: is the EditorClient of the editor 
    * `instance`: original editor's instance (such as CodeMirror)
 
-### workspacePath: `string | null`
+### workspacePath: <div class="type"> string | null </div>
 Refers to the current workspacePath, if there isn't any workspace opened it will be null.
 
-### iconpack: `{ }`
+### iconpack: <div class="type"> {} </div>
 This contains the current selected iconpack's icons.
 
-### isDebug: `boolean`
+### isDebug: <div class="type"> boolean </div>
 Indicates if Graviton was launched in debug mode.
 
-### isDev: `boolean`
+### isDev: <div class="type"> boolean </div>
 Indicates if Graviton is in development mode.
 
-### workspaceConfig: `{ name, folders }`
+### workspaceConfig: <div class="type"> { name, folders } </div>
 This contains the current workspace configuration, it exists even if there isnt any workspace selected.
    * `name: string | null` -> Refers to the Workspace name, by default it's null.
    * `folders: string[]` -> Contains the current opened folders in Graviton's explorer panel.
 
-### globalCommandPrompt: `[]`
+### globalCommandPrompt: <div class="type"> [] </div>
 Contains options which will be included in the global prompt, this can be handy for plugins wanting to add their own options to it.
 
-### notifications: `[]`
+### notifications: <div class="type"> [] </div>
 Contains the current displayed notifications
 
-### editorsRank: `[]`
+### editorsRank: <div class="type"> [] </div>
 Contains a rank of editor clients. By default the first is CodeMirror and second the ImageViewer, this means whenever you open a file, first it will ask CodeMirror if it supports the file's format and if not it will then ask the second which in this case is the ImageViewer.
 
-### openedWindows: `number`
+### openedWindows: <div class="type"> number </div>
 Indicates the total number of opened windows, this also includes Dialogs.
 
-### arguments: `string[]`
+### arguments: <div class="type"> string[] </div>
 Contains the arguments Graviton was launched with.
 
-### currentStaticConfig: `{}`
+### currentStaticConfig: <div class="type"> {} </div>
 Contains all the settings provided by the current workspace if selected.
 
-### envs: `{ name, prefix, filter }[]`
+### envs: <div class="type"> { name, prefix, filter }[] </div>
 Contains all the environment filters. 
 
 These are used to understand what kind of project you are working on. 
@@ -72,7 +98,7 @@ By default, Graviton includes the NPM env, so whenever you open a NPM project it
    * `prefix: string` -> Command prefix used for scripts
    * `filter: function` -> Function which returns a object with the environment data or false if it didn't identify the environment.
 
-### projectServices: `{ name, description, onExecuted }[]`
+### projectServices: <div class="type">{ name, description, onExecuted }[]</div>
 Contains the project services.
    * `name: string`: -> Name 
    * `descripion: -> string`: Short description 

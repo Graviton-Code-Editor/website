@@ -18,6 +18,42 @@ Example:
 StaticConfig.data.appTheme
 ```
 
+It's data interface:
+
+```ts
+interface StaticConfigData {
+	appTheme: string,
+	appIconpack: string,
+	appLanguage: string,
+	editorFontSize: string,
+	appProjectsLog: [],
+	appConfigPath: string,
+	appWorkspacesLog: [],
+	appZoom: number,
+	editorFSWatcher: boolean,
+	editorAutocomplete: boolean,
+	editorIndentation: string,
+	editorTabSize: number,
+	editorFontFamily: string,
+	editorWrapLines: boolean,
+	appPlatform: string,
+	appShortcuts: {
+		[CommandName: { 
+			combos: string[] 
+		}]
+	},
+	miscEnableLiveUpdateInManualConfig: boolean,
+	appBlurEffect: number,
+	appCheckUpdatesInStartup: boolean,
+	appEnableSidebar: boolean,
+	appEnableSidepanel: boolean,
+	appEnableExplorerItemsAnimations: boolean,
+	appOpenWelcomeInStartup: boolean,
+	editorsClients: Array<{ extension, editor, regex }>,
+	editorExcludedDirs: string[],
+}
+```
+
 ### appTheme: `string`
 Indicates the selected theme. Default to `Night`
 
@@ -89,7 +125,7 @@ Font family used for the editor. Default to `JetBrainsMono`.
 ### editorWrapLines: `boolean`
 Wrap or no the lines in the editor. Defaul to `false`
 
-### editorClients: `{ extension, editor, regex }[]`
+### editorClients: `Array<{ extension, editor, regex }>`
 User's preferences for editor clients
   * `extension: string`: -> File's extension to match
   * `editor: string`: -> EditorClient's name to use

@@ -27,6 +27,20 @@ puffin.render(exampleComp, document.body)
 
 ### State
 
+Interface:
+
+```ts
+interface PuffinState {
+	keyChanged: (keyName: string, eventAction: () => void) => void,
+	changed: (eventAction: () => void) => void,
+	on: (eventName: string, eventAction: () => void ) => void,
+	emit: (eventName: string, eventParams: () => void) => void,
+	data: any,
+	triggerChange: () => void
+}
+```
+
+Example:
 ```js
 const exampleState = new puffin.state({
 	someData: false,
