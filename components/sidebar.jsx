@@ -15,7 +15,7 @@ const SidebarContainer = styled.div`
 	padding: 5px;
 	overflow: auto;
 	& > button {
-		position: fixed;
+		position: absolute;
 		top: 205px;
 		left: 25px;
 		display: none;
@@ -27,13 +27,13 @@ const SidebarContainer = styled.div`
 		background: rgb(247,247,247);
 		border: none;
 		box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
-		margin: 2px;
+		margin: 3px;
 		flex-direction: column;
 		& rect {
-			background: rgb(50, 50, 50);
-			height: 2px;
-			border-radius: 1px;
-			margin: 3px 0px;
+			background: rgb(75, 75, 75);
+			height: 1.5px;
+			border-radius: 5px;
+			margin: 3.5px 0px;
 			flex: 1;
 			width: 100%;
 		}
@@ -83,7 +83,7 @@ const SidebarContainer = styled.div`
 			}
 		}
 		& > div{
-			position: fixed;
+			position: absolute;
 			top: 225px;
 			padding: 15px;
 			pointer-events:none;
@@ -128,9 +128,19 @@ function Sidebar() {
 	
 	const [opened, open]= useState(false)
 	
+	if(typeof window !== "undefined"){
+		window.addEventListener('click',()=> {
+			open(false)
+		})
+	}
+	function click(e){
+		e.stopPropagation()
+		open(!opened)
+	}
+	
 	return (
 		<SidebarContainer>
-			<button onClick={() => open(!opened)}>
+			<button onClick={click}>
 				<rect></rect>
 				<rect></rect>
 				<rect></rect>
