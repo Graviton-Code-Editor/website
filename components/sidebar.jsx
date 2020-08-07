@@ -16,13 +16,13 @@ const SidebarContainer = styled.div`
 	overflow: auto;
 	& > button {
 		position: fixed;
-		top: 160px;
+		top: 205px;
 		left: 25px;
 		display: none;
 		outline: 0;
-		padding: 7px;
-		height: auto;
-		width: 30px;
+		padding:  8px 7px;
+		height: 45px;
+		width: 45px;
 		border-radius: 7px;
 		background: rgb(247,247,247);
 		border: none;
@@ -33,7 +33,8 @@ const SidebarContainer = styled.div`
 			background: rgb(50, 50, 50);
 			height: 2px;
 			border-radius: 1px;
-			margin: 1px 0px;
+			margin: 3px 0px;
+			flex: 1;
 			width: 100%;
 		}
 	}
@@ -83,7 +84,7 @@ const SidebarContainer = styled.div`
 		}
 		& > div{
 			position: fixed;
-			top: 180px;
+			top: 225px;
 			padding: 15px;
 			pointer-events:none;
 			max-height: 100%;
