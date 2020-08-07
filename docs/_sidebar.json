@@ -3,6 +3,18 @@
 		{
 			"label": "👋 Introduction",
 			"slug": ""
+		},{
+			"label": "🧠 Core",
+			"slug": "core"
+		},{
+			"label": "🤓 Guides",
+			"slug": "guides",
+			"list":[
+				{
+					"label": "🤠 Building from source",
+					"slug": "guides/building"
+				}
+			]
 		},
 		{
 			"label": "🚦 Fundamentals",

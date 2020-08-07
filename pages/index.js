@@ -3,23 +3,27 @@ import HomeLayout from '../components/home.layout.jsx'
 import Title from '../components/title.jsx'
 import Footer from '../components/footer.jsx'
 import Button from '../components/button.jsx'
+import Head from 'next/head'
 
 function Home() {
 	return (
 		<HomeLayout>
+			<Head>
+				<title>Graviton Editor</title>
+			</Head>
 			<Navbar/>
 			<div>
-				<div class="container">
-					<div class="top-text"> 
+				<div className="container">
+					<div className="top-text"> 
 						<p>A <b>modern</b> code editor.</p>
 						<a target="_blank" href="https://github.com/Graviton-Code-Editor/Graviton-App/releases">
 							<Button>DOWNLOAD</Button>
 						</a>
 					</div>
-					<div class="image">
+					<div className="image">
 						<img src="screenshot.png"/>
 					</div>
-					<div class="footer">
+					<div className="footer">
 						<div>
 							<a title="Source Code" target="_blank" href="https://github.com/Graviton-Code-Editor/Graviton-App">
 								<img alt="Source Code" id="github_link" src="github_mark.png"/>

@@ -21,7 +21,7 @@ const Post = ({ content, title }) => {
 			<Title>{title}</Title>
 			<DocsLayout>
 				<Sidebar/>
-				<div class="markdown-container" dangerouslySetInnerHTML={{ __html: content }}/>
+				<div className="markdown-container" dangerouslySetInnerHTML={{ __html: content }}/>
 			</DocsLayout>
 		</div>
 	)

@@ -1,12 +1,18 @@
 {
-	"name": "gv-web",
-	"folders": [
-		{
-			"name": "next",
-			"path": "C:\\\\Users\\\\mespi\\\\Projects\\\\next"
-		}
-	],
-	"settings":{
-		"editorExcludedDirs":[".next"]
-	}
+  "name": "gv-web",
+  "folders": [
+    {
+      "name": "next",
+      "path": "C:\\\\Users\\\\mespi\\\\Projects\\\\next"
+    },
+    {
+      "name": "Graviton-App",
+      "path": "C:\\\\Users\\\\mespi\\\\Projects\\\\Graviton-App"
+    }
+  ],
+  "settings": {
+    "editorExcludedDirs": [
+      ".next"
+    ]
+  }
 }
