@@ -16,17 +16,16 @@ const SidebarContainer = styled.div`
 	overflow: auto;
 	& > button {
 		position: absolute;
-		top: 205px;
-		left: 25px;
+		top: 120px;
+		left: 20px;
 		display: none;
 		outline: 0;
-		padding:  8px 7px;
-		height: 45px;
-		width: 45px;
+		padding:  6px 7px;
+		height: 40px;
+		width: 40px;
 		border-radius: 7px;
 		background: rgb(247,247,247);
 		border: none;
-		box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
 		margin: 3px;
 		flex-direction: column;
 		& rect {
@@ -74,7 +73,7 @@ const SidebarContainer = styled.div`
 		& {
 			box-shadow: none;
 			flex: 1;
-			min-width: 40px;
+			min-width: 0px;
 			margin: 0px;
 			padding: 0;
 			overflow: auto;
@@ -84,7 +83,8 @@ const SidebarContainer = styled.div`
 		}
 		& > div{
 			position: absolute;
-			top: 225px;
+			top: 162px;
+			left: 55px;
 			padding: 15px;
 			pointer-events:none;
 			max-height: 100%;
@@ -93,6 +93,7 @@ const SidebarContainer = styled.div`
 			opacity: 0;
 			margin-top: -5px;
 			margin-left: 0px;
+			padding: 7px;
 			&[opened="true"]{
 				margin-top: 0px;
 				margin-left: 5px;
@@ -102,7 +103,7 @@ const SidebarContainer = styled.div`
 			}
 			& div.sideButton{
 				& > button {
-					padding: 9px 11px;
+					padding: 8px 10px;
 				}
 			}
 		}

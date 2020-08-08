@@ -6,7 +6,7 @@ import Link from 'next/link'
 import Sidebar from '../../components/sidebar.jsx'
 import DocsLayout from '../../components/docs.layout.jsx'
 import Navbar from '../../components/navbar.jsx'
-import Title from '../../components/title.jsx'
+import DocsTitle from '../../components/docs.title.jsx'
 import unified from 'unified'
 import markdown from 'remark-parse'
 import highlight from 'remark-highlight.js'
@@ -18,7 +18,7 @@ const Post = ({ content, title }) => {
 	return (
 		<div style={{height: '100%'}}>
 			<Navbar/>
-			<Title>{title}</Title>
+			<DocsTitle>{title}</DocsTitle>
 			<DocsLayout>
 				<Sidebar/>
 				<div className="markdown-container" dangerouslySetInnerHTML={{ __html: content }}/>

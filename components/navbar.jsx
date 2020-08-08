@@ -8,6 +8,11 @@ const NavBarContainer = styled.div`
 	min-width: 90%;
 	margin: 50px 30px;
 	margin-bottom: 15px;
+	@media only screen and (max-width: 600px) {
+		& {
+			margin: 15px;
+		}
+	}
 	& > div {
 		min-width: 100px;
 		width: 100%;

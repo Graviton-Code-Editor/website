@@ -5,13 +5,18 @@ const DocsLayout = styled.div`
 	min-height: 100%;
 	padding: 0 10%;
 	& > div {
-		margin: 10px;
+		margin: 20px;
 		overflow: auto;
+		
 	}
 	@media only screen and (min-width: 600px) {
 		& > div {
-			margin: 20px;
 			flex: 3;
+		}
+	}
+	@media only screen and (max-width: 600px) {
+		& > div {
+			margin: 5px;
 		}
 	}
 `
