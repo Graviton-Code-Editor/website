@@ -71,8 +71,8 @@
 			"slug": "tutorials",
 			"list":[
 				{
-					"label": "Sample plugin",
-					"slug": "tutorials/sample_plugin"
+					"label": "🧵 Basic plugin",
+					"slug": "tutorials/basic_plugin"
 				}
 			]
 		}

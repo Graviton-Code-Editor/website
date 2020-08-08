@@ -19,6 +19,7 @@ Example (simplified):
 	"name": "SuperPlugin",
 	"version":"1.0.0",
 	"description":"Interesting plugin",
+	"author":"Superman",
 	"id": "com.superplugin",
 	"textTheme":"night",
 	"type":"theme",

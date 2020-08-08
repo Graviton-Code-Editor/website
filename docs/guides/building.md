@@ -1,5 +1,5 @@
 ---
-title: 🦾 Building from source
+title: 🤠 Building from source
 slug: guides/building
 description: Building from source
 
@@ -20,11 +20,11 @@ Clone the git repository:
 git clone https://github.com/Graviton-Code-Editor/Graviton-App.git --depth 1
 ```
 
-There are 2 different branches:
+There are 3 different branches:
 
-- Master: daily source (default).
-- Stable: this doesn't mean it's ready to be released as stable build , but it doesn't have that many bugs, it's more stable overall.
-- 1.3.0: it refers to the old Graviton source code.
+- `master`: daily source (default).
+- `stable`: this doesn't mean it's ready to be released as stable build , but it doesn't have that many bugs, it's more stable overall.
+- `1.3.0`: it refers to the old Graviton source code.
 
 ## Install dependencies
 

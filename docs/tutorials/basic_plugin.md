@@ -1,12 +1,12 @@
 ---
-title: Sample plugin
-slug: tutorials/sample_plugin
-description: How to make a sample plugin
+title: 🧵 Basic plugin
+slug: tutorials/basic_plugin
+description: How to make a basic plugin
 
 ---
 
 
-[Source code](https://github.com/Graviton-Code-Editor/sample-plugin)
+[Sample plugin](https://github.com/Graviton-Code-Editor/sample-plugin)
 
 ## Setup
 
@@ -14,12 +14,12 @@ Create the plugin folder in your [.graviton2](https://github.com/Graviton-Code-E
 
 Name it as you wish:
 ```shell
-mkdir SamplePlugin
+mkdir BasicPlugin
 ```
 
 Go inside it:
 ```shell
-cd SamplePlugin
+cd BasicPlugin
 ```
 
 Now, let's create our package.json ( You can use `npm init` if you wish.)
@@ -28,14 +28,20 @@ Now, let's create our package.json ( You can use `npm init` if you wish.)
 | ------------- |----------------------------------------------------------------|
 | name          | Plugin's name                                                  |
 | id            | Technical name (no spaces)                                     |
-| main          | Location of your entry file                                     |
+| main          | Location of your entry file                                    |
+| description   | Brief descrption of the plugin                                 |
+| author        | Author's name                                                  |
+| version       | Current version of the plugin                                  |
 
 Example:
 ```json
 {
-  "name": "SamplePlugin",
-  "id": "sample-plugin",
-  "main" :"main.js"
+	"name": "BasicPlugin",
+	"id": "basic-plugin",
+	"main": "main.js",
+	"description": "A very cool plugin",
+	"author": "Superman",
+	"version": "1.0.0"
 }
 ```
 

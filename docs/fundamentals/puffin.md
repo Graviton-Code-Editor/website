@@ -1,5 +1,5 @@
 ---
-title: PuffinJS
+title: 🐧 Puffin
 slug: fundamentals/puffin
 description: What's puffin?
 
@@ -9,7 +9,11 @@ description: What's puffin?
 
 Graviton makes a heavy usage of it. For example, objects like `RunningConfig` or `StaticConfig` are Puffin States, which means, they hold reactive data and events.
 
-### Component
+## Component
+
+Components are used to create HTML-like components which you can then reutilize as many times you want.
+
+Here is an example of creating a `<div>` with `Hello World` as text and a click event listener. Then it's rendered into the document.body.
 
 ```js
 function clickedMe(){
@@ -25,7 +29,11 @@ const exampleComp = puffin.element`
 puffin.render(exampleComp, document.body)
 ```
 
-### State
+**Note**: Rendering a component into the body is not the intended usage in Graviton, this is just an example of how it works.
+
+## State
+
+Puffin States are reactive and event emitters objects. It allows you to store and watch for data changes. Ando also to create custom events and listen for them.
 
 Interface:
 
@@ -99,7 +107,7 @@ exampleState.onChanged( newData =>{
 
 ```
 
-### style
+## Style
 You can encapsulate CSS StyleSheets in random-generated classes which you can use in your components.
 
 ```js
@@ -111,3 +119,5 @@ const exampleStyle = puffin.style`
 
 const exampleComp = puffin.element`<div class="${myStyle}"/>`
 ```
+
+**Note**: You can also user other alternatives like Emotion using the CSS prop.

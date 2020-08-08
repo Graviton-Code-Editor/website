@@ -18,5 +18,4 @@ Default location for every OS:
 
 This path can be changed in the setting: `appConfigPath`
 
-
 Plugins are located in `.graviton2/plugins`.

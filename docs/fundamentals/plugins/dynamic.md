@@ -18,6 +18,7 @@ Example supossing we have a `main.js` file in the same root as the package.json:
 	"version":"1.0.0",
 	"id": "com.superplugin",
 	"description":"Interesting plugin",
+	"author":"Superman",
 	"type":"plugin",
 	"main": "main.js"
 }
