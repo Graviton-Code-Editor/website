@@ -9,6 +9,8 @@ Graviton themes are handled via properties, not CSS stylesheets, this ensures it
 
 I recommend you to take as base [this](https://github.com/Graviton-Code-Editor/sample-theme) when making a theme from scratch since there are a lot of properties. 
 
+package.json's properties needed for themes:
+
 * textTheme: indicates what color highlighting must be loaded,
 * type: type of the plugin, in this case "theme"
 

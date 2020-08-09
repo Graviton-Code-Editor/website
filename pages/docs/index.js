@@ -9,7 +9,7 @@ const Docs = () => {
 	return(
 		<div style={{height: '100%'}}>
 			<Navbar/>
-			<Title>Documentation</Title>
+			<Title>Documentation (WIP)</Title>
 			<DocsLayout>
 				<Sidebar/>
 				<div class="markdown-container">
