@@ -55,6 +55,7 @@ const SidebarContainer = styled.div`
 				color: black;
 				padding:  6px 8px;
 				background: transparent;
+				outline: 0;
 				&:hover{
 					background: rgba(255, 0, 72, 0.2);
 					color: rgba(255, 0, 72, 0.9);

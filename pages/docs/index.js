@@ -12,8 +12,8 @@ const Docs = () => {
 			<Title>Documentation</Title>
 			<DocsLayout>
 				<Sidebar/>
-				<div>
-					<p>Graviton Editor is a cross-platform code editor.</p>
+				<div class="markdown-container">
+					<p>Graviton Editor is a cross-platform code editor made using web technologies.</p>
 					<h2>Guides</h2>
 					<LinkCard href="docs/guides/building" >
 						🤠 Building from source

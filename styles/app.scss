@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
 
 body * {
 	font-family: 'Inter', sans-serif;
@@ -20,22 +21,31 @@ h1, h2, {
 
 .markdown-container {
 	max-width: 100%;
+	* {
+		line-height: 30px;
+	}
 	li {
 		line-height: 25px;
 	}
+	h3 {
+		color: rgb(40, 40, 40);
+	}
 	h2 {
 		padding-bottom: 15px;
-		border-bottom: 1px solid rgb(140,140,140);
+		margin-top: 20px;
+		margin-bottom: 15px;
+		font-weight: 600;
 	}
 	code {
 		border-radius: 5px;
-		padding: 1px 3px;
+		padding: 1px 6px;
 		font-family: 'Roboto Mono', monospace;
 		background: #eee;
 		color: gray;
+		font-family: Inter;
 	}
 	pre code {
-		border-radius: 5px;
+		border-radius: 8px;
 		padding: 13px;
 		font-family: 'Roboto Mono', monospace;
 		background: rgb(244, 251, 244);
