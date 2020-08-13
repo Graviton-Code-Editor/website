@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 
 const BlogCard = styled.div`
 	padding: 15px;
-	width: 100%;
+	width: 250px;
 	cursor: pointer;
 	max-width: 300px;
 	margin: 10px;
@@ -12,17 +12,17 @@ const BlogCard = styled.div`
 	& * {
 		font-size: 12px;
 	}
-	& img {
-		width: 100%;
-		border-radius: 5px;
-	}
-	& h4 {
-		margin-bottom: 15px;
+	& h2 {
 		font-weight: bold;
+		font-size: 15px;
 	}
 	:hover {
 		box-shadow: 0px 2px 7px rgba(0,0,0,0.1);
 		transition: 0.15s;
+	}
+	.date{
+		color: gray;
+		font-size: 12px;
 	}
 `
 

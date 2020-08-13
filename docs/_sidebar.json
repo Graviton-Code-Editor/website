@@ -4,14 +4,24 @@
 			"label": "👋 Introduction",
 			"slug": ""
 		},{
-			"label": "🧠 Core",
-			"slug": "core"
+			"label": "🐾 User Guide",
+			"slug": "user_guide",
+			"list":[
+				{
+					"label": "🍱 Workspaces",
+					"slug": "user_guide/workspaces"
+				}
+			]
 		},{
 			"label": "🤓 Guides",
 			"slug": "guides",
 			"list":[
 				{
-					"label": "🤠 Building from source",
+				"label": "🧠 Source Code",
+				"slug": "guides/sourcecode"
+				},
+				{
+					"label": "🤠 Building manually",
 					"slug": "guides/building"
 				}
 			]

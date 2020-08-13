@@ -2,11 +2,8 @@
 title: Graviton Remake
 date: "2020-02-15"
 slug: graviton_remake
-cover: landscape.png
 description: "Graviton v2 is coming"
 ---
-
-**NOTE:** I have 0 experience on writing posts.
 
 Graviton v2 is a made from ground up editor.
 

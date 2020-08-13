@@ -1,7 +1,7 @@
 ---
-title: Building from source
+title: Guides
 slug: guides
-description: Building from source
+description: Guides
 
 ---
 

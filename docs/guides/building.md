@@ -1,7 +1,7 @@
 ---
-title: 🤠 Building from source
+title: 🤠 Building manually
 slug: guides/building
-description: Building from source
+description: Building manually
 
 ---
 

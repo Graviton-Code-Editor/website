@@ -20,8 +20,8 @@ function Blog({ posts }) {
 							<BlogCard key={post.title}>
 								<Link href={`/blog/${post.slug}`}>
 									<div>
-										<img src={post.cover}/>
-										<h4>{post.title}</h4>
+										<h2>{post.title}</h2>
+										<span className="date">{post.date}</span>
 										<p>{post.description}</p>
 									</div>
 								</Link>

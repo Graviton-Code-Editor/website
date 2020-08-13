@@ -1,8 +1,8 @@
 ---
 title: Graviton v2 summary
 slug: graviton2_changes
-cover: landscape.png
-description: "Graviton v2 summary"
+date: "2020-06-08"
+description: "Summary of Graviton v2 changes"
 ---
 
 If you don't know Graviton has been through a lot of changes lately, it has a new source made from scratch, read the [announcement](https://graviton.netlify.ml/blog/graviton_remake/remake/)

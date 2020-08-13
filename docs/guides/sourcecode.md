@@ -1,7 +1,7 @@
 ---
-title: Core
-slug: core
-description: How Graviton works internally
+title: 🧠 Source Code
+slug: guides/sourcecode
+description: Understanding the Source Code
 
 ---
 
