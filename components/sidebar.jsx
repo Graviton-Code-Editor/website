@@ -17,7 +17,7 @@ const SidebarContainer = styled.div`
 	overflow: auto;
 	& > button {
 		position: absolute;
-		top: 120px;
+		top: 123px;
 		left: 20px;
 		display: none;
 		outline: 0;

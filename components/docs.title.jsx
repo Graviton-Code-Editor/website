@@ -4,11 +4,12 @@ const DocsTitle = styled.h1`
 	padding: 20px;
 	padding-bottom: 10px;
 	margin: 10px 0px;
-	font-size: 25px;
+	font-size: 28px;
 	text-align: left;
 	font-weight: bold;
 	@media only screen and (max-width: 600px) {
-		margin-left: 80px;
+		margin-left: 23px;
+		text-align: center;
 	}
 `
 

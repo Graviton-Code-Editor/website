@@ -5,13 +5,13 @@ description: What's puffin?
 
 ---
 
-**Puffin**, is a library used to create HTML components (element), reactive objects with event emitters (state),  and CSS in JS encapsulated stylesheets (style).
+**Puffin**, is a libray to create HTML components, reactive objects, event emitters, and CSS-in-JS stylesheets.
 
 Graviton makes a heavy usage of it. For example, objects like `RunningConfig` or `StaticConfig` are Puffin States, which means, they hold reactive data and events.
 
 ## Component
 
-Components are used to create HTML-like components which you can then reutilize as many times you want.
+Components are used to create HTML-like components which you can then reuse as many times you want.
 
 Here is an example of creating a `<div>` with `Hello World` as text and a click event listener. Then it's rendered into the document.body.
 

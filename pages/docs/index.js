@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import DocsLayout from '../../components/docs.layout.jsx'
-import Title from '../../components/title.jsx'
+import DocsTitle from '../../components/docs.title.jsx'
 import Navbar from '../../components/navbar.jsx'
 import Sidebar from '../../components/sidebar.jsx'
 import LinkCard from '../../components/link_card.jsx'
@@ -14,12 +14,12 @@ const Docs = () => {
 			<DocsLayout>
 				<Sidebar/>
 				<div className="container">
-					<Title>Documentation (WIP)</Title>
+					<DocsTitle>Documentation (WIP)</DocsTitle>
 					<div className="markdown-container">
 					<p>Graviton Editor is a cross-platform code editor made using web technologies.</p>
 					<h2>Guides</h2>
 					<LinkCard href="docs/dev/guides/building" >
-						🤠 Building from source
+						🤠 Building manually
 					</LinkCard>
 					<h2>Fundamentals</h2>
 					<LinkCard href="docs/dev/fundamentals/graviton2" >

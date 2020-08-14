@@ -9,7 +9,7 @@ The **manifest** is a file used to identify each plugin. It contains the plugin'
 
 The manifest file's name is `package.json`, same as NPM packages.
 
-Essential properties in the manifest:
+Essential properties in the manifest (these are used across all types of plugins):
 
 ```json
 {

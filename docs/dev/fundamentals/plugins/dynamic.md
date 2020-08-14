@@ -29,12 +29,14 @@ Example supossing we have a `main.js` file in the same root as the package.json:
 Entry function is the function executed when Graviton loads the file, it contains the whole exposed API for plugins. 
 So, it must be exported.
 
-Example of a file:
+Example:
 
-```js
+```ts
 function entry(API){
-    //Here you can make use of the API
+	//Here you can make use of the API
 }
 
-exports.entry = entry
+module.exports = {
+	entry
+}
 ```

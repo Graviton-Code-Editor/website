@@ -7,7 +7,7 @@ description: Iconpacks
 
 Iconpacks consist on a set of different types of rules.
 
-package.json's properties needed for themes:
+Manifest's properties needed for themes:
 
 * icons: icons matches
 * type: plugin's type, in this case, 'iconpack'
