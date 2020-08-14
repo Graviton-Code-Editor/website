@@ -1,8 +1,11 @@
 import styled from '@emotion/styled'
 
 const DocsTitle = styled.h1`
-	margin: 25px 15px;
-	text-align: center;
+	padding: 20px;
+	padding-bottom: 10px;
+	margin: 10px 0px;
+	font-size: 25px;
+	text-align: left;
 	font-weight: bold;
 	@media only screen and (max-width: 600px) {
 		margin-left: 80px;

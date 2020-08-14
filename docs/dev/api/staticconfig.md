@@ -1,6 +1,6 @@
 ---
 title: StaticConfig
-slug: api/staticconfig
+slug: dev/api/staticconfig
 description: Static Configuration
 
 ---

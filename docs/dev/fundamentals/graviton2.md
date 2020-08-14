@@ -1,6 +1,6 @@
 ---
 title: .graviton2
-slug: fundamentals/graviton2
+slug: dev/fundamentals/graviton2
 description: Explanation of .graviton2
 
 ---

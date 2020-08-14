@@ -1,6 +1,6 @@
 ---
 title: How plugins work?
-slug: fundamentals/plugins
+slug: dev/fundamentals/plugins
 description: How plugins work?
 
 ---

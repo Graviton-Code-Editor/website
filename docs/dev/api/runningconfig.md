@@ -1,6 +1,6 @@
 ---
-title: RunningConfig
-slug: api/runningconfig
+title: 🏃‍♂️ RunningConfig
+slug: dev/api/runningconfig
 description: Runtime Configuration
 
 ---

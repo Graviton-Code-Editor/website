@@ -1,6 +1,6 @@
 ---
 title: Dynamic plugins
-slug: fundamentals/plugins/dynamic
+slug: dev/fundamentals/plugins/dynamic
 description: Dynamic plugins
 
 ---

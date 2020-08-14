@@ -1,6 +1,6 @@
 ---
 title: 🎭 Iconpacks
-slug: fundamentals/plugins/iconpacks
+slug: dev/fundamentals/plugins/iconpacks
 description: Iconpacks
 
 ---

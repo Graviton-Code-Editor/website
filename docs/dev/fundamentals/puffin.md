@@ -1,6 +1,6 @@
 ---
 title: 🐧 Puffin
-slug: fundamentals/puffin
+slug: dev/fundamentals/puffin
 description: What's puffin?
 
 ---

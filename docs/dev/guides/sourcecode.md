@@ -1,6 +1,6 @@
 ---
 title: 🧠 Source Code
-slug: guides/sourcecode
+slug: dev/guides/sourcecode
 description: Understanding the Source Code
 
 ---

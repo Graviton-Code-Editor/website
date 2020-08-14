@@ -12,7 +12,7 @@ const Docs = () => {
 			<Title>Documentation (WIP)</Title>
 			<DocsLayout>
 				<Sidebar/>
-				<div class="markdown-container">
+				<div className="markdown-container">
 					<p>Graviton Editor is a cross-platform code editor made using web technologies.</p>
 					<h2>Guides</h2>
 					<LinkCard href="docs/guides/building" >

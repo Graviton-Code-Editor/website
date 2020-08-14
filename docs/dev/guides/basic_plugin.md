@@ -1,6 +1,6 @@
 ---
 title: 🧵 Basic plugin
-slug: tutorials/basic_plugin
+slug: dev/guides/basic_plugin
 description: How to make a basic plugin
 
 ---

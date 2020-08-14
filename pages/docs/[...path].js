@@ -16,12 +16,16 @@ const Post = ({ content, title }) => {
 	const { pathname, query } = useRouter()
 	const { path } = query
 	return (
-		<div style={{height: '100%'}}>
-			<Navbar/>
-			<DocsTitle>{title}</DocsTitle>
+		<div>
+			<div style={{height: 100}}>
+				<Navbar/>
+			</div>
 			<DocsLayout>
 				<Sidebar/>
-				<div className="markdown-container" dangerouslySetInnerHTML={{ __html: content }}/>
+				<div className="container">
+					<DocsTitle>{title}</DocsTitle>
+					<div className="markdown-container" dangerouslySetInnerHTML={{ __html: content }}/>
+				</div>
 			</DocsLayout>
 		</div>
 	)

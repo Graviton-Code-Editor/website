@@ -1,6 +1,6 @@
 ---
 title: 🤠 Building manually
-slug: guides/building
+slug: dev/guides/building
 description: Building manually
 
 ---

@@ -1,6 +1,6 @@
 ---
 title: Themes
-slug: fundamentals/plugins/themes
+slug: dev/fundamentals/plugins/themes
 description: Themes
 
 ---

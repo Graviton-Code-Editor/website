@@ -1,6 +1,6 @@
 ---
 title: Dialog
-slug: api/dialog
+slug: dev/api/dialog
 description: Dialog
 
 ---
