@@ -8,23 +8,27 @@ import LinkCard from '../../components/link_card.jsx'
 const Docs = () => {
 	return(
 		<div style={{height: '100%'}}>
-			<Navbar/>
-			<Title>Documentation (WIP)</Title>
+			<div style={{height: 100}}>
+				<Navbar/>
+			</div>
 			<DocsLayout>
 				<Sidebar/>
-				<div className="markdown-container">
+				<div className="container">
+					<Title>Documentation (WIP)</Title>
+					<div className="markdown-container">
 					<p>Graviton Editor is a cross-platform code editor made using web technologies.</p>
 					<h2>Guides</h2>
-					<LinkCard href="docs/guides/building" >
+					<LinkCard href="docs/dev/guides/building" >
 						🤠 Building from source
 					</LinkCard>
 					<h2>Fundamentals</h2>
-					<LinkCard href="docs/fundamentals/graviton2" >
+					<LinkCard href="docs/dev/fundamentals/graviton2" >
 						🧰 .graviton2
 					</LinkCard>
-					<LinkCard href="docs/fundamentals/plugins" >
-						📦 Plugins
+					<LinkCard href="docs/dev/fundamentals/puffin" >
+						🐧 Puffin
 					</LinkCard>
+				</div>
 				</div>
 			</DocsLayout>
 		</div>
