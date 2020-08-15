@@ -1,6 +1,5 @@
 import fs from 'fs'
 import matter from 'gray-matter'
-import Markdown from 'markdown-to-jsx';
 import Navbar from '../../components/navbar.jsx'
 import Layout from '../../components/layout.jsx'
 import BlogLayout from '../../components/blog.layout.jsx'
