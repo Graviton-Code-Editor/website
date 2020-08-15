@@ -21,7 +21,7 @@ function Home() {
 						</a>
 					</div>
 					<div className="image">
-						<img src="screenshot.png?lqip"/>
+						<img alt="Gravitonn Screenshot" src="screenshot.png?lqip"/>
 					</div>
 					<div className="footer">
 						<div>

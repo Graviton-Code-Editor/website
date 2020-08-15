@@ -16,7 +16,7 @@ function Post({ title, content }) {
 			<Title>{title}</Title>
 			<BlogLayout>
 				<div>
-					<div class="markdown-container" dangerouslySetInnerHTML={{ __html: content}}/>
+					<div className="markdown-container" dangerouslySetInnerHTML={{ __html: content}}/>
 				</div>
 			</BlogLayout>
 			

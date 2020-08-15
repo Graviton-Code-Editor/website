@@ -3,6 +3,7 @@ const optimizedImages = require('next-optimized-images');
 
 module.exports = withPlugins([
 	[optimizedImages,{
+		handleImages: ['jpeg', 'png', 'svg', 'webp', 'gif', 'ico'],
 		optimizeImagesInDev: true
 	}]
 ],{

@@ -58,7 +58,7 @@ function Navbar() {
 			<div>
 				<div>
 					<Link href="/">
-						<img src="/logo.png"/>
+						<img alt="Graviton Logo" src="/logo.png"/>
 					</Link>
 				</div>
 				<Link href="/">
