@@ -4,6 +4,7 @@ import Title from '../components/title.jsx'
 import Footer from '../components/footer.jsx'
 import Button from '../components/button.jsx'
 import Head from 'next/head'
+import GravitonScreenshot from '../public/screenshot.png'
 
 function Home() {
 	return (
@@ -21,7 +22,7 @@ function Home() {
 						</a>
 					</div>
 					<div className="image">
-						<img alt="Gravitonn Screenshot" src="screenshot.png?lqip"/>
+						<img alt="Gravitonn Screenshot" src={GravitonScreenshot}/>
 					</div>
 					<div className="footer">
 						<div>

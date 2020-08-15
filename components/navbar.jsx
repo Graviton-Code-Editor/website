@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import styled from '@emotion/styled'
 import { useRouter } from "next/router";
+import Logo from '../public/logo.png'
 
 const NavBarContainer = styled.div`
 	display: flex;
@@ -58,7 +59,7 @@ function Navbar() {
 			<div>
 				<div>
 					<Link href="/">
-						<img alt="Graviton Logo" src="/logo.png"/>
+						<img alt="Graviton Logo" src={Logo}/>
 					</Link>
 				</div>
 				<Link href="/">
