@@ -42,6 +42,7 @@ const NavBarContainer = styled.div`
 			& > img {
 				width: 50%;
 				max-width: 140px;
+				cursor: pointer;
 			}
 		}
 	}

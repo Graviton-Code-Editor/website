@@ -6,6 +6,11 @@ const BlogList = styled.div`
 	& > div {
 		min-width: 20%;
 		max-width: 100%;
+		@media only screen and (max-width: 600px) {
+			& > div {
+				width: 100%;
+			}
+		}
 	}
 `
 

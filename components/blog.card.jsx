@@ -6,7 +6,7 @@ const BlogCard = styled.div`
 	cursor: pointer;
 	max-width: 300px;
 	margin: 10px;
-	border-radius: 3px;
+	border-radius: 5px;
 	transition: 0.25s;
 	display: inline-block;
 	& * {
@@ -17,8 +17,9 @@ const BlogCard = styled.div`
 		font-size: 15px;
 	}
 	:hover {
-		box-shadow: 0px 2px 7px rgba(0,0,0,0.1);
-		transition: 0.15s;
+		background: rgb(252, 252, 252);
+		box-shadow: 0px 1px 7px rgba(0,0,0, 0.17);
+		transition: 0.12s;
 	}
 	.date{
 		color: gray;
