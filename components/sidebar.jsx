@@ -44,6 +44,15 @@ const SidebarContainer = styled.div`
 		padding: 20px;
 		border-radius: 8px;
 		overflow: auto;
+		& input {
+			max-width: 115px;
+			padding: 5px;
+			border: 2px solid rgb(200, 200, 200);
+			border-radius: 5px;
+			margin: 1px;
+			margin-bottom: 4px;
+			font-size: 12px;
+		}
 		& div.sideButton{
 			margin-left: 15px;
 			height: auto;
@@ -127,27 +136,41 @@ const SidebarContainer = styled.div`
 `
 
 
-const getSideButton = (btn) => {
+const getSideButton = (btn, filter) => {
 	const router = useRouter();
 	const slug = btn.slug !== '' ? `/docs/${btn.slug}` : '/docs'
 	const [displayed, display] = useState(router.asPath.includes(slug))
+	const [active, setActive] = useState(router.asPath ===  slug ? "true" : "")
+	filter.results.push({
+		slug,
+		name: btn.label,
+		action(p){
+			if(p.match(slug)) {
+				display(true)
+				if(p === slug) setActive('true')
+			}else{
+				display(false)
+				if(router.asPath !==  slug) setActive('false')
+			}
+		}
+	})
 	
 	return (
 		<div key={btn.slug} className="sideButton" >
 			{btn.list ? (
-				<button className="sidebtn" onClick={ () => display(!displayed)} active={router.asPath ===  slug ? "true" : ""}> 
+				<button className="sidebtn" onClick={ () => display(!displayed)} active={active}> 
 					{btn.label} 
 					<img src="/arrow.svg" className={displayed?'sidebtn displayed':'sidebtn hidden'}/>
 				</button>
 			): (
 				<Link href={`/docs/${btn.slug}`} >
-					<button onClick={ () => display(!displayed)} active={router.asPath ===  slug ? "true" : ""}>
+					<button onClick={ () => display(!displayed)} active={active}>
 						{btn.label} 
 					</button>
 				</Link> 
 			)}
 			<div style={displayed ? {display: 'block'}:{display: 'none'}}>
-			{btn.list && btn.list.map(btn => getSideButton(btn))}
+			{btn.list && btn.list.map(btn => getSideButton(btn, filter))}
 			</div>
 			
 		</div>
@@ -171,6 +194,22 @@ function Sidebar() {
 		open(!opened)
 	}
 	
+	const filter = {
+		results: []
+	}
+	
+	function onChange(e){
+		const slugFilter = e.target.value
+		const res = filter.results.find(({ name }) => {
+			return name.toLowerCase().includes(slugFilter.toLowerCase())
+		})
+		if(res){
+			filter.results.forEach(({ action }) => {
+				action(res.slug)
+			})
+		}
+	}
+	
 	return (
 		<SidebarContainer>
 			<button onClick={click}>
@@ -179,10 +218,13 @@ function Sidebar() {
 				<rect></rect>
 			</button>
 			<div opened={opened.toString()}>
-				{sidebar.map(btn => getSideButton(btn))}
+				<input placeHolder="Search" className="sidebtn" onChange={onChange}></input>
+				{sidebar.map(btn => getSideButton(btn, filter))}
 			</div>
 		</SidebarContainer>
 	)
 }
+
+
 
 export default Sidebar
