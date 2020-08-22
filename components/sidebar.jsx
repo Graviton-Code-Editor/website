@@ -218,7 +218,7 @@ function Sidebar() {
 				<rect></rect>
 			</button>
 			<div opened={opened.toString()}>
-				<input placeHolder="Search" className="sidebtn" onChange={onChange}></input>
+				<input placeholder="Search" className="sidebtn" onChange={onChange}></input>
 				{sidebar.map(btn => getSideButton(btn, filter))}
 			</div>
 		</SidebarContainer>

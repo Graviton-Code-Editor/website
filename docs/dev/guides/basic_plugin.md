@@ -1,5 +1,5 @@
 ---
-title: 🧵 Basic plugin
+title: 🧵 Basic dynamic plugin
 slug: dev/guides/basic_plugin
 description: How to make a basic plugin
 

@@ -81,7 +81,7 @@
 							"slug": "dev/guides/building"
 						},
 						{
-							"label": "🧵 Basic plugin",
+							"label": "🧵 Basic dynamic plugin",
 							"slug": "dev/guides/basic_plugin"
 						}
 					]

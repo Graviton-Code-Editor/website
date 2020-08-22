@@ -7,12 +7,12 @@ description: Iconpacks
 
 Iconpacks consist on a set of different types of rules.
 
-Manifest's properties needed for themes:
+Manifest's properties needed for iconpacks:
 
 * icons: icons matches
 * type: plugin's type, in this case, 'iconpack'
 
-Rules are stored in the plugin's package.json under property `icons`.
+Rules are stored in the Manifest under property `icons`.
 
 Example:
 
@@ -33,6 +33,15 @@ Example:
 }
 ```
 
+Types:
+* [filename](filename)
+* fileformat
+* filetype
+* foldername
+* basicfile
+* basicfolder
+* basicimage
+
 ## filename
 Match by file's name.
 
@@ -48,6 +57,35 @@ Example, considering we have a file named `package.json`:
 	}
 }
 ```
+
+### fileformat
+Match by file's format.
+
+Example, considering we have a file named `cool.ts`:
+```json
+{
+	...
+	"icons":{
+		"ts": {
+			"icon": "./icons/typescript_icon.svg",
+			"type": "fileformat"
+		}
+	}
+}
+```
+
+**Note**: fileformat is the default type, so you can just not write it, example:
+```json
+{
+	...
+	"icons":{
+		"ts": {
+			"icon": "./icons/typescript_icon.svg"
+		}
+	}
+}
+```
+
 
 ## filetype
 Match by file's type.

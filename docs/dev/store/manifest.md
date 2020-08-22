@@ -14,9 +14,9 @@ It must contain all these properties:
 - repository: Source code remote repository
 - releases: This is an array which contains all the releases of your plugin
   - version: Releases's version
-	- minTarget: Minium Graviton's version
-	- target: This is a regex
-	- url: Release's download link ( I suggest using GitHub built-in Releases )
+  - minTarget: Minium Graviton's version
+  - target: This is a regex to more specific version matching
+  - url: See [Release's URL](manifest/#release_url)
 
 
 Example:
@@ -29,7 +29,19 @@ description: Basic Cargo support.
 repository: https://github.com/marc2332/cargo-graviton
 releases:
   - version: 1.0.0
-    minTarget: 2.0.84
+    minTarget: 2.0.92
     target: 2.0
     url: https://github.com/marc2332/cargo-graviton/releases/download/1.0.0/Cargo.zip
 ```
+
+<div id="release_url">
+	<h2>Release's URL</h2>
+	<ul>
+		<li>
+			It must be in a ZIP file
+		</li>
+		<li>
+			The Manifest file (aka package.json) must be at the top root 
+		</li>
+	</ul>
+</div>
