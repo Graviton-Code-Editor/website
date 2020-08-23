@@ -127,6 +127,7 @@ There are some events not listed here since they are used in Graviton internally
 ### Tabs
 
 Events related to tabs:
+* aTabHasBeenCreated
 * aTabHasBeenSaved
 * aTabHasBeenFocused
 * aTabHasBeenUnfocused
