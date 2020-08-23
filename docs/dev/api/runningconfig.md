@@ -7,6 +7,12 @@ description: Runtime Configuration
 
 RunningConfig is a Puffin State which holds configuration, data and events needed on runtime. 
 
+**Contents**:
+* [Data](#data)
+* [Events](#events)
+
+<div id="data"/>
+
 ## Data
 
 You can access it's data via the `data` prop.
@@ -104,6 +110,8 @@ Contains the project services.
    * `descripion: -> string`: Short description 
    * `onExecuted: -> function`: Function executed when the project service is used
    
+<div id="events"/>
+
 ## Events
 
 Usage:
@@ -114,25 +122,80 @@ RunningConfig.on('eventName', () => {
 })
 ```
 
-List of useful events:
+There are some events not listed here since they are used in Graviton internally.
+
+### Tabs
+
+Events related to tabs:
 * aTabHasBeenSaved
 * aTabHasBeenFocused
 * aTabHasBeenUnfocused
 * aTabHasBeenClosed
+
+Arguments interface:
+```ts
+interface TabEventArgs {
+	tabElement: HTMLElement,
+	directory: string,
+	client: EditorClient,
+	instance: any,
+	parentFolder: string,
+	projectPath: string,
+	isEditor: boolean
+}
+```
+
+### Filesystem
+
+Events related to the Filesystem:
+
 * aFileHasBeenCreated
-* aFolderHasBeenCreated
 * aFileHasBeenRemoved
+
+Arguments interface:
+```ts
+interface FileCreatedArgs {
+	parentFolder: string,
+	filePath: string
+}
+```
+
+* aFolderHasBeenCreated
 * aFolderHasBeenRemoved
+
+Arguments interface:
+```ts
+interface FileCreatedArgs {
+	parentFolder: string,
+	folderPath: string
+}
+```
+
 * gitStatusUpdated
+Arguments interface:
+```ts
+interface FileCreatedArgs {
+	gitChanges: any,
+	parentFolder: string,
+	branch: string,
+	anyChanges: boolean
+}
+```
 
-There are some events not listed here since they are used in Graviton internally.
+> Note: These will only be triggered if the files watcher is enabled.
 
-There are also commands, which are events you can emit to do certain things:
+### Commands
+
+These are events, you can trigger to do certain things.
+
 * command.saveCurrentFile
 * command.newPanel
 * command.closeCurrentTab
 * command.closeCurrentPanel
 * command.openCommandPrompt
 
-And some misc actions:
+
+### Misc
+
+Misc events:
 * registerLanguageServer

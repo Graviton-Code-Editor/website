@@ -1,5 +1,5 @@
 ---
-title: Dialog
+title: 👓 Dialog
 slug: dev/api/dialog
 description: Dialog
 

@@ -101,6 +101,10 @@
 						{
 							"label": "👓 Dialog",
 							"slug": "dev/api/dialog"
+						},
+						{
+							"label": "🎴 Window",
+							"slug": "dev/api/window"
 						}
 					]
 				}
