@@ -13,6 +13,8 @@ Fundamentals:
 
 ## 🎉 Publishing a plugin
 
+> **Important**: The plugin must have a decent quality to be published. 
+
 * Fork and clone https://github.com/Graviton-Code-Editor/store-api/
 * Create a folder under store-api/data with your plugin's name
 * Create the Manifest (`manifest.yaml`) inside your plugin's folder.
