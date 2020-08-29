@@ -6,12 +6,15 @@ import Layout from '../../components/layout.jsx'
 import BlogList from '../../components/blog.list.jsx'
 import BlogCard from '../../components/blog.card.jsx'
 import Title from '../../components/title.jsx'
+import Head from 'next/head'
 
 function Blog({ posts }) {
 	return (
 		<div style={{height: '100%'}}>
 			<Navbar/>
-			<Title>Blog</Title>
+			<Head>
+				<title>Blog</title>
+			</Head>
 			<BlogList>
 				<div>
 					{posts.map(post => {

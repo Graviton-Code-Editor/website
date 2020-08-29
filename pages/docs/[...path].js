@@ -11,12 +11,16 @@ import unified from 'unified'
 import markdown from 'remark-parse'
 import highlight from 'remark-highlight.js'
 import html from 'remark-html'
+import Head from 'next/head'
 
 const Post = ({ content, title }) => {
 	const { pathname, query } = useRouter()
 	const { path } = query
 	return (
 		<div>
+			<Head>
+				<title>Docs | {title}</title>
+			</Head>
 			<div style={{height: 100}}>
 				<Navbar/>
 			</div>

@@ -4,9 +4,9 @@ const BlogCard = styled.div`
 	padding: 15px;
 	width: 250px;
 	cursor: pointer;
-	max-width: 300px;
+	max-width: auto;
 	margin: 10px;
-	border-radius: 5px;
+	border-radius: 10px;
 	transition: 0.25s;
 	display: inline-block;
 	& * {
@@ -24,6 +24,9 @@ const BlogCard = styled.div`
 	.date{
 		color: gray;
 		font-size: 12px;
+	}
+	@media only screen and (max-width: 600px) {
+		margin: 0 auto;
 	}
 `
 

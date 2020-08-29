@@ -33,6 +33,16 @@
 					]
 				},
 				{
+					"label": "🧵 SDK",
+					"slug": "dev/sdk",
+					"list":[
+						{
+							"label": "🧾 About",
+							"slug": "dev/sdk/about"
+						}
+					]
+				},
+				{
 					"label": "🚦 Fundamentals",
 					"slug": "dev/fundamentals",
 					"list":[

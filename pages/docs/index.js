@@ -4,10 +4,14 @@ import DocsTitle from '../../components/docs.title.jsx'
 import Navbar from '../../components/navbar.jsx'
 import Sidebar from '../../components/sidebar.jsx'
 import LinkCard from '../../components/link_card.jsx'
+import Head from 'next/head'
 
 const Docs = () => {
 	return(
 		<div style={{height: '100%'}}>
+			<Head>
+				<title>Documentation</title>
+			</Head>
 			<div style={{height: 100}}>
 				<Navbar/>
 			</div>

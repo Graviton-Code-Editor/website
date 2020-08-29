@@ -30,6 +30,7 @@ const NavBarContainer = styled.div`
 			color: rgb(75,75,75);
 			font-size: 16px;
 			font-weight: 500;
+			outline: 0;
 			&[active="true"]{
 				color: black;
 			}

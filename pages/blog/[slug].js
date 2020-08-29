@@ -8,10 +8,14 @@ import unified from 'unified'
 import markdown from 'remark-parse'
 import highlight from 'remark-highlight.js'
 import html from 'remark-html'
+import Head from 'next/head'
 
 function Post({ title, content }) {
 	return (
 		<Layout>
+			<Head>
+				<title>Blog | {title}</title>
+			</Head>
 			<Navbar/>
 			<Title>{title}</Title>
 			<BlogLayout>

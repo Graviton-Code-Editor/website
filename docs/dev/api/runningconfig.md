@@ -146,6 +146,20 @@ interface TabEventArgs {
 }
 ```
 
+Since `aTabHasBeenFocused` is also emitted when the tab is created it has an extra property, so it's arguments interface is:
+```ts
+interface TabEventArgs {
+	tabElement: HTMLElement,
+	directory: string,
+	client: EditorClient,
+	instance: any,
+	parentFolder: string,
+	projectPath: string,
+	isEditor: boolean,
+	justCreated: boolean
+}
+```
+
 ### Filesystem
 
 Events related to the Filesystem:

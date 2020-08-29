@@ -17,7 +17,7 @@ Or directly in menu "File" > "Workspaces" > "Open workspaces".
 
 
 ## Creating workspaces
-There are various ways of creating a workspace.
+There are two methods to create a workspace.
 
 ### Method 1 · From Graviton
 

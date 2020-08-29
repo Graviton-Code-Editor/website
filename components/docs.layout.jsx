@@ -16,6 +16,7 @@ const DocsLayout = styled.div`
 		}
 		& .container {
 			padding: 0 20px;
+			width: calc(100% - 250px);
 		}
 		& .markdown-container {
 			padding: 0px 20px;
