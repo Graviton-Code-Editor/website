@@ -15,6 +15,7 @@ function Blog({ posts }) {
 			<Head>
 				<title>Blog</title>
 			</Head>
+			<Title>Blog</Title>
 			<BlogList>
 				<div>
 					{posts.map(post => {
