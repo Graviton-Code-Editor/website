@@ -169,7 +169,7 @@ Events related to the Filesystem:
 
 Arguments interface:
 ```ts
-interface FileCreatedArgs {
+interface FileEventsArgs {
 	parentFolder: string,
 	filePath: string
 }
@@ -180,7 +180,7 @@ interface FileCreatedArgs {
 
 Arguments interface:
 ```ts
-interface FileCreatedArgs {
+interface FolderEventsArgs {
 	parentFolder: string,
 	folderPath: string
 }
@@ -189,7 +189,7 @@ interface FileCreatedArgs {
 * gitStatusUpdated
 Arguments interface:
 ```ts
-interface FileCreatedArgs {
+interface gitStatusUpdatedArgs {
 	gitChanges: any,
 	parentFolder: string,
 	branch: string,
