@@ -33,9 +33,8 @@ Arguments:
    
 #### Manifest
 
-The Manifest file (aka package.json) needs some extra properties when using Graviton's SDK:
+The Manifest file (aka package.json) needs an extra property when using Graviton's SDK:
 
-* mainDev: indicates the path of the built entry file when using the Mode `dev`.
 * mainSrc: indicates the path of the source entry file.
 
 Example:
@@ -47,7 +46,6 @@ Example:
 	"id": "example-plugin",
 	"main": "main.js",
 	"mainSrc": "src/main.js",
-	"mainDev": "dist/main.js",
 	"author": "SuperMan",
 	"scripts": {
 		"watch": "gvsdk --entry package.json --target plugin --mode dev",
