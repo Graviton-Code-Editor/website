@@ -119,6 +119,10 @@
 						{
 							"label": "🔍 Explorer",
 							"slug": "dev/api/explorer"
+						},
+						{
+							"label": "🎹 Environment Inspectors",
+							"slug": "dev/api/env_inspectors"
 						}
 					]
 				}
