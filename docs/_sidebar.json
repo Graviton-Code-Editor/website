@@ -115,6 +115,10 @@
 						{
 							"label": "🎴 Window",
 							"slug": "dev/api/window"
+						},
+						{
+							"label": "🔍 Explorer",
+							"slug": "dev/api/explorer"
 						}
 					]
 				}

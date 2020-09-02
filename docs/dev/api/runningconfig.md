@@ -201,7 +201,7 @@ interface gitStatusUpdatedArgs {
 
 ### Commands
 
-These are events, you can trigger to do certain things.
+These are events, you can trigger to do certain things, they are self-explained.
 
 * command.saveCurrentFile
 * command.newPanel
