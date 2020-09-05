@@ -25,14 +25,27 @@ const LinkCard = styled.div`
 	}
 `
 
-const a = ({ children, href }) =>  {
-	return (
-		<Link href={href}>
-			<LinkCard>
-				<span>-></span>{children}
-			</LinkCard>
-		</Link>
-	)
+const a = ({ children, is = 'internal', href }) =>  {
+	if(is == 'external'){
+		return (
+			<a style={{
+					color: 'black'
+				}} target="_blank" href={href}>
+				<LinkCard>
+					<span>-></span>{children}
+				</LinkCard>
+			</a>
+		)
+	}else{
+		return (
+			<Link href={href}>
+				<LinkCard>
+					<span>-></span>{children}
+				</LinkCard>
+			</Link>
+		)
+	}
+	
 }
 
 export default a

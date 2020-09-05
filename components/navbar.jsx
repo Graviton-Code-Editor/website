@@ -72,6 +72,9 @@ function Navbar() {
 				<Link href="/docs" >
 					<a active={router.asPath.split('/')[1] === 'docs' ? 'true' : ''}>Docs</a>
 				</Link>
+				<Link href="/about" >
+					<a active={router.asPath.split('/')[1] === 'about' ? 'true' : ''}>About</a>
+				</Link>
 			</div>
 		</NavBarContainer>
 	)
