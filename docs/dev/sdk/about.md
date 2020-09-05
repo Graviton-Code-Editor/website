@@ -22,7 +22,7 @@ You can use it as CLI or access it's internal API  for custom scripts.
 #### CLI
 
 Arguments: 
-* --entry: indicates where the package.json of the plugin is stored
+* --project: indicates where the plugin ins stored (generally in the same directory, `./`)
 * --target: indicates what type of plugin you want to build
    - plugin: JavaScript (aka dynamic) plugin
    - iconpack
@@ -48,8 +48,8 @@ Example:
 	"mainSrc": "src/main.js",
 	"author": "SuperMan",
 	"scripts": {
-		"watch": "gvsdk --entry package.json --target plugin --mode dev",
-		"build": "gvsdk --entry package.json --target plugin --mode release"
+		"watch": "gvsdk --project . --target plugin --mode dev",
+		"build": "gvsdk --project . --target plugin --mode release"
 	}
 }
 ```
