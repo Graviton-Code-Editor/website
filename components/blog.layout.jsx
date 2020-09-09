@@ -8,7 +8,10 @@ const BlogLayout = styled.div`
 	& > div {
 		min-width: 15%;
 		width: auto;
-		max-width: 90%;
+		max-width: 50%;
+		@media only screen and (max-width: 600px) {
+			max-width: 95%;
+		}
 	}
 `
 

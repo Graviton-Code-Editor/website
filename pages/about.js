@@ -55,7 +55,7 @@ function About() {
 							</LinkCard>
 						</li>
 					</ul>
-					<p>And many other plugins!</p>
+					<p>And many other!</p>
 				</div>
 			</div>
 		</HomeLayout>

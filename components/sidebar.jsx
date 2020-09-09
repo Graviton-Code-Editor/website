@@ -136,10 +136,10 @@ const SidebarContainer = styled.div`
 `
 
 
-const getSideButton = (btn, filter) => {
+const getSideButton = (btn, filter, inRoot) => {
 	const router = useRouter();
 	const slug = btn.slug !== '' ? `/docs/${btn.slug}` : '/docs'
-	const [displayed, display] = useState(router.asPath.includes(slug))
+	const [displayed, display] = useState(router.asPath.includes(slug) || inRoot)
 	const [active, setActive] = useState(router.asPath ===  slug ? "true" : "")
 	filter.results.push({
 		slug,
@@ -170,7 +170,7 @@ const getSideButton = (btn, filter) => {
 				</Link> 
 			)}
 			<div style={displayed ? {display: 'block'}:{display: 'none'}}>
-			{btn.list && btn.list.map(btn => getSideButton(btn, filter))}
+			{btn.list && btn.list.map(btn => getSideButton(btn, filter, false))}
 			</div>
 			
 		</div>
@@ -219,7 +219,7 @@ function Sidebar() {
 			</button>
 			<div opened={opened.toString()}>
 				<input placeholder="Search" className="sidebtn" onChange={onChange}></input>
-				{sidebar.map(btn => getSideButton(btn, filter))}
+				{sidebar.map(btn => getSideButton(btn, filter, true))}
 			</div>
 		</SidebarContainer>
 	)
