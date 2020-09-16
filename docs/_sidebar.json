@@ -19,6 +19,10 @@
 			"slug": "dev",
 			"list":[
 				{
+					"label": "👋🏻 Getting Started",
+					"slug": "dev/starting"
+				},
+				{
 					"label": "🚦 Fundamentals",
 					"slug": "dev/fundamentals",
 					"list":[

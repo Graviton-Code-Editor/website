@@ -20,19 +20,22 @@ const Docs = () => {
 				<div className="container">
 					<DocsTitle>Documentation (WIP)</DocsTitle>
 					<div className="markdown-container">
-					<p>Graviton Editor is a cross-platform code editor made using web technologies.</p>
-					<h2>Guides</h2>
-					<LinkCard href="docs/dev/guides/building" >
-						🤠 Building manually
-					</LinkCard>
-					<h2>Fundamentals</h2>
-					<LinkCard href="docs/dev/fundamentals/graviton2" >
-						🧰 .graviton2
-					</LinkCard>
-					<LinkCard href="docs/dev/fundamentals/puffin" >
-						🐧 Puffin
-					</LinkCard>
-				</div>
+						<p>Graviton Editor is a cross-platform code editor made using web technologies.</p>
+						<h2>Guides</h2>
+						<LinkCard href="docs/dev/guides/building" >
+							👋🏻 Getting Started
+						</LinkCard>
+						<LinkCard href="docs/dev/guides/building" >
+							🤠 Building manually
+						</LinkCard>
+						<h2>Fundamentals</h2>
+						<LinkCard href="docs/dev/fundamentals/graviton2" >
+							🧰 .graviton2
+						</LinkCard>
+						<LinkCard href="docs/dev/fundamentals/puffin" >
+							🐧 Puffin
+						</LinkCard>
+					</div>
 				</div>
 			</DocsLayout>
 		</div>
