@@ -8,12 +8,12 @@ import GravitonScreenshot from '../public/screenshot.png'
 
 function Home() {
 	return (
-		<HomeLayout>
+		<div style={{height: '100%'}}>
 			<Head>
 				<title>Graviton Editor</title>
 			</Head>
 			<Navbar/>
-			<div>
+			<HomeLayout>
 				<div className="container">
 					<div className="top-text"> 
 						<p>A <b>modern</b> code editor.</p>
@@ -42,8 +42,8 @@ function Home() {
 						<Footer/>
 					</div>
 				</div>
-			</div>
-		</HomeLayout>
+			</HomeLayout>
+		</div>
 	)
 }
 

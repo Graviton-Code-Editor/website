@@ -5,12 +5,12 @@ import LinkCard from '../components/link_card.jsx'
 
 function About() {
 	return (
-		<HomeLayout>
+		<div style={{height: '100%'}}>
 			<Head>
 				<title>Graviton Editor</title>
 			</Head>
 			<Navbar/>
-			<div>
+			<HomeLayout>
 				<div style={{padding: 15}}>
 					<h1>About</h1>
 					<p>The <b>Graviton Project</b> is not just a editor. See projects related to it:</p>
@@ -57,8 +57,8 @@ function About() {
 					</ul>
 					<p>And many other!</p>
 				</div>
-			</div>
-		</HomeLayout>
+			</HomeLayout>
+		</div>
 	)
 }
 
