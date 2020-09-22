@@ -95,6 +95,14 @@
 						{
 							"label": "🎹 Environment Inspectors",
 							"slug": "dev/api/env_inspectors"
+						},
+						{
+							"label": "Explorer Provider",
+							"slug": "dev/api/explorer_provider"
+						},
+						{
+							"label": "Editor Client",
+							"slug": "dev/api/editor_client"
 						}
 					]
 				},
