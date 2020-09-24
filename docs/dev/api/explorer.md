@@ -36,36 +36,38 @@ interface ItemHooks {
 Example:
 
 ```ts
-const myExplorerComponent = new Explorer({
-	items: [
-		{
-			label: 'Item 1',
-			icon:'graviton_icon',
-			items: [
-				{
-					label: 'Subitem 1'
+function entry({ Explorer }){
+	const myExplorerComponent = new Explorer({
+		items: [
+			{
+				label: 'Item 1',
+				icon:'graviton_icon',
+				items: [
+					{
+						label: 'Subitem 1'
+					}
+				],
+				decorator:{
+					label: 'wow',
+					background: 'rgb(100, 100, 100)'
 				}
-			],
-			decorator:{
-				label: 'wow',
-				background: 'rgb(100, 100, 100)'
+			},
+			{
+				label: 'Item 2',
+				action(e, itemHooks){
+					//Left click action
+				},
+				contextAction(e, itemHooks){
+					//Right click action
+				},
+				iconComp(){
+					return element`<svg> ... </svg>`
+				},
+				mounted(itemHooks){
+					//Executed when the item is shown in the explorer
+				}
 			}
-		},
-		{
-			label: 'Item 2',
-			action(e, itemHooks){
-				//Left click action
-			},
-			contextAction(e, itemHooks){
-				//Right click action
-			},
-			iconComp(){
-				return element`<svg> ... </svg>`
-			},
-			mounted(itemHooks){
-				//Executed when the item is shown in the explorer
-			}
-		}
-	]
-})
+		]
+	})
+}
 ```

@@ -117,9 +117,11 @@ Contains the project services.
 Usage:
 
 ```javascript
-RunningConfig.on('eventName', () => {
-	//Event action
-})
+function entry({ RunningConfig }){
+	RunningConfig.on('eventName', () => {
+		//Event action
+	})
+}
 ```
 
 There are some events not listed here since they are used in Graviton internally.
