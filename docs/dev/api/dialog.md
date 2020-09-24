@@ -50,10 +50,10 @@ dialogExample.launch()
 
 An example passing a component instead of a plain content and with any button.
 ```js
-function entry({ Dialog }){
+function entry({ Dialog, puffin }){
 	const dialogExample = new Dialog({
 		title: 'The title',
-		component: () => element`<p>Hello World</p>`
+		component: () => puffin.element`<p>Hello World</p>`
 	})
 
 	dialogExample.launch()
