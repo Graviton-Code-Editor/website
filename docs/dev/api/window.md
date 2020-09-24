@@ -30,11 +30,13 @@ interface WindowInstance {
 
 Example:
 ```js
-const windowExample = new Window({
-	component(){
-		return element`<button>Hello World</button>`
-	}
-})
+function entry({ Window }){
+	const windowExample = new Window({
+		component(){
+			return element`<button>Hello World</button>`
+		}
+	})
 
-windowExample.launch()
+	windowExample.launch()
+}
 ```
