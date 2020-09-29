@@ -7,7 +7,7 @@ description: Building manually
 
 Prerequisites:
 
-- NodeJS
+- NodeJSs (LTS version)
 - Git
 
 ## Getting the source
