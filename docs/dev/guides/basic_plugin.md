@@ -63,7 +63,7 @@ function entry(API){
   })
 }
 
-exports = { entry }
+module.exports = { entry }
 ```
 
 What is this code doing?
