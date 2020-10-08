@@ -50,14 +50,11 @@ const Store = ({ name, author, description, releases, id, repository }) => {
 
 export async function getStaticProps({ params: { slug } }) {
 
-	console.log(StoreData.list, slug)
-	
 	const plugin = StoreData.list.find(pg => {
 		if(pg.id === slug){
 			return pg
 		}
 	})
-	console.log(plugin)
 	return {
 		props: {
 			...plugin
