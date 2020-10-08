@@ -15,14 +15,17 @@ function Home() {
 			<Navbar/>
 			<HomeLayout>
 				<div className="container">
-					<div className="top-text"> 
-						<p>A <b>modern</b> code editor.</p>
-						<a target="_blank" href="https://github.com/Graviton-Code-Editor/Graviton-App/releases">
-							<Button>DOWNLOAD</Button>
-						</a>
-					</div>
-					<div className="image">
-						<img alt="Gravitonn Screenshot" src={GravitonScreenshot}/>
+					<div className="horizontal">
+						<div className="image">
+							<img alt="Gravitonn Screenshot" src={GravitonScreenshot}/>
+						</div>
+						<div className="right-text"> 
+							<Title>Built for all kind of devs</Title>
+							<p>Graviton Editor is a open source, free and cross-platform code editor</p>
+							<a target="_blank" href="https://github.com/Graviton-Code-Editor/Graviton-App/releases">
+								<Button>DOWNLOAD</Button>
+							</a>
+						</div>
 					</div>
 					<div className="footer">
 						<div>

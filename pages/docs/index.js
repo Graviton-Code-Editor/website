@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router'
 import DocsLayout from '../../components/docs.layout.jsx'
 import DocsTitle from '../../components/docs.title.jsx'
 import Navbar from '../../components/navbar.jsx'

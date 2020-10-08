@@ -1,19 +1,23 @@
 {
-	"name": "nexttest",
+	"name": "graviton-website",
 	"version": "1.0.0",
-	"description": "",
+	"description": "Graviton Editor's website",
 	"main": "index.js",
+	"author": "Marc Espín Sanz",
 	"scripts": {
 		"dev": "next",
 		"build": "next build",
 		"postbuild": "next-on-netlify",
 		"build:static": "next build && next export -o dist",
-		"start": "next start"
+		"dev:tasks": "gulp",
+		"start": "next start",
+		"postinstall": "npm run dev:tasks"
 	},
-	"author": "Marc Espín Sanz",
 	"devDependencies": {
 		"babel-plugin-emotion": "^10.0.33",
+		"download-git-repo": "^3.0.2",
 		"gray-matter": "^4.0.2",
+		"gulp": "^4.0.2",
 		"imagemin-svgo": "^8.0.0",
 		"marked": "^1.1.1",
 		"next": "^9.5.2",

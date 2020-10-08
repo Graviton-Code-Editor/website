@@ -29,7 +29,7 @@ const SidebarContainer = styled.div`
 		border: none;
 		margin: 3px;
 		flex-direction: column;
-		& rect {
+		& span {
 			background: rgb(75, 75, 75);
 			height: 1.5px;
 			border-radius: 5px;
@@ -213,9 +213,9 @@ function Sidebar() {
 	return (
 		<SidebarContainer>
 			<button onClick={click}>
-				<rect></rect>
-				<rect></rect>
-				<rect></rect>
+				<span></span>
+				<span></span>
+				<span></span>
 			</button>
 			<div opened={opened.toString()}>
 				<input placeholder="Search" className="sidebtn" onChange={onChange}></input>

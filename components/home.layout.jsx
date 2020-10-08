@@ -12,15 +12,26 @@ const HomeLayout = styled.div`
 		flex-direction: column;
 		text-align: center;
 		max-width: 80%;
-		.top-text{
+		.horizontal {
 			display: flex;
+			flex-direction: row;
+			padding: 50px 5px;
+			@media only screen and (max-width: 600px) {
+				display: block;
+				& .image {
+					margin: 15px;
+				}
+			}
+		}
+		.right-text{
 			align-items: center;
 			margin: 20px 0px;
 			margin-bottom: 35px;
+			max-width: 270px;
 			p {
-				text-align: left;
+				text-align: center;
 				flex: 1;
-				max-height: 40px;
+				line-height: 25px;
 			}
 		}
 		.image {
@@ -29,6 +40,7 @@ const HomeLayout = styled.div`
 			flex-direction: column;
 			text-align: center;
 			margin-bottom: 15px;
+			margin-right: 30px;
 			img {
 				filter: drop-shadow(0px 5px 15px rgba(0,0,0,0.35));
 				width: 450px;

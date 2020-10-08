@@ -2,7 +2,6 @@ import fs from 'fs'
 import matter from 'gray-matter'
 import Navbar from '../../components/navbar.jsx'
 import Link from 'next/link'
-import Layout from '../../components/layout.jsx'
 import BlogList from '../../components/blog.list.jsx'
 import BlogCard from '../../components/blog.card.jsx'
 import Title from '../../components/title.jsx'
@@ -17,21 +16,19 @@ function Blog({ posts }) {
 			</Head>
 			<Title>Blog</Title>
 			<BlogList>
-				<div>
-					{posts.map(post => {
-						return (
-							<BlogCard key={post.title}>
-								<Link href={`/blog/${post.slug}`}>
-									<div>
-										<h2>{post.title}</h2>
-										<span className="date">{post.date}</span>
-										<p>{post.description}</p>
-									</div>
-								</Link>
-							</BlogCard> 
-						)
-					})}
-				</div>
+				{posts.map(post => {
+					return (
+						<BlogCard key={post.title}>
+							<Link href={`/blog/${post.slug}`}>
+								<div>
+									<h2>{post.title}</h2>
+									<span className="date">{post.date}</span>
+									<p>{post.description}</p>
+								</div>
+							</Link>
+						</BlogCard> 
+					)
+				})}
 			</BlogList>
 		</div>
 	)

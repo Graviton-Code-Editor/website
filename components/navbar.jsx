@@ -31,6 +31,7 @@ const NavBarContainer = styled.div`
 			font-size: 16px;
 			font-weight: 500;
 			outline: 0;
+			font-family: 'Fira Sans', sans-serif;
 			&[active="true"]{
 				color: black;
 			}
@@ -68,6 +69,9 @@ function Navbar() {
 				</Link>
 				<Link href="/blog">
 					<a active={router.asPath.split('/')[1] === 'blog' ? 'true' : ''}>Blog</a>
+				</Link>
+				<Link href="/store">
+					<a active={router.asPath.split('/')[1] === 'store' ? 'true' : ''}>Store</a>
 				</Link>
 				<Link href="/docs" >
 					<a active={router.asPath.split('/')[1] === 'docs' ? 'true' : ''}>Docs</a>

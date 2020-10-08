@@ -14,6 +14,9 @@ const Button = styled.button`
 		background: rgba(0, 102, 255,0.85);
 		transition: 0.1s;
 	}
+	:focus{
+		box-shadow: 0px 0px 0px 3px rgb(215,215,215);
+	}
 `
 
 export default Button
