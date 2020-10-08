@@ -25,7 +25,7 @@ const HomeLayout = styled.div`
 		}
 		.right-text{
 			align-items: center;
-			margin: 20px 0px;
+			margin: 20px auto;
 			margin-bottom: 35px;
 			max-width: 270px;
 			p {

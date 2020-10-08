@@ -18,13 +18,13 @@ html {
 	padding: 0;
 }
 h1, h2, {
-	font-weight: 500;
+	font-weight: normal;
 	color: rgb(30,30,30);
 }
 
 h3 {
-	font-size: 20px;
-	text-decoration: underline;
+	font-size: 17px;
+	font-weight: bold;
 }
 
 .markdown-container {
@@ -57,8 +57,10 @@ h3 {
 		padding: 13px;
 		font-family: 'Roboto Mono', monospace;
 		background: rgb(244, 251, 244);
+		font-size: 14px;
 		* {
 			font-family: inherit;
+			font-size: inherit;
 		}
 	}
 	table {

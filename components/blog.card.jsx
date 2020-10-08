@@ -4,11 +4,10 @@ const BlogCard = styled.div`
 	padding: 15px;
 	width: 250px;
 	cursor: pointer;
-	max-width: auto;
-	margin: 10px;
 	border-radius: 10px;
 	transition: 0.25s;
-	display: inline-block;
+	margin: 0 10px;
+	display: block;
 	& * {
 		font-size: 12px;
 	}
@@ -26,8 +25,6 @@ const BlogCard = styled.div`
 		font-size: 12px;
 	}
 	@media only screen and (max-width: 600px) {
-		min-width: 100%;
-		max-width: auto;
 		margin: 0 auto;
 	}
 `

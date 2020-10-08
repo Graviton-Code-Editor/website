@@ -47,6 +47,15 @@ const NavBarContainer = styled.div`
 				max-width: 140px;
 				cursor: pointer;
 			}
+			@media only screen and (max-width: 600px) {
+				margin-left: 50px;
+				min-width: 60px;
+				margin-bottom: 7px;
+				padding-left: 10px;
+				& > img { 
+					width: 50px;
+				}
+			}
 		}
 	}
 	& > div:nth-child(2) {
