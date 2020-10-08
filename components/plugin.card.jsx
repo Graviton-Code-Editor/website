@@ -9,6 +9,9 @@ const PluginCard = styled.div`
 	border-radius: 10px;
 	transition: 0.25s;
 	display: inline-block;
+	color: black;
+	font-size: 13px;
+	text-decoration: none;
 	& * {
 		font-size: 12px;
 		color: black;

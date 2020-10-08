@@ -33,11 +33,11 @@ const Store = ({ name, author, description, releases, id, repository }) => {
 						<h4>Releases</h4>
 						{releases.map(({ url, version }) => {
 							return (
-								<PluginCard key={url}>
-									<a href={`graviton:install?&id=${id}&url=${url}`}>
+								<a href={`graviton:install?&id=${id}&url=${url}`}>
+									<PluginCard key={url}>
 										{`Install -> v${version}`}
-									</a>
-								</PluginCard>
+									</PluginCard>
+								</a>
 							)
 						})}
 					</div>
