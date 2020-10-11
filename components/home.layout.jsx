@@ -28,6 +28,9 @@ const HomeLayout = styled.div`
 			margin: 20px auto;
 			margin-bottom: 35px;
 			max-width: 270px;
+			@media only screen and (max-width: 600px) {
+				margin: 0 auto;
+			}
 			p {
 				text-align: center;
 				flex: 1;

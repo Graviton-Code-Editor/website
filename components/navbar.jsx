@@ -10,50 +10,47 @@ const NavBarContainer = styled.div`
 	padding: 20px 15px;
 	padding-bottom: 10px;
 	& > div {
-		min-width: 100px;
-		width: 100%;
-		max-width: 500px;
-		padding: 25px 40px;
-		border-bottom: 1px solid rgb(180,180,180);
-		display: flex;
-		justify-content: center;
-	}
-	& > div {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		overflow: auto;
-		& > a {
-			margin-bottom: 10px;
+		min-width: 100px;
+		width: 100%;
+		max-width: 500px;
+		padding: 25px;
+		border-bottom: 1px solid rgb(180,180,180);
+		@media only screen and (max-width: 600px) {
+			display: block;
+		}
+		& > * {
+			max-width: 100px;
 			padding: 0px 15px;
+			margin-bottom: 5px;
 			text-decoration: none;
 			color: rgb(75,75,75);
 			font-size: 16px;
 			font-weight: 500;
 			outline: 0;
 			font-family: 'Fira Sans', sans-serif;
+			white-space: nowrap;
 			&[active="true"]{
 				color: black;
 			}
 			&[active=""]:hover {
 				color: gray;
 			}
-		}
-		& > div {
-			flex: 1;
-			min-width: 40%;
-			& > img {
-				width: 50%;
-				max-width: 140px;
-				cursor: pointer;
-			}
-			@media only screen and (max-width: 600px) {
-				margin-left: 50px;
-				min-width: 60px;
-				margin-bottom: 7px;
-				padding-left: 10px;
-				& > img { 
-					width: 50px;
+			&.img{
+				margin-bottom: 0px;
+				margin-right: 75px;
+				@media only screen and (max-width: 600px) {
+					margin: 0;
+				}
+				& > img {
+					cursor: pointer;
+					max-width: 100px;
+					@media only screen and (max-width: 600px) {
+						max-width: 60px;
+					}
 				}
 			}
 		}
@@ -68,11 +65,11 @@ function Navbar() {
 	return (
 		<NavBarContainer>
 			<div>
-				<div>
+				<a className="img">
 					<Link href="/">
 						<img alt="Graviton Logo" src={Logo}/>
 					</Link>
-				</div>
+				</a>
 				<Link href="/">
 					<a active={router.asPath.split('/')[1] === '' ? 'true' : ''}>Home</a>
 				</Link>
