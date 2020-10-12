@@ -7,11 +7,11 @@ import { useState, useEffect } from 'react'
 const SidebarContainer = styled.div`
 	display: block;
 	overflow: auto;
-	flex: 1;
-	min-height: 300px;
+	min-height: auto;
 	height: 100%;
-	min-width: 215px;
-	max-width: 50px;
+	min-width: 250px;
+	width: 250px;
+	max-width: 25%;
 	margin-top: 5px;
 	padding: 20px 5px;
 	overflow: auto;
@@ -45,13 +45,19 @@ const SidebarContainer = styled.div`
 		border-radius: 8px;
 		overflow: auto;
 		& input {
-			max-width: 115px;
-			padding: 5px;
-			border: 2px solid rgb(200, 200, 200);
-			border-radius: 5px;
+			max-width: 100%;
+			padding: 9px;
+			border: 0;
+			border-radius: 6px;
 			margin: 1px;
 			margin-bottom: 4px;
 			font-size: 12px;
+			transition 0.15s;
+			box-shadow: inset 0px 1px 5px rgba(0,0,0,0.25), 0px 0px 0px 0px rgb(200, 200, 200);
+			:focus{
+				transition 0.15s;
+				box-shadow: inset 0px 1px 3px rgba(0,0,0,0.15), 0px 0px 0px 3px rgb(200, 200, 200);
+			}
 		}
 		& div.sideButton{
 			margin-left: 15px;
@@ -62,16 +68,16 @@ const SidebarContainer = styled.div`
 				border-radius: 6px;
 				border: none;
 				font-size: 12px;
-				color: black;
+				color: rgb(50,50,50);
 				padding:  6px 8px;
 				background: transparent;
 				outline: 0;
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				& img {
-					height: 7px;
-					margin-left: 10px;
+				& .img {
+					height: 6px;
+					width: 20px;
 					transition: transform ease-out 0.07s;
 					&.displayed{
 						transform: rotate(0deg);
@@ -81,12 +87,12 @@ const SidebarContainer = styled.div`
 					}
 				}
 				&:hover{
-					background: rgba(255, 0, 72, 0.2);
-					color: rgba(255, 0, 72, 0.9);
+					background: rgba(150, 150, 150, 0.4);
+					color: #000000;
 				}
 				&[active="true"]{
-					background: rgba(255, 0, 72, 0.2);
-					color: rgba(255, 0, 72, 0.9);
+					background: rgba(150, 150, 150, 0.6);
+					color: black;
 				}
 			}
 		}
@@ -159,12 +165,13 @@ const getSideButton = (btn, filter, inRoot) => {
 		<div key={btn.slug} className="sideButton" >
 			{btn.list ? (
 				<button className="sidebtn" onClick={ () => display(!displayed)} active={active}> 
+					<img className="" src="/arrow.svg" className={displayed?'img sidebtn displayed':'img sidebtn hidden'}/>
 					{btn.label} 
-					<img src="/arrow.svg" className={displayed?'sidebtn displayed':'sidebtn hidden'}/>
 				</button>
 			): (
 				<Link href={`/docs/${btn.slug}`} >
 					<button onClick={ () => display(!displayed)} active={active}>
+						<div className="img"/>
 						{btn.label} 
 					</button>
 				</Link> 

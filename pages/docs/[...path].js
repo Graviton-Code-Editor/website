@@ -25,10 +25,15 @@ const Post = ({ content, title }) => {
 				<Navbar/>
 			</div>
 			<DocsLayout>
-				<Sidebar/>
+				<div>
+					<Sidebar/>
+				</div>
 				<div className="container">
 					<DocsTitle>{title}</DocsTitle>
-					<div className="markdown-container" dangerouslySetInnerHTML={{ __html: content }}/>
+					<div>
+						<div className="markdown-container" dangerouslySetInnerHTML={{ __html: content }}/>
+						<div className="spacing"/>
+					</div>
 				</div>
 			</DocsLayout>
 		</div>

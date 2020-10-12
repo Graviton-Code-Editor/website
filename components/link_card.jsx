@@ -9,7 +9,7 @@ const LinkCard = styled.div`
 	max-width: auto;
 	display: inline-block;
 	cursor: pointer;
-	transition: 0.12s;
+	transition: 0.15s;
 	text-align: center;
 	& span {
 		margin-right: 8px;
@@ -19,8 +19,8 @@ const LinkCard = styled.div`
 		color: rgb(40,40,40);
 	}
 	:hover{
-		transition: 0.12s;
-		background: rgb(247,247,247);
+		transition: 0.15s;
+		background: rgb(230,230,230);
 		box-shadow: 0px 1px 7px rgba(0,0,0, 0.17);
 	}
 `

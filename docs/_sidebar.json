@@ -97,6 +97,10 @@
 							"slug": "dev/api/env_inspectors"
 						},
 						{
+							"label": "Notification",
+							"slug": "dev/api/notification"
+						},
+						{
 							"label": "Explorer Provider",
 							"slug": "dev/api/explorer_provider"
 						},

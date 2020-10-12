@@ -58,9 +58,11 @@ h3 {
 		font-family: 'Roboto Mono', monospace;
 		background: rgb(244, 251, 244);
 		font-size: 14px;
+		tab-size: 2;
 		* {
 			font-family: inherit;
 			font-size: inherit;
+			tab-size: 2;
 		}
 	}
 	table {
@@ -70,6 +72,7 @@ h3 {
 	}
 	.type{
 		display: inline-block;
+		white-space: nowrap;
 		padding: 6px;
 		background: rgb(244,251, 244);
 		color: rgb(35,35,35);
