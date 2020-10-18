@@ -74,7 +74,17 @@ export async function getStaticProps({ params: { slug } }) {
 		}
 	})
 	
-	const { content } =  matter(fs.readFileSync(`${process.cwd()}/repos/${slug}/README.md`, 'UTF-8'))
+	const repoPath = `${process.cwd()}/repos/${slug}`
+	
+	const readmeName = await new Promise(res => {
+		 fs.lstat(`${repoPath}/README.md`).then(() => {
+			 res('README.md')
+		 }).catch(() => {
+			 res('readme.md')
+		 })
+	})
+	
+	const { content } =  matter(fs.readFileSync(`${repoPath}/${readmeName}`, 'UTF-8'))
 
 	const readme = await unified()
 		.use(markdown)
