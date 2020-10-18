@@ -6,7 +6,7 @@
 	"author": "Marc Espín Sanz",
 	"scripts": {
 		"dev": "next",
-		"build": "npm run postinstall && next build",
+		"build": "next build",
 		"postbuild": "next-on-netlify",
 		"build:static": "next build && next export -o dist",
 		"dev:tasks": "gulp",
