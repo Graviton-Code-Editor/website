@@ -44,6 +44,7 @@ async function clonePluginsRepos(){
 					cwd: path.join(__dirname, 'repos')
 				}, (err) => {
 					if(err) console.log(err)
+					console.log(fs.readdirSync(path.join(__dirname, 'repos', id)))
 					resolve()
 				})
 			})
