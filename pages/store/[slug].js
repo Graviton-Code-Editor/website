@@ -14,7 +14,7 @@ import unified from 'unified'
 import markdown from 'remark-parse'
 import highlight from 'remark-highlight.js'
 import html from 'remark-html'
-import * as fs from 'fs'
+import * as fs from 'fs-extra'
 
 const Store = ({ name, author, description, releases, id, repository, readmeContent }) => {
 	const { pathname, query } = useRouter()
