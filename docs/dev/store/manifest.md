@@ -4,22 +4,22 @@ slug: dev/store/manifest
 
 ---
 
-The `Manifest`  is a YAML-formatted file which represents every plugin.
+The Manifest file(`manifest.yaml`) is a YAML-formatted file which contains all essential information for the plugin.
 
-It must contain all these properties:
-- name: Plugin's name
-- id: Plugin's ID (this must be the same as used in the plugins source's manifest file (aka `package.json`))
-- description: Brief description of what the plugin doest.
-- author: Your name ( nicknames are also valid )
-- repository: Source code remote repository
-- releases: This is an array which contains all the releases of your plugin
-  - version: Releases's version
-  - minTarget: Minium Graviton's version
-  - target: This is a regex to more specific version matching
-  - url: See [Release's URL](manifest/#release_url)
+It must contain all the of the following properties:
+- `name`: Plugin's name
+- `id`: Plugin's ID (must match the `id` property in the plugin's `package.json`)
+- `description`: Brief description of what the plugin does.
+- `author`: Your name ( nicknames are also valid )
+- `repository`: Source code remote repository
+- `releases`: Array containing all the releases of the plugin.
+  - `version`: Version of release.
+  - `minTarget`: Mininum Graviton version.
+  - `target`: This is a regex for more specific version matching.
+  - `url`: See [Release's URL](manifest/#release_url)
 
 
-Example:
+### Example:
 
 ```yaml
 name: Cargo
@@ -35,13 +35,13 @@ releases:
 ```
 
 <div id="release_url">
-	<h2>Release's URL</h2>
+	<h2>Release's URL(<code>url</code>)</h2>
 	<ul>
 		<li>
-			It must be in a ZIP file
+			Releases must be a ZIP file.
 		</li>
 		<li>
-			The Manifest file (aka package.json) must be at the top root 
+			The plugin's <code>package.json</code> file must be at the root of the plugin's folder.
 		</li>
 	</ul>
 </div>
