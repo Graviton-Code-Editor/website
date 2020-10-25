@@ -3,6 +3,7 @@ const download = require('download-git-repo')
 const path = require('path')
 const { exec } = require('child_process')
 const fs = require('fs-extra')
+const ncp = require('ncp')
 
 async function cloneStoreApi(){
 	return new Promise(res => {
@@ -52,4 +53,42 @@ async function clonePluginsRepos(){
 	})
 }
 
-exports.default = series(cloneStoreApi, installDeps, buildsPlugins, clonePluginsRepos)
+
+async function cloneGraviton(){
+	return new Promise(res => {
+		download('Graviton-Code-Editor/Graviton-App', path.join(__dirname, 'graviton_repo'), () => {
+			res()
+		})
+	})
+}
+
+async function installGravitonDeps(){
+	return new Promise(res => {
+		exec('npm i', {
+			cwd: path.join(__dirname, 'graviton_repo')
+		}, () => {
+			res()
+		})
+	})
+}
+
+async function buildGraviton(){
+	return new Promise(res => {
+		exec('npm run build:experimental:browser', {
+			cwd: path.join(__dirname, 'graviton_repo')
+		}, () => {
+			res()
+		})
+	})
+}
+
+async function copyGravitonDist(){
+	return new Promise(res => {
+		ncp(path.join(__dirname, 'graviton_repo', 'dist_browser'), path.join(__dirname, 'public', 'graviton'), () => {
+			res()
+		})
+	})
+}
+
+
+exports.default = series(cloneStoreApi, installDeps, buildsPlugins, clonePluginsRepos, cloneGraviton, installGravitonDeps, buildGraviton, copyGravitonDist)

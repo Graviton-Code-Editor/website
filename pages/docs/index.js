@@ -22,6 +22,7 @@ const Docs = () => {
 					<DocsTitle>Documentation (WIP)</DocsTitle>
 					<div>
 						<div className="markdown-container">
+							<i>NOTE: this docs are updated in accordance with the lastest changes, so, somethings might not work if you target a lower version than the one on the source code.</i>
 							<p>Graviton Editor is a cross-platform code editor made using web technologies.</p>
 							<h2>Guides</h2>
 							<LinkCard href="docs/dev/guides/building" >

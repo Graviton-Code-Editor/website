@@ -3,7 +3,9 @@ import HomeLayout from '../components/home.layout.jsx'
 import Title from '../components/title.jsx'
 import Footer from '../components/footer.jsx'
 import Button from '../components/button.jsx'
+import SecondButton from '../components/second_button.jsx'
 import Head from 'next/head'
+import Link from 'next/link'
 import GravitonScreenshot from '../public/screenshot.png'
 
 function Home() {
@@ -25,6 +27,10 @@ function Home() {
 							<a target="_blank" href="https://github.com/Graviton-Code-Editor/Graviton-App/releases">
 								<Button>DOWNLOAD</Button>
 							</a>
+							
+							<Link href="/browser" >
+								<SecondButton>Use Browser version</SecondButton>
+							</Link>
 						</div>
 					</div>
 					<div className="footer">
