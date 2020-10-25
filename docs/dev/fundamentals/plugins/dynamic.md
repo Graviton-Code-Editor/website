@@ -10,8 +10,9 @@ Dynamic plugins ( or JavaScript plugins ) are dynamically loaded in live when Gr
 
 Every dynamic plugin should indicate it's entry file ( Main file ) in it's package.json so Graviton knows what file should be loaded.
 
-Example supossing we have a `main.js` file in the same root as the package.json:
-
+## Example:
+Supose we have a `main.js` file in the same root as the package.json.
+### package.json
 ```json
 {
 	"name": "SuperPlugin",
@@ -24,12 +25,10 @@ Example supossing we have a `main.js` file in the same root as the package.json:
 }
 ```
 
-## Entry function
+### Entry function
 
-Entry function is the function executed when Graviton loads the file, it contains the whole exposed API for plugins. 
+The entry function is the function that is executed when Graviton loads the file, it contains the exposed API for plugins. 
 So, it must be exported.
-
-Example:
 
 ```ts
 function entry(API){

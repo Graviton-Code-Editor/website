@@ -5,11 +5,11 @@ slug: dev/fundamentals/plugins/manifest
 ---
 
 
-The **manifest** is a file used to identify each plugin. It contains the plugin's name, the descripton, author, etc...
+The **Manifest** file is used to identify each plugin. It contains the plugin's name, the descripton, author, etc...
 
 The Manifest file's name is `package.json`, same as NPM packages.
 
-Essential properties in the Manifest (these are used across all types of plugins):
+Required properties in the Manifest file (used for all types of plugins):
 
 ```json
 {
@@ -21,4 +21,4 @@ Essential properties in the Manifest (these are used across all types of plugins
 }
 ```
 
-Depending on the type of plugin it must have some other properties.
+Depending on the type of plugin some other properties are required.

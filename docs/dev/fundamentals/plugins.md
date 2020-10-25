@@ -1,7 +1,7 @@
 ---
-title: How plugins work?
+title: 📦 How do Plugins work?
 slug: dev/fundamentals/plugins
-description: How plugins work?
+description: How do plugins work?
 
 ---
 

@@ -5,15 +5,15 @@ description: What's puffin?
 
 ---
 
-**Puffin**, is a libray to create HTML components, reactive objects, event emitters, and CSS-in-JS stylesheets.
+**Puffin**, is a frontend-framework for creating HTML components, reactive objects, event emitters, and CSS-in-JS stylesheets.
 
-Graviton makes a heavy usage of it. For example, objects like `RunningConfig` or `StaticConfig` are Puffin States, which means, they hold reactive data and events.
+Graviton makes a heavy use of it. For example, objects like `RunningConfig` or `StaticConfig` are Puffin States, which means, they hold reactive data and events.
 
 ## Component
 
-Components are used to create HTML-like components which you can then reuse as many times you want.
+Components are used to create HTML-like components which can be reused as-needed.
 
-Here is an example of creating a `<div>` with `Hello World` as text and a click event listener. Then it's rendered into the document.body.
+Here is an example of creating a `<div>` with `Hello World` as text and a click event listener. It is then rendered into document.body.
 
 ```js
 function clickedMe(){
@@ -33,7 +33,7 @@ puffin.render(exampleComp, document.body)
 
 ## State
 
-Puffin States are reactive and event emitters objects. It allows you to store and watch for data changes. Ando also to create custom events and listen for them.
+Puffin States are reactive and event emitter objects. It allows you to store and watch for data changes, and also create custom events and listen for them.
 
 Interface:
 
@@ -84,7 +84,8 @@ whateverListener.cancel()
 
 **Note**:
 
-Sub properties are not reactive, example:
+Sub properties are not reactive.
+Example:
 
 ```js
 
@@ -108,7 +109,7 @@ exampleState.onChanged( newData =>{
 ```
 
 ## Style
-You can encapsulate CSS StyleSheets in random-generated classes which you can use in your components.
+You can encapsulate CSS StyleSheets in random-generated classes which can then be used in your components.
 
 ```js
 const exampleStyle = puffin.style`
@@ -120,4 +121,4 @@ const exampleStyle = puffin.style`
 const exampleComp = puffin.element`<div class="${myStyle}"/>`
 ```
 
-**Note**: You can also user other alternatives like Emotion using the CSS prop.
+**Note**: You can also use other alternatives like Emotion using the CSS prop.
