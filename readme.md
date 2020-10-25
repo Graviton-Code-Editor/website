@@ -11,17 +11,18 @@ Markdown usage:
 ```![MadeForGraviton](https://raw.githubusercontent.com/marc2332/website-1/master/src/badges/made_for_graviton.svg?sanitize=true)```
 
 ### 🥽 Development
-Clone the repository:
+1. Fork the repo
+2. Clone the repository:
 ```
-git clone https://github.com/marc2332/website-1.git
+git clone https://github.com/<YOUR USERNAME>/website-1.git
 ```
 
 Install dependencies:
 ```
-npm run install
+npm install
 ```
 
 Run locally:
 ```
-npm nun dev
+npm run dev
 ```
