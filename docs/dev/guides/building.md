@@ -7,8 +7,8 @@ description: Building manually
 
 Prerequisites:
 
-- NodeJSs (LTS version)
-- Git
+- [NodeJS (LTS version)](https://nodejs.org/en/)
+- [Git](https://git-scm.com/)
 
 ## Getting the source
 
@@ -20,13 +20,20 @@ git clone https://github.com/Graviton-Code-Editor/Graviton-App.git --depth 1
 
 **Important**: There are 3 different branches:
 
-- `master`: daily source (default).
-- `stable`: this doesn't mean it's ready to be released as stable build , but it doesn't have that many bugs, it's more stable overall.
-- `1.3.0`: it refers to the old Graviton source code.
+- `master`: Daily source (default).
+- `stable`: This doesn't mean it's ready to be released as stable build, but it doesn't have as many bugs as master, and is overall more stable.
+- `1.3.0`: The old Graviton source code.
+
+> **Note** To switch branch:
+* You must be in the previously cloned repository to switch branch. 
+    ```shell
+    git checkout {branch-name}
+    ```
+* Replace `{branch-name}` with the branch you want to build.
 
 ## Installing dependencies
 
-Go inside the folder:
+Navigate into the folder:
 
 ```shell
 cd Graviton-App
@@ -46,11 +53,11 @@ In case you just want to test it in development mode, run:
 npm start
 ```
 
-If shows an empty dark screen just wait.
+If it shows an empty dark screen just wait.
 
 ## Building the installer
 
-For Windows, Linux(deb,AppImage,rpm) and MacOS:
+For Windows, Linux(deb, AppImage, rpm) and MacOS:
 
 ```shell
 npm run build
@@ -60,7 +67,7 @@ You can override the default platforms from the package.json.
 
 #### Building another linux installers
 
-If you want to build a specific linux package for your distro you can run:
+If you want to build a specific linux package for your linux distribution you can run:
 
 ```shell
 npm run build:your_extension
@@ -72,7 +79,7 @@ For example, if you are an Arch Linux user, run:
 npm run build:pacman
 ```
 
-Here is the list of the supported packages:
+The following is a list of supported packages:
 
 - snap
 - pacman
@@ -83,7 +90,7 @@ Here is the list of the supported packages:
 - rpm
 - AppImage
 
-Please keep in mind that any distribution can build for every platform. For example, you can build for AppImage and Deb in Debian-based distros, like Ubuntu.
+Please keep in mind that any OS can build for ***any*** platform. For example, you can build an AppImage and Deb in a Debian-based distro like Ubuntu.
 
 #### Building out-packed
 
