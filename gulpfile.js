@@ -84,7 +84,9 @@ async function buildGraviton(){
 
 async function copyGravitonDist(){
 	return new Promise(res => {
-		ncp(path.join(__dirname, 'graviton_repo', 'dist_browser'), path.join(__dirname, 'public', 'graviton'))
+		ncp(path.join(__dirname, 'graviton_repo', 'dist_browser'), path.join(__dirname, 'public', 'graviton'), () => {
+			res()
+		})
 	})
 }
 
