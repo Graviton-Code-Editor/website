@@ -11,14 +11,14 @@ StaticConfig is a Puffin State which holds the user's configuration and some eve
 
 ## Data
 
-You can access it's data via the `data` prop.
+The data can be accessed via the `data` prop.
 
 Example:
 ```javascript
 StaticConfig.data.appTheme
 ```
 
-It's data interface:
+The data interface of StaticConfig:
 
 ```ts
 interface StaticConfigData {
@@ -55,81 +55,73 @@ interface StaticConfigData {
 ```
 
 ### appTheme: `string`
-Indicates the selected theme. Default to `Night`
+Indicates the selected theme. Defaults to `Night`.
 
 ### appIconpack: `string`
-Indicates the selected iconpack theme. Default to `Graviton`
+Indicates the selected iconpack theme. Defaults to `Graviton`.
 
 ### appLanguage: `string`
-Indicates the selected language name. Default to `English`
+Indicates the selected language name. Defaults to `English`.
 
 ### appProjectsLog: `[]`
 Contains the projects log.
 
 ### appConfigPath: `string`
-Indicates the `.graviton2` path.
+Indicates the `.graviton2`-folder path.
 
 ### appWorkspacesLog: `[]`
 Contans the workspaces log.
 
 ### appZoom: `number`
-Indicates the zoom level of the GUI. Default to `0`
+Indicates the zoom level of the GUI. Defaults to `0`
 
 ### appPlatform: `string`
-Indicates the app platform. Default to `auto`.
+Indicates the app platform. Defaults to `auto`.
 
 ### appShortcuts: `{}`
-Configured shortcuts.
+Contains configured shortcuts.
 
 ### appBlurEffect: `number`
 Indicates the blur intensity.
 
 ### appCheckUpdatesInStartup: `boolean`
-Enable or disable checking if there is a new update every time you open Graviton.
-
-Default to `true`.
+Enable or disable checking for updates when Graviton is opened. Defaults to `true`.
 
 ### appEnableSidebar: `boolean`
-Enable or disable the sidebar. Default to `true`
+Enable or disable the sidebar. Defaults to `true`.
 
 ### appEnableSidepanel: `boolean`
-Enable or disable the sidepanel. Default to `true`
+Enable or disable the sidepanel. Defaults to `true`.
 
 ### appEnableExplorerItemsAnimations: `boolean`
-Enable or disable the hovering and clickig animations in Explore panel items.
+Enable or disable on-hover and on-click animations in Explore panel items.
 
 ### appOpenWelcomeInStartup: `boolean`
-Open or not the welcome window every time you open Graviton.
-
-Default to `true`
+Enable or disable the welcome window when Graviton is opened. Defaults to `true`.
 
 ### editorFSWatcher: `boolean`
-Enable or disable Files Watcher.
-
-Default to `true`
+Enable or disable File Watcher. Defaults to `true`.
 
 ### editorAutocompletion: `boolean`
-Enable or disable autocompletion.
-
-Default to `true`
+Enable or disable autocompletion. Default to `true`.
 
 ### editorIdentation: `string`
-Indicates to use `tab` or `space`
+Indicates whether to use `tab` or `space` indentation.
 
 ### editorTabSize: `number`
-Indicates the tab's size.
+Indicates the number of spaces a tab is equal to.
 
 ### editorFontFamily: `string`
-Font family used for the editor. Default to `JetBrainsMono`.
+Indicates the font family used in the editor. Defaults to `JetBrainsMono`.
 
 ### editorWrapLines: `boolean`
-Wrap or no the lines in the editor. Defaul to `false`
+Indicates whether to wrap lines in the editor. Defaults to `false`.
 
 ### editorClients: `Array<{ extension, editor, regex }>`
 User's preferences for editor clients
-  * `extension: string`: -> File's extension to match
-  * `editor: string`: -> EditorClient's name to use
-  * `regex: boolean`: -> Indicates if `extension` is a regex
+  * `extension: string`: -> File extension to match.
+  * `editor: string`: -> Name of the editor to use.
+  * `regex: boolean`: -> Indicates if `extension`-propert is a regex.
 
 ### editorExcludedDirs: `string[]`
-Excluded directories which won't be watched by the Files Watcher.
+Excluded directories which won't be watched by the File Watcher.

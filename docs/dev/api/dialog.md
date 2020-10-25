@@ -5,7 +5,7 @@ description: Dialog
 
 ---
 
-Dialog allows you to create small sized windows with a title, content and buttons.
+Dialogs allow you to create small sized windows with a title, content and buttons.
 
 Options interface: 
 
@@ -30,7 +30,7 @@ interface DialogInstance {
 }
 ```
 
-A simple Dialog with a Title, Content and a button:
+A simple Dialog with a title, content and a button:
 ```js
 const dialogExample = new Dialog({
 	title: 'The title',
@@ -48,7 +48,7 @@ const dialogExample = new Dialog({
 dialogExample.launch()
 ```
 
-An example passing a component instead of a plain content and with any button.
+An example of passing a component instead of plain content without a button.
 ```js
 function entry({ Dialog, puffin }){
 	const dialogExample = new Dialog({

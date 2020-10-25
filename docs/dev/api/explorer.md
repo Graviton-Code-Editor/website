@@ -7,9 +7,9 @@ description: Explorer
 
 Explorer is a tree-view component.
 
-The constructor returns a Puffin Component, so you can render it whereever you want.
+The constructor returns a Puffin Component, which can be rendered wherever needed.
 
-Explorer item's interface: 
+Explorer item interface: 
 
 ```ts
 interface ExplorerItemOptions { 

@@ -5,7 +5,7 @@ description: Window
 
 ---
 
-Options interface: 
+Window options interface: 
 
 ```ts
 interface WindowOptions {
