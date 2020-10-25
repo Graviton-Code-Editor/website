@@ -91,4 +91,4 @@ async function copyGravitonDist(){
 }
 
 
-exports.default = series(cloneStoreApi, installDeps, buildsPlugins, clonePluginsRepos, cloneGraviton, installGravitonDeps, copyGravitonDist)
+exports.default = series(cloneStoreApi, installDeps, buildsPlugins, clonePluginsRepos, cloneGraviton, installGravitonDeps, buildGraviton, copyGravitonDist)
