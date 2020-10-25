@@ -25,3 +25,8 @@ Run locally:
 ```
 npm nun dev
 ```
+
+Building:
+```
+npm nun build
+```
