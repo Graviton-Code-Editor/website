@@ -8,3 +8,5 @@ out_publish
 graviton.wp.json
 store_repo
 repos
+graviton_repo
+public/graviton

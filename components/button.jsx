@@ -8,6 +8,7 @@ const Button = styled.button`
 	border-radius: 6px;
 	cursor: pointer;
 	transition: 0.1s;
+	margin: 1px;
 	letter-spacing: ${props => props.noSpacing ? '0px':'1px'};
 	& *{
 		color: inherit;

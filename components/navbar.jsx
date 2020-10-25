@@ -16,7 +16,7 @@ const NavBarContainer = styled.div`
 		overflow: auto;
 		min-width: 100px;
 		width: 100%;
-		max-width: 500px;
+		max-width: 600px;
 		padding: 25px;
 		border-bottom: 1px solid rgb(180,180,180);
 		@media only screen and (max-width: 600px) {

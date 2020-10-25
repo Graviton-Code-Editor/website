@@ -31,6 +31,11 @@ module.exports = withPlugins([
 				destination: '/blog/website_revamp',
 				permanent: true,
 			},
+			{
+				source: '/app',
+				destination: '/graviton/index.html',
+				permanent: true,
+			},
 		]
 	},
 })
