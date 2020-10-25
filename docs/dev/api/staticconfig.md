@@ -121,7 +121,7 @@ Indicates whether to wrap lines in the editor. Defaults to `false`.
 User's preferences for editor clients
   * `extension: string`: -> File extension to match.
   * `editor: string`: -> Name of the editor to use.
-  * `regex: boolean`: -> Indicates if `extension`-propert is a regex.
+  * `regex: boolean`: -> Indicates if `extension`-property is a regex.
 
 ### editorExcludedDirs: `string[]`
 Excluded directories which won't be watched by the File Watcher.
