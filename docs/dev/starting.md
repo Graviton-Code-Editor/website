@@ -4,25 +4,26 @@ slug: dev/starting
 
 ---
 
-This document instends to be a guide through the different phases for making a plugin.
+This document is intended to be a guide through the different phases for developing a plugin.
 
 
 ## Fundamentals
 
-Read the fundamentals of how Graviton works.
+Read about the fundamentals of Graviton:
 
-*  [🧰 .graviton2](fundamentals/graviton2)
+* [🧰 .graviton2](fundamentals/graviton2)
+* [📦 Plugins](fundamentals/plugins)
 * [🧾 Manifest File](fundamentals/plugins/manifest)
 * [🐧 Puffin](fundamentals/puffin)
 
-You can choose to read the one you prefer.
+The following links are for information about the different types of plugins. Read the information for the type of plugin you are developing:
 * [Dynamic](fundamentals/plugins/dynamic)
 * [IconPack](fundamentals/plugins/iconpacks)
 * [Themes](fundamentals/plugins/themes)
 
 ## API
 
-The API documentation is still not fully documented, current docs:
+The API documentation is still Work-In-Progress (WIP). Currently there are the following articles:
 
 * [RunningConfig](api/runningconfig)
 * [StaticConfig](api/staticconfig)
@@ -33,6 +34,6 @@ The API documentation is still not fully documented, current docs:
 
 ## SDK
 
-Using Graviton's SDK is optional, but hightly recommended since it makes it all easier.
+Using Graviton's SDK is optional, but highly recommended as it makes developing a plugin significantly easier.
 
-See more [Here](sdk/about)
+Find out more [Here](sdk/about)
