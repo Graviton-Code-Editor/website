@@ -5,16 +5,14 @@ description: Iconpacks
 
 ---
 
-Iconpacks consist on a set of different types of rules.
+Iconpacks consist of a set of different types of rules.
 
-Manifest's properties needed for iconpacks:
+Required Manifest properties for iconpacks:
 
-* icons: icons matches
-* type: plugin's type, in this case, 'iconpack'
+* type: Type of plugin, in this case, 'iconpack'.
+* icons: Contains all the mappings for filetypes and its icon.
 
-Rules are stored in the Manifest under property `icons`.
-
-Example:
+### Example:
 
 ```json
 {
@@ -33,19 +31,21 @@ Example:
 }
 ```
 
-Types:
-* [filename](filename)
-* fileformat
-* filetype
-* foldername
-* basicfile
-* basicfolder
-* basicimage
+## Types:
+* [filename](#filename)
+* [fileformat](#fileformat)
+* [filetype](#filetype)
+* [foldername](#foldername)
+* [basicfile](#basicfile)
+* [basicfolder](#basicfolder)
+* [basicimage](#basicimage)
 
-## filename
-Match by file's name.
+### filename<a name="filename"></a>
+Matches files by filename.
 
-Example, considering we have a file named `package.json`:
+##### Example
+Suppose we have a file named `package.json`.
+The correct rule for this would be the following:
 ```json
 {
 	...
@@ -58,10 +58,12 @@ Example, considering we have a file named `package.json`:
 }
 ```
 
-### fileformat
-Match by file's format.
+### fileformat<a name="fileformat"></a>
+Matches files by file extension.
 
-Example, considering we have a file named `cool.ts`:
+##### Example
+Suppose we have a file named `cool.ts`.
+The correct rule for this would be the follwing:
 ```json
 {
 	...
@@ -74,7 +76,8 @@ Example, considering we have a file named `cool.ts`:
 }
 ```
 
-**Note**: fileformat is the default type, so you can just not write it, example:
+> **Note**: </br>
+fileformat is the default type, so you can omit it.
 ```json
 {
 	...
@@ -87,10 +90,11 @@ Example, considering we have a file named `cool.ts`:
 ```
 
 
-## filetype
-Match by file's type.
+### filetype<a name="filetype"></a>
+Matches files by filetype.
 
-Example, considering we have a file named `whatever.cool.js`:
+##### Example
+Suppose we have a file named `whatever.cool.js`:
 ```json
 {
 	...
@@ -103,12 +107,13 @@ Example, considering we have a file named `whatever.cool.js`:
 }
 ```
 
-This will match every file ending with 'cool.js'
+This will match every file ending with 'cool.js'.
 
-## foldername
-Same as filename but for folders.
+### foldername<a name="foldername"></a>
+Matches folders by foldername.
 
-Example, considering we have a file named `magic`:
+##### Example
+Suppose we have a file named `magic`:
 ```json
 {
 	...
@@ -121,12 +126,14 @@ Example, considering we have a file named `magic`:
 	}
 }
 ```
+> **Note**: 
+* icon (aka closedIcon): Icon displayed when the folder is closed.
+* openedIcon: Icon displayed when the folder is open.
 
-* icon (aka closedIcon): icon displayed when the folder is closed
-* openedIcon: icon displayed when the folder is opened.
+### basicfile<a name="basicfile"></a>
+> **Note**:</br>
+When Graviton doesn't recognize a fileformat, it will show a unknown file which uses the basic file.
 
-## basicfile
-When Graviton doesn't recognize a file's format, it will show a unknown file, aka Basic file.
 ```json
 {
 	...
@@ -139,8 +146,8 @@ When Graviton doesn't recognize a file's format, it will show a unknown file, ak
 }
 ```
 
-## basicfolder
-This applies for the normal folder icon.
+### basicfolder<a name="basicfolder"></a>
+Matches any folder that is not matched by [foldername](#foldername).
 
 ```json
 {
@@ -158,8 +165,8 @@ This applies for the normal folder icon.
 * icon (aka closedIcon): icon displayed when the folder is closed
 * openedIcon: icon displayed when the folder is opened.
 
-## basicimage
-This applies for all images formats recognized in Graviton.
+### basicimage<a name="basicimage"></a>
+Matches any image whose imageformat is recognized by Graviton.
 
 ```json
 {

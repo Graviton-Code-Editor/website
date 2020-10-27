@@ -5,9 +5,9 @@ description: Notification
 
 ---
 
-The Notification class allows you send notifications inside Graviton.
+The Notification class allows you to send notifications inside Graviton.
 
-Options interface: 
+Notification options interface: 
 
 ```ts
 interface NotificationOptions {

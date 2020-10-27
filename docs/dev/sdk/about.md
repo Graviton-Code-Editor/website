@@ -5,7 +5,7 @@ description: About Graviton's SDK
 
 ---
 
-Graviton SDK provides a toolchain to build all kind of plugins for Graviton Editor.
+The Graviton SDK provides a toolchain for building all kinds of plugins for Graviton Editor.
 
 ### Installation
 
@@ -17,27 +17,27 @@ npm install --save-dev @gveditor/sdk
 
 ### Usage
 
-You can use it as CLI or access it's internal API  for custom scripts.
+You can use it's CLI or access it's internal API for custom scripts.
 
 #### CLI
 
 Arguments: 
-* --project: indicates where the plugin ins stored (generally in the same directory, `./`)
-* --target: indicates what type of plugin you want to build
+* `--project`: indicates where the plugin is stored (generally in the same directory, `./`)
+* `--target`: indicates what type of plugin you want to build
    - plugin: JavaScript (aka dynamic) plugin
    - iconpack
    - theme
-* --mode: indicates what kind of build you want to do
-   - dev: Development build (it will watch for changes)
+* `--mode`: indicates what kind of build you want to do
+   - dev: Development build (will watch for changes)
    - release: A release build
    
 #### Manifest
 
 The Manifest file (aka package.json) needs an extra property when using Graviton's SDK:
 
-* mainSrc: indicates the path of the source entry file.
+* `mainSrc`: indicates the path of the source entry file.
 
-Example:
+##### Example:
 
 ```json
 {

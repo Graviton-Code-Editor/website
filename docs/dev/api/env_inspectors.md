@@ -5,16 +5,17 @@ description: Environment Inspectors
 
 ---
 
-Environment inspectors (aka Project Inspectors) allows you to inspect the information about your project easier, and also execute scripts.
+Environment inspectors (or Project Inspectors) allow you to inspect information about your project more easily, and execute scripts.
 
 Concepts:
-* Inspectors are filters, if they detect something "interesting" in the folder, it will return the information about the folder, if not, the next Inspector's filter will be executed.
+* Inspectors are filters, if they detect something "interesting" in the folder, they will return information about the folder. If not, the next Inspector's filter will be executed.
 * The filters are executed every time a folder is opened.
-* They are shown in the Environment sidepanel
+* The Inspectors are shown in the Environment sidepanel
 
 Example:
 
-Let's suppose the folder have a file `interesting.json`, with some JSON content:
+Suppose a folder has a file `interesting.json`, with some JSON content.
+A filter for this file would look like the following:
 
 ```ts
 RunningConfig.data.envs.push({
@@ -24,7 +25,7 @@ RunningConfig.data.envs.push({
 			
 			const interestingFile = path.join(OpenedFolderPath, 'interesting.json')
 			
-			if(await fs.exists(interestingFile)){ //The folder have the 'interesting.json' file
+			if(await fs.exists(interestingFile)){ //The folder has the 'interesting.json' file
 				
 				const interestingContent = window.require(interestingFile)
 				resolve(interestingContent)

@@ -5,9 +5,9 @@ description: Explorer Provider
 
 ---
 
-A Explorer Provider is a tiny layer between the Gravion and the filesystem. 
-By default, Graviton ships with a [Local ExplorerProvider](https://github.com/Graviton-Code-Editor/Graviton-App/blob/master/src/interface/defaults/local.explorer.ts) which allows you to access, read, modify, etc, your local filesystem.
-Plugins can make use custom ExplorerProviders to access non-local filesystems, for example, remote filesystems.
+An Explorer Provider is a tiny layer between Graviton and the filesystem. 
+By default, Graviton ships with the [Local ExplorerProvider](https://github.com/Graviton-Code-Editor/Graviton-App/blob/master/src/interface/defaults/local.explorer.ts) which allows you to access, read, and modify, your local filesystem.
+Plugins can make use of custom ExplorerProviders to access non-local filesystems, for example remote filesystems.
 
 ExplorerProvider's full interface:
 ```ts
@@ -52,7 +52,7 @@ function entry({ FilesExplorer }){
 			},
 			isGitRepo(){
 				return new Promise( (res) => {
-					//Return if is or is not a git repository
+					//Return whether it is a git repository
 					res(false)
 				})
 			},
@@ -71,7 +71,7 @@ modules.export = {
 }
 ```
 
-This implements some basic operations:
+This example implements some basic operations:
 * List directories
-* Reading files
-* Detecting if the project folder is a git repository
+* Read files
+* Detect if the project folder is a git repository

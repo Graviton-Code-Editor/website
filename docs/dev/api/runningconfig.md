@@ -5,17 +5,16 @@ description: Runtime Configuration
 
 ---
 
-RunningConfig is a Puffin State which holds configuration, data and events needed on runtime. 
+RunningConfig is a Puffin State which holds configuration, data and events needed on runtime for Graviton.
 
 **Contents**:
 * [Data](#data)
 * [Events](#events)
 
-<div id="data"/>
 
-## Data
+## Data<a name="data"></a>
 
-You can access it's data via the `data` prop.
+The data can be accessed via the `data` prop.
 
 Example:
 ```javascript
@@ -49,21 +48,21 @@ interface RunningConfigData{
 ```
 
 ### focusedTab: <div class="type"> HTMLElement | null </div>
-Refers refers to the focused tab. If there isn't any, it will be null.
+Refers to the focused tab. `null` if none exist.
 
 ### focusedPanel: <div class="type"> HTMLElement </div>
-Refers refers to the focused panel.
+Refers to the focused panel.
 
 ### focusedEditor: <div class="type"> { client, instance } | null </div>
-Refers to the focused editor. If there isn't any, it will be null.
-   * `client: string`: is the EditorClient of the editor 
-   * `instance`: original editor's instance (such as CodeMirror)
+Refers to the focused editor. `null` if none exist.
+   * `client: string`: is the EditorClient of the editor.
+   * `instance`: original editor's instance (such as CodeMirror).
 
 ### workspacePath: <div class="type"> string | null </div>
-Refers to the current workspacePath, if there isn't any workspace opened it will be null.
+Refers to the current workspacePath. `null` if no open workspace.
 
 ### iconpack: <div class="type"> {} </div>
-This contains the current selected iconpack's icons.
+Contains the current selected iconpack's icons.
 
 ### isDebug: <div class="type"> boolean </div>
 Indicates if Graviton was launched in debug mode.
@@ -72,21 +71,21 @@ Indicates if Graviton was launched in debug mode.
 Indicates if Graviton is in development mode.
 
 ### workspaceConfig: <div class="type"> { name, folders } </div>
-This contains the current workspace configuration, it exists even if there isnt any workspace selected.
-   * `name: string | null` -> Refers to the Workspace name, by default it's null.
+Contains the current workspace configuration, it exists even if there isnt any workspace selected.
+   * `name: string | null` -> Refers to the Workspace name, `null` by default.
    * `folders: string[]` -> Contains the current opened folders in Graviton's explorer panel.
 
 ### globalCommandPrompt: <div class="type"> [] </div>
 Contains options which will be included in the global prompt, this can be handy for plugins wanting to add their own options to it.
 
 ### notifications: <div class="type"> [] </div>
-Contains the current displayed notifications
+Contains the current displayed notifications.
 
 ### editorsRank: <div class="type"> [] </div>
-Contains a rank of editor clients. By default the first is CodeMirror and second the ImageViewer, this means whenever you open a file, first it will ask CodeMirror if it supports the file's format and if not it will then ask the second which in this case is the ImageViewer.
+Contains a rank of editor clients. By default the first is CodeMirror and second the ImageViewer, this means whenever you open a file, first it will ask CodeMirror if it supports the file's format: if not it will then ask the second which in this case is the ImageViewer.
 
 ### openedWindows: <div class="type"> number </div>
-Indicates the total number of opened windows, this also includes Dialogs.
+Indicates the total number of open windows, this also includes Dialogs.
 
 ### arguments: <div class="type"> string[] </div>
 Contains the arguments Graviton was launched with.
@@ -97,12 +96,12 @@ Contains all the settings provided by the current workspace if selected.
 ### envs: <div class="type"> { name, prefix, filter }[] </div>
 Contains all the environment filters. 
 
-These are used to understand what kind of project you are working on. 
+These properties are used to determine the kind of project being developed.
 By default, Graviton includes the NPM env, so whenever you open a NPM project it will display it in the environments side panel.
 
-   * `name: string` -> Indicates the Env name
+   * `name: string` -> Indicates the env name
    * `prefix: string` -> Command prefix used for scripts
-   * `filter: function` -> Function which returns a object with the environment data or false if it didn't identify the environment.
+   * `filter: function` -> Function which returns an object with the environment data or false if it didn't identify the environment.
 
 ### projectServices: <div class="type">{ name, description, onExecuted }[]</div>
 Contains the project services.
@@ -110,9 +109,8 @@ Contains the project services.
    * `descripion: -> string`: Short description 
    * `onExecuted: -> function`: Function executed when the project service is used
    
-<div id="events"/>
 
-## Events
+## Events<a name="events"></a>
 
 Usage:
 
@@ -124,7 +122,7 @@ function entry({ RunningConfig }){
 }
 ```
 
-There are some events not listed here since they are used in Graviton internally.
+There are some events not listed here because they are used only in Graviton internally.
 
 ### Tabs
 
@@ -148,7 +146,7 @@ interface TabEventArgs {
 }
 ```
 
-Since `aTabHasBeenFocused` is also emitted when the tab is created it has an extra property, so it's arguments interface is:
+Because `aTabHasBeenFocused` is also emitted when the tab is created, it has an extra property: `justCreated`. The following is the argument interface:
 ```ts
 interface TabEventArgs {
 	tabElement: HTMLElement,
@@ -189,6 +187,7 @@ interface FolderEventsArgs {
 ```
 
 * gitStatusUpdated
+
 Arguments interface:
 ```ts
 interface gitStatusUpdatedArgs {
@@ -199,11 +198,11 @@ interface gitStatusUpdatedArgs {
 }
 ```
 
-> Note: These will only be triggered if the files watcher is enabled.
+> Note: These will only be triggered if the file watcher is enabled.
 
 ### Commands
 
-These are events, you can trigger to do certain things, they are self-explained.
+The following events can be triggered to do certain things. The names are self-explanatory.
 
 * command.saveCurrentFile
 * command.newPanel

@@ -7,7 +7,7 @@
 		{
 			"label": "🐾 User Guide",
 			"slug": "user_guide",
-			"list":[
+			"list": [
 				{
 					"label": "🍱 Workspaces",
 					"slug": "user_guide/workspaces"
@@ -17,7 +17,7 @@
 		{
 			"label": "🔧 For developers",
 			"slug": "dev",
-			"list":[
+			"list": [
 				{
 					"label": "👋🏻 Getting Started",
 					"slug": "dev/starting"
@@ -25,7 +25,7 @@
 				{
 					"label": "🚦 Fundamentals",
 					"slug": "dev/fundamentals",
-					"list":[
+					"list": [
 						{
 							"label": "🧰 .graviton2",
 							"slug": "dev/fundamentals/graviton2"
@@ -33,7 +33,7 @@
 						{
 							"label": "📦 Plugins",
 							"slug": "dev/fundamentals/plugins",
-							"list":[
+							"list": [
 								{
 									"label": "🧾 Manifest",
 									"slug": "dev/fundamentals/plugins/manifest"
@@ -61,7 +61,7 @@
 				{
 					"label": "🧵 SDK",
 					"slug": "dev/sdk",
-					"list":[
+					"list": [
 						{
 							"label": "🧾 About",
 							"slug": "dev/sdk/about"
@@ -71,7 +71,7 @@
 				{
 					"label": "🎨 API",
 					"slug": "dev/api",
-					"list":[
+					"list": [
 						{
 							"label": "🏃‍♂️ RunningConfig",
 							"slug": "dev/api/runningconfig"
@@ -113,7 +113,7 @@
 				{
 					"label": "🏤 Store",
 					"slug": "dev/store",
-					"list":[
+					"list": [
 						{
 							"label": "🧾 Manifest",
 							"slug": "dev/store/manifest"
@@ -127,7 +127,7 @@
 				{
 					"label": "🤓 Guides",
 					"slug": "dev/guides",
-					"list":[
+					"list": [
 						{
 							"label": "🧠 Source Code",
 							"slug": "dev/guides/sourcecode"
