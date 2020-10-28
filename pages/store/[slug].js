@@ -37,7 +37,7 @@ const Store = ({ name, author, description, releases, id, repository, readmeCont
 					<p>Releases</p>
 					{releases.map(({ url, version }) => {
 							return (
-								<button>
+								<button key={url}>
 									<a href={`graviton:install?&id=${id}&url=${url}`}>
 										{`v${version}`}
 									</a>
