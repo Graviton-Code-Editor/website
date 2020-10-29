@@ -24,6 +24,7 @@ npm install
 
 Run locally:
 ```
+npm run dev:tasks
 npm run dev
 ```
 

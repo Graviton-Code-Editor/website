@@ -6,12 +6,11 @@
 	"author": "Marc Espín Sanz",
 	"scripts": {
 		"dev": "next",
-		"build": "next build",
+		"build": "npm run dev:tasks && next build",
 		"postbuild": "next-on-netlify",
 		"build:static": "next build && next export -o dist",
 		"dev:tasks": "gulp",
-		"start": "next start",
-		"postinstall": "npm run dev:tasks"
+		"start": "next start"
 	},
 	"devDependencies": {
 		"babel-plugin-emotion": "^10.0.33",
