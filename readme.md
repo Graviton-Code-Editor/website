@@ -30,5 +30,5 @@ npm run dev
 
 Building:
 ```
-npm nun build
+npm run build
 ```
