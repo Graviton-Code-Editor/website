@@ -66,7 +66,11 @@ async function installGravitonDeps(){
 	return new Promise(res => {
 		exec('npm i', {
 			cwd: path.join(__dirname, 'graviton_repo')
-		}, () => {
+		}, (err) => {
+			if(err) {
+				console.log(err)
+				throw  err
+			}
 			res()
 		})
 	})
@@ -76,7 +80,11 @@ async function buildGraviton(){
 	return new Promise(res => {
 		exec('npm run build:experimental:browser', {
 			cwd: path.join(__dirname, 'graviton_repo')
-		}, () => {
+		}, (err) => {
+			if(err) {
+				console.log(err)
+				throw  err
+			}
 			res()
 		})
 	})
