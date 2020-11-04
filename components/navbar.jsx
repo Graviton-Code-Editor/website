@@ -19,10 +19,8 @@ const NavBarContainer = styled.div`
 		max-width: 600px;
 		padding: 25px;
 		border-bottom: 1px solid rgb(180,180,180);
-		@media only screen and (max-width: 600px) {
-			display: block;
-		}
 		& > * {
+			display: inline-block;
 			max-width: 100px;
 			padding: 0px 15px;
 			margin-bottom: 5px;
@@ -33,6 +31,8 @@ const NavBarContainer = styled.div`
 			outline: 0;
 			font-family: 'Fira Sans', sans-serif;
 			white-space: nowrap;
+			margin: 0;
+			margin-bottom: 5px;
 			&[active="true"]{
 				color: black;
 			}
@@ -43,7 +43,8 @@ const NavBarContainer = styled.div`
 				margin-bottom: 0px;
 				margin-right: 75px;
 				@media only screen and (max-width: 600px) {
-					margin: 0;
+					margin-right: 0px;
+					margin-left: 150px;
 				}
 				& > img {
 					cursor: pointer;
@@ -65,11 +66,11 @@ function Navbar() {
 	return (
 		<NavBarContainer>
 			<div>
-				<a className="img">
-					<Link href="/">
+				<Link href="/">
+					<a className="img">
 						<img alt="Graviton Logo" src={Logo}/>
-					</Link>
-				</a>
+					</a>
+				</Link>
 				<Link href="/">
 					<a active={router.asPath.split('/')[1] === '' ? 'true' : ''}>Home</a>
 				</Link>
