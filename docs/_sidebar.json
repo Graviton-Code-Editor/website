@@ -1,0 +1,148 @@
+{
+	"list": [
+		{
+			"label": "👋 Introduction",
+			"slug": ""
+		},
+		{
+			"label": "🐾 User Guide",
+			"slug": "user_guide",
+			"list": [
+				{
+					"label": "🍱 Workspaces",
+					"slug": "user_guide/workspaces"
+				}
+			]
+		},
+		{
+			"label": "🔧 For developers",
+			"slug": "dev",
+			"list": [
+				{
+					"label": "👋🏻 Getting Started",
+					"slug": "dev/starting"
+				},
+				{
+					"label": "🚦 Fundamentals",
+					"slug": "dev/fundamentals",
+					"list": [
+						{
+							"label": "🧰 .graviton2",
+							"slug": "dev/fundamentals/graviton2"
+						},
+						{
+							"label": "📦 Plugins",
+							"slug": "dev/fundamentals/plugins",
+							"list": [
+								{
+									"label": "🧾 Manifest",
+									"slug": "dev/fundamentals/plugins/manifest"
+								},
+								{
+									"label": "🎲 Dynamic",
+									"slug": "dev/fundamentals/plugins/dynamic"
+								},
+								{
+									"label": "🎨 Themes",
+									"slug": "dev/fundamentals/plugins/themes"
+								},
+								{
+									"label": "🎭 Iconpacks",
+									"slug": "dev/fundamentals/plugins/iconpacks"
+								}
+							]
+						},
+						{
+							"label": "🐧 Puffin",
+							"slug": "dev/fundamentals/puffin"
+						}
+					]
+				},
+				{
+					"label": "🧵 SDK",
+					"slug": "dev/sdk",
+					"list": [
+						{
+							"label": "🧾 About",
+							"slug": "dev/sdk/about"
+						}
+					]
+				},
+				{
+					"label": "🎨 API",
+					"slug": "dev/api",
+					"list": [
+						{
+							"label": "🏃‍♂️ RunningConfig",
+							"slug": "dev/api/runningconfig"
+						},
+						{
+							"label": "🔩 StaticConfig",
+							"slug": "dev/api/staticconfig"
+						},
+						{
+							"label": "👓 Dialog",
+							"slug": "dev/api/dialog"
+						},
+						{
+							"label": "🎴 Window",
+							"slug": "dev/api/window"
+						},
+						{
+							"label": "🔍 Explorer",
+							"slug": "dev/api/explorer"
+						},
+						{
+							"label": "🎹 Environment Inspectors",
+							"slug": "dev/api/env_inspectors"
+						},
+						{
+							"label": "Notification",
+							"slug": "dev/api/notification"
+						},
+						{
+							"label": "Explorer Provider",
+							"slug": "dev/api/explorer_provider"
+						},
+						{
+							"label": "Editor Client",
+							"slug": "dev/api/editor_client"
+						}
+					]
+				},
+				{
+					"label": "🏤 Store",
+					"slug": "dev/store",
+					"list": [
+						{
+							"label": "🧾 Manifest",
+							"slug": "dev/store/manifest"
+						},
+						{
+							"label": "🎠 Publishing",
+							"slug": "dev/store/publishing"
+						}
+					]
+				},
+				{
+					"label": "🤓 Guides",
+					"slug": "dev/guides",
+					"list": [
+						{
+							"label": "🧠 Source Code",
+							"slug": "dev/guides/sourcecode"
+						},
+						{
+							"label": "🤠 Building manually",
+							"slug": "dev/guides/building"
+						},
+						{
+							"label": "🧵 Basic dynamic plugin",
+							"slug": "dev/guides/basic_plugin"
+						}
+					]
+				}
+			]
+		}
+	]
+}

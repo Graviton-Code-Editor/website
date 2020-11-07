@@ -1,69 +1,41 @@
 {
 	"name": "graviton-website",
-	"private": true,
-	"description": "Graviton Website",
-	"version": "1.0.1",
-	"author": "Marc Espín Sanz <mespinsanz@gmail.com>",
-	"bugs": {
-		"url": "https://github.com/Graviton-Code-Editor/website/issues"
-	},
-	"dependencies": {
-		"@mdx-js/mdx": "^1.5.1",
-		"@mdx-js/react": "^1.5.1",
-		"babel-plugin-styled-components": "^1.10.0",
-		"gatsby": "^2.3.25",
-		"gatsby-image": "^2.0.39",
-		"gatsby-plugin-feed-mdx": "^1.0.0",
-		"gatsby-plugin-google-analytics": "^2.0.18",
-		"gatsby-plugin-manifest": "^2.0.29",
-		"gatsby-plugin-mdx": "^1.0.52",
-		"gatsby-plugin-netlify-cms": "^4.0.0",
-		"gatsby-plugin-offline": "^2.0.25",
-		"gatsby-plugin-react-helmet": "^3.0.12",
-		"gatsby-plugin-sharp": "^2.0.35",
-		"gatsby-plugin-styled-components": "^3.0.7",
-		"gatsby-plugin-typography": "^2.2.13",
-		"gatsby-remark-copy-linked-files": "^2.0.11",
-		"gatsby-remark-images": "^2.0.6",
-		"gatsby-remark-responsive-iframe": "^2.1.1",
-		"gatsby-remark-smartypants": "^2.0.9",
-		"gatsby-remark-vscode": "^1.0.4",
-		"gatsby-source-filesystem": "^2.0.29",
-		"gatsby-transformer-sharp": "^2.1.18",
-		"lodash": "^4.17.19",
-		"netlify-cms-app": "^2.9.1",
-		"react": "^16.8.6",
-		"react-dom": "^16.8.6",
-		"react-helmet": "^5.2.0",
-		"react-switch": "^5.0.0",
-		"react-typography": "^0.16.19",
-		"sharp": "^0.24.1",
-		"styled-components": "^4.2.0",
-		"typeface-merriweather": "0.0.72",
-		"typeface-montserrat": "0.0.54",
-		"typography": "^0.16.19",
-		"typography-theme-wordpress-2016": "^0.16.19"
+	"version": "1.1.0",
+	"description": "Graviton Editor's website",
+	"main": "index.js",
+	"author": "Marc Espín Sanz",
+	"scripts": {
+		"dev": "next",
+		"build": "npm run dev:tasks && next build",
+		"postbuild": "next-on-netlify",
+		"build:static": "next build && next export -o dist",
+		"dev:tasks": "gulp",
+		"start": "next start"
 	},
 	"devDependencies": {
-		"prettier": "^1.17.0"
+		"babel-plugin-emotion": "^10.0.33",
+		"download-git-repo": "^3.0.2",
+		"fs-extra": "^9.0.1",
+		"gray-matter": "^4.0.2",
+		"gulp": "^4.0.2",
+		"imagemin-svgo": "^8.0.0",
+		"marked": "^1.1.1",
+		"ncp": "^2.0.0",
+		"next": "^10.0.0",
+		"next-compose-plugins": "^2.2.0",
+		"next-on-netlify": "^2.3.1",
+		"next-optimized-images": "^2.6.2",
+		"remark-highlight.js": "^6.0.0",
+		"remark-html": "^12.0.0",
+		"remark-parse": "^8.0.3",
+		"sass": "^1.26.10",
+		"unified": "^9.1.0",
+		"webp-loader": "^0.6.0"
 	},
-	"homepage": "https://github.com/Graviton-Code-Editor/website",
-	"keywords": [
-		"graviton",
-		"editor",
-		"javascript",
-		"css"
-	],
-	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/Graviton-Code-Editor/website.git"
-	},
-	"scripts": {
-		"build": "gatsby build",
-		"develop": "gatsby develop",
-		"format": "prettier --write src/**/*.{js,jsx}",
-		"start": "npm run develop",
-		"serve": "gatsby serve"
+	"dependencies": {
+		"@emotion/core": "^10.0.34",
+		"@emotion/styled": "^10.0.27",
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1"
 	}
 }
