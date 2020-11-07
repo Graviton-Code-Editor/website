@@ -22,8 +22,8 @@ function Home() {
 							<img alt="Gravitonn Screenshot" src={GravitonScreenshot}/>
 						</div>
 						<div className="right-text"> 
-							<Title>Built for all kind of devs</Title>
-							<p>Graviton Editor is a open source, free and cross-platform code editor</p>
+							<Title>Built for all kind of developers</Title>
+							<p>Graviton Editor is an open source, free and cross-platform code editor</p>
 							<a target="_blank" href="https://github.com/Graviton-Code-Editor/Graviton-App/releases">
 								<Button>DOWNLOAD</Button>
 							</a>
@@ -46,7 +46,7 @@ function Home() {
 							</a>
 						</div>
 						<div>
-							<p>Available for Windows, MacOS and Linux.</p>
+							<p>Available for Windows, MacOS, Linux and any device running the Web.</p>
 						</div>
 						<Footer/>
 					</div>
