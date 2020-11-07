@@ -4,6 +4,7 @@
 	"description": "Graviton Editor's website",
 	"main": "index.js",
 	"author": "Marc Espín Sanz",
+	"license":"MIT",
 	"scripts": {
 		"dev": "next",
 		"build": "npm run dev:tasks && next build",
