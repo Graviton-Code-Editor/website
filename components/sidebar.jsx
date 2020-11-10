@@ -3,12 +3,14 @@ import styled from '@emotion/styled'
 import { useRouter } from "next/router";
 import { list as sidebar } from '../docs/_sidebar.json'
 import { useState, useEffect } from 'react'
+import Events from 'events'
 
 const SidebarContainer = styled.div`
 	display: block;
 	overflow: auto;
 	min-height: auto;
 	height: 100%;
+	max-height: 700px;
 	min-width: 250px;
 	width: 250px;
 	max-width: 25%;
@@ -141,45 +143,68 @@ const SidebarContainer = styled.div`
 	}
 `
 
+const routing = new Events()
+routing.setMaxListeners(50)
+
 
 const getSideButton = (btn, filter, inRoot) => {
 	const router = useRouter();
 	const slug = btn.slug !== '' ? `/docs/${btn.slug}` : '/docs'
 	const [displayed, display] = useState(router.asPath.includes(slug) || inRoot)
 	const [active, setActive] = useState(router.asPath ===  slug ? "true" : "")
-	filter.results.push({
-		slug,
-		name: btn.label,
-		action(p){
-			if(p.match(slug)) {
-				display(true)
-				if(p === slug) setActive('true')
+	
+	useEffect(() => {
+		
+		function routeChanged(newRoute) {
+			if(newRoute === slug){
+				setActive('true')
 			}else{
-				display(false)
-				if(router.asPath !==  slug) setActive('false')
+				setActive('')
 			}
 		}
-	})
+		
+		routing.on('routeChanged', routeChanged)
+		
+		filter.results.push({
+			slug,
+			name: btn.label,
+			action(p){
+				if(p.match(slug)) {
+					display(true)
+					if(p === slug) setActive('true')
+				}else{
+					display(false)
+					if(router.asPath !==  slug) setActive('false')
+				}
+			}
+		})
+		return () => {
+			routing.off('routeChanged', routeChanged)
+		}
+	},[])
+	
 	
 	return (
 		<div key={btn.slug} className="sideButton" >
 			{btn.list ? (
 				<button className="sidebtn" onClick={ () => display(!displayed)} active={active}> 
-					<img className="" src="/arrow.svg" className={displayed?'img sidebtn displayed':'img sidebtn hidden'}/>
+					<img src="/arrow.svg" className={displayed ? 'img sidebtn displayed' : 'img sidebtn hidden'}/>
 					{btn.label} 
 				</button>
 			): (
-				<Link href={`/docs/${btn.slug}`} >
-					<button onClick={ () => display(!displayed)} active={active}>
+				<Link href={slug} >
+					<button onClick={ () => {
+							display(!displayed)
+							routing.emit('routeChanged', slug)
+						}} active={active}>
 						<div className="img"/>
 						{btn.label} 
 					</button>
 				</Link> 
 			)}
-			<div style={displayed ? {display: 'block'}:{display: 'none'}}>
-			{btn.list && btn.list.map(btn => getSideButton(btn, filter, false))}
+			<div style={displayed ? { display: 'block' } : { display: 'none' }}>
+				{btn.list && btn.list.map(btn => getSideButton(btn, filter, false))}
 			</div>
-			
 		</div>
 	)
 }
