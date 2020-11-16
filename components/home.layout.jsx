@@ -12,10 +12,13 @@ const HomeLayout = styled.div`
 		flex-direction: column;
 		text-align: center;
 		max-width: 80%;
+		.note{
+			color: rgb(60, 60, 60);
+			font-size: 14px;
+		}
 		.horizontal {
 			display: flex;
 			flex-direction: row;
-			padding: 50px 5px;
 			@media only screen and (max-width: 600px) {
 				display: block;
 				& .image {

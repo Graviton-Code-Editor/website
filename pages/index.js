@@ -17,16 +17,16 @@ function Home() {
 			<Navbar/>
 			<HomeLayout>
 				<div className="container">
-					<div className="horizontal">
+					<div className="horizontal" style={{ 'padding': '50px 5px'}}>
 						<div className="image">
 							<img alt="Gravitonn Screenshot" src={GravitonScreenshot}/>
 						</div>
 						<div className="right-text"> 
 							<Title>Built for all kind of developers</Title>
 							<p>Graviton Editor is an open source, free and cross-platform code editor</p>
-							<a target="_blank" href="https://github.com/Graviton-Code-Editor/Graviton-App/releases">
+							<Link href="/download">
 								<Button>DOWNLOAD</Button>
-							</a>
+							</Link>
 							
 							<Link href="/browser" >
 								<SecondButton>Use Browser version</SecondButton>
