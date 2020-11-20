@@ -59,17 +59,7 @@
 					]
 				},
 				{
-					"label": "🧵 SDK",
-					"slug": "dev/sdk",
-					"list": [
-						{
-							"label": "🧾 About",
-							"slug": "dev/sdk/about"
-						}
-					]
-				},
-				{
-					"label": "🎨 API",
+					"label": "🎨 Plugins API",
 					"slug": "dev/api",
 					"list": [
 						{
@@ -107,6 +97,16 @@
 						{
 							"label": "Editor Client",
 							"slug": "dev/api/editor_client"
+						}
+					]
+				},
+				{
+					"label": "🧵 SDK",
+					"slug": "dev/sdk",
+					"list": [
+						{
+							"label": "🧾 About",
+							"slug": "dev/sdk/about"
 						}
 					]
 				},

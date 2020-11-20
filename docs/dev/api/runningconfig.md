@@ -44,6 +44,21 @@ interface RunningConfigData{
 	envs: [],
 	projectServices: [],
 	languageServers: [],
+	LSPPort: Number,
+	LSPServers: {
+		LanguageMode:{
+			server: string[]
+		}
+	},
+	isGitInstalled: Boolean,
+	focusedExplorerItem: HTMLElement | null,
+	terminalShells: {
+		TerminalShellName: () => void
+	},
+	openedTerminals: Array<{ name: string, state: PuffinState }>,
+	focusedTerminal: string,
+	localTerminalAccessories: Array<{ component: PuffinComponent }>,
+	isBrowser: Boolean
 }
 ```
 
@@ -109,6 +124,34 @@ Contains the project services.
    * `descripion: -> string`: Short description 
    * `onExecuted: -> function`: Function executed when the project service is used
    
+### isGitInstalled: <div class="type">Boolean</div>
+Is git installed locally or not.
+
+
+### LSPPort: <div class="type">Number</div>
+LSP Port.
+
+### LSPServers: <div class="type">{LanguageMode:{server: string[]}}</div>
+This contains all loaded language server
+
+### focusedExplorerItem: <div class="type">HTMLElement | null</div>
+This indicates the current focused Explorer's item.
+
+### terminalShells: <div class="type">{{ TerminalShellName: () => void }}</div>
+This contains all Terminal shells loaded
+
+### openedTerminals: <div class="type">{ name: string, state: PuffinState }[]</div>
+This contains all running shells.
+
+### focusedTerminal: <div class="type">string</div>
+This indicates the current session's name.
+
+### localTerminalAccessories: <div class="type">{ component: PuffinComponent }[]</div>
+This contains all the extra accessories for the local shell.
+
+### isBrowser: <div class="type">Boolean</div>
+Indicates if it's running on a browser.
+
 
 ## Events<a name="events"></a>
 

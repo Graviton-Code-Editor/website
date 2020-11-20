@@ -10,14 +10,15 @@ Graviton's Source Code: https://github.com/Graviton-Code-Editor/Graviton-App
 
 ## Source
 
-App's source is located under `Graviton-app/src`. 
+Graviton's source is located under `Graviton-app/src`. 
 * `app`: Contains the startup scripts and handlers.
-* `interface`: Contains all of the app's logic.
+* `interface`: Contains all of the UI logic.
 	- `collections`: Collections are a way of properly loading a bunch of files. For example: different languages, CodeMirror modes and addons, etc.
 	- `components`: Contains all of Graviton components, like Notification, Title bar, etc.
 	- `constructor`: Contains all of the constructors for components such as Window, Dialog, Notification.
-	- `defaults`: Contains default components, default shortcuts, editor clients used in Graviton, default Settings etc.
-	- `types`: here contains TypeScript interfaces used in Graviton internally.
+	- `defaults`: Contains default components, default shortcuts, editor clients, sidepanels, etc... used in Graviton.
+	- `core`: Contains core modules of Graviton, as RunningConfig, StaticConfig, etc...
+	- `types`: here contains TypeScript types used in Graviton internally.
 	- `main.ts`: It contains the root component of the app.
 * `styles`: Contains some essential styles, like Night and Arctic CodeMirror themes.
 
