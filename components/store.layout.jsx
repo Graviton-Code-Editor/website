@@ -65,10 +65,14 @@ const StoreLayout = styled.div`
 		color: gray;
 		font-size: 15px;
 	}
-	& .link{
-		color: black;
+	& .link, .markdown-container a{
+		color: #0066FF;
 		font-size: 15px;
 		padding: 10px 0px;
+		
+	}
+	& code {
+		display: block;
 	}
 `
 

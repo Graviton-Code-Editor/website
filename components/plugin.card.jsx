@@ -27,7 +27,7 @@ const PluginCard = styled.div`
 		transition: 0.12s;
 	}
 	.author{
-		color: gray;
+		color: rgb(70, 70, 70);
 		font-size: 12px;
 	}
 	& a {

@@ -18,15 +18,15 @@ function Blog({ posts }) {
 			<BlogList>
 				{posts.map(post => {
 					return (
-						<BlogCard key={post.title}>
-							<Link href={`/blog/${post.slug}`}>
+						<Link key={post.title} href={`/blog/${post.slug}`}>
+							<BlogCard >
 								<div>
 									<h2>{post.title}</h2>
 									<span className="date">{post.date}</span>
 									<p>{post.description}</p>
 								</div>
-							</Link>
-						</BlogCard> 
+							</BlogCard> 
+						</Link>
 					)
 				})}
 			</BlogList>

@@ -11,7 +11,7 @@ const Button = styled.button`
 	margin: 1px;
 	letter-spacing: ${props => props.noSpacing ? '0px':'1px'};
 	& *{
-		color: inherit;
+		color: white;
 		text-decoration: inherit;
 	}
 	:hover {

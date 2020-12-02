@@ -17,18 +17,18 @@ function Store() {
 			<StoreList>
 				<div>
 					{StoreData.list.map(plugin => {
-					return (
-						<PluginCard key={plugin.id}>
-							<Link href={`/store/${plugin.id}`}>
-								<div>
-									<h2>{plugin.name}</h2>
-									<span className="date">by {plugin.author}</span>
-									<p>{plugin.description}</p>
-								</div>
+						return (
+							<Link key={plugin.id} href={`/store/${plugin.id}`}>
+								<PluginCard >
+									<div>
+										<h2>{plugin.name}</h2>
+										<span className="author">by {plugin.author}</span>
+										<p>{plugin.description}</p>
+									</div>
+								</PluginCard>
 							</Link>
-						</PluginCard>
-					)
-				})}
+						)
+					})}
 				</div>
 			</StoreList>
 		</div>
