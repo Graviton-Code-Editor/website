@@ -9,6 +9,7 @@ Prerequisites:
 
 - [NodeJS (LTS version)](https://nodejs.org/en/)
 - [Git](https://git-scm.com/)
+- **❗ IMPORTANT ❗** -> https://www.npmjs.com/package/node-gyp#installation
 
 ## Getting the source
 
@@ -24,12 +25,6 @@ git clone https://github.com/Graviton-Code-Editor/Graviton-App.git --depth 1
 - `stable`: This doesn't mean it's ready to be released as stable build, but it doesn't have as many bugs as master, and is overall more stable.
 - `1.3.0`: The old Graviton source code.
 
-> **Note** To switch branch:
-* You must be in the previously cloned repository to switch branch. 
-    ```shell
-    git checkout {branch-name}
-    ```
-* Replace `{branch-name}` with the branch you want to build.
 
 ## Installing dependencies
 
@@ -49,21 +44,53 @@ npm install
 
 In case you just want to test it in development mode, run:
 
+### Desktop
+
 ```shell
 npm start
 ```
 
-If it shows an empty dark screen just wait.
+### Browser (experimental)
+
+```shell
+npm start:experimental:browser
+```
+
+If shows an empty dark screen wait some seconds and if Graviton doesn't load try reloading the window (Ctrl+R).
+
 
 ## Building the installer
 
-For Windows, Linux(deb, AppImage, rpm) and MacOS:
+You can build Graviton as a browser app or as a desktop app, you probably want the second option.
+
+### Browser
+
+This will generate a static website, which includes the whole Graviton UI, Arctic, Night and Remote plugins by default.
+
+Run:
+
+```shell
+npm run build:experimental:browser
+```
+
+### Desktop App
+
+This will make a Desktop installer.
+
+Default formats for each platform:
+
+- Windows: 64 bits
+- Linux: Deb and AppImage
+- MacOS: DMG
+
+Run:
 
 ```shell
 npm run build
 ```
 
-You can override the default platforms from the package.json.
+You can override the default outputs in the package.json, or just skip to the next section.
+
 
 #### Building another linux installers
 

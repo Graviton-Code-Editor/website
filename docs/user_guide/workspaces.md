@@ -11,9 +11,7 @@ Workspaces are a way of grouping projects and settings together in a organized w
 The configuration for each workspace is written in files you can save wherever you want. By default Graviton saves the workspaces in files named 'gv.workspace.json', but you can name them whatever you want.
 
 ## Opening workspaces
-You can open your workspaces from the Welcome window > `Recent workspaces`.
-
-Or directly in the menu: `"File" > "Workspaces" > "Open workspaces"`.
+You can see your saved workspaces in `"File" > "Workspaces" > "Open workspaces"`.
 
 
 ## Creating workspaces
@@ -46,8 +44,8 @@ There are two methods to create a workspace.
 
 You have now manually created a Graviton workspace! 
 
-To use it, you must load it in Graviton. To do this, in the menu select `"File" > "Workspaces" > "Load from file"`, and select your workspace's file.
-The next time you are opening a workspace, your workspace will now appear in "Recents Workspaces".
+In order to use it click in menu `"File" > "Workspaces" > "Load from file"`, and select your workspace's file.
+It will now appear in your workspace log.
 
 
 ## Add custom settings
@@ -91,4 +89,4 @@ You should now have the following:
 }
 ```
 
-The settings property enables tweaking of settings for a workspace.
+The settings property allows you to tweak the settings for a workspace.
