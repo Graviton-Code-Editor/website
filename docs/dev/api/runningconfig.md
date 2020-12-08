@@ -5,7 +5,7 @@ description: Runtime Configuration
 
 ---
 
-RunningConfig is a Puffin State which holds configuration, data and events needed on runtime for Graviton.
+RunningConfig is a Puffin State which holds configuration and events needed on runtime for Graviton.
 
 **Contents**:
 * [Data](#data)
