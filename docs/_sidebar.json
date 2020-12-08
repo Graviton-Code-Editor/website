@@ -139,6 +139,10 @@
 						{
 							"label": "🧵 Basic dynamic plugin",
 							"slug": "dev/guides/basic_plugin"
+						},
+						{
+							"label": "🎨 Making a theme",
+							"slug": "dev/guides/theme"
 						}
 					]
 				}

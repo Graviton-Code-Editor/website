@@ -10,9 +10,9 @@ description: How to make a basic plugin
 
 ## Setup
 
-1. Create the folder for your plugin in your [.graviton2](https://github.com/Graviton-Code-Editor/Graviton-App/wiki/docs/.graviton2.md)/plugins directory.
+1. Create the folder for your plugin in your [.graviton2](/docs/dev/fundamentals/graviton2)/plugins directory.
 
-	* Call the folder what you want: `mkdir BasicPlugin`.
+	* Call the folder what you want, example: `mkdir BasicPlugin`.
 2. Navigate into your folder: `cd BasicPlugin`.
 
 3. Now, let's create our package.json (You can use `npm init` if you wish.)
