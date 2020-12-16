@@ -10,3 +10,4 @@ store_repo
 repos
 graviton_repo
 public/graviton
+public/api_docs

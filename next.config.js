@@ -36,6 +36,11 @@ module.exports = withPlugins([
 				destination: '/graviton/index.html',
 				permanent: true,
 			},
+			{
+				source: '/api_docs',
+				destination: '/api_docs/modules/_doc_.gravitonapi.html',
+				permanent: true,
+			},
 		]
 	},
 })

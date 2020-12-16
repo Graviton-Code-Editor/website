@@ -76,21 +76,20 @@ async function installGravitonDeps(){
 	})
 }
 
-async function buildGraviton(){
+async function buildGravitonBrowser(){
 	return new Promise(res => {
 		exec('npm run build:experimental:browser', {
 			cwd: path.join(__dirname, 'graviton_repo')
 		}, (err) => {
 			if(err) {
 				console.log(err)
-				throw  err
 			}
 			res()
 		})
 	})
 }
 
-async function copyGravitonDist(){
+async function copyGravitonBrowserDist(){
 	return new Promise(res => {
 		ncp(path.join(__dirname, 'graviton_repo', 'dist_browser'), path.join(__dirname, 'public', 'graviton'), () => {
 			res()
@@ -98,5 +97,38 @@ async function copyGravitonDist(){
 	})
 }
 
+async function buildGravitonDocs(){
+	return new Promise(res => {
+		exec('npm run doc', {
+			cwd: path.join(__dirname, 'graviton_repo')
+		}, (err) => {
+			if(err) {
+				console.log(err)
+			}
+			res()
+		})
+	})
+}
 
-exports.default = series(cloneStoreApi, installDeps, buildsPlugins, clonePluginsRepos, cloneGraviton, installGravitonDeps, buildGraviton, copyGravitonDist)
+async function copyGravitonDocsDist(){
+	return new Promise(res => {
+		ncp(path.join(__dirname, 'graviton_repo', 'dist_docs'), path.join(__dirname, 'public', 'api_docs'), () => {
+			res()
+		})
+	})
+}
+
+
+
+exports.default = series(
+	cloneStoreApi, 
+	installDeps, 
+	buildsPlugins,
+	clonePluginsRepos,
+	cloneGraviton, 
+	installGravitonDeps,
+	buildGravitonBrowser, 
+	copyGravitonBrowserDist,
+	buildGravitonDocs,
+	copyGravitonDocsDist
+)
