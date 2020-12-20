@@ -99,7 +99,7 @@ async function copyGravitonBrowserDist(){
 
 async function buildGravitonDocs(){
 	return new Promise(res => {
-		exec('npm run build:doc', {
+		exec('npm run build:docs', {
 			cwd: path.join(__dirname, 'graviton_repo')
 		}, (err) => {
 			if(err) {
