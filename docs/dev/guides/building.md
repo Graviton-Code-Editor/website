@@ -7,8 +7,9 @@ description: Building manually
 
 Prerequisites:
 
-- [NodeJS (LTS version)](https://nodejs.org/en/)
-- [Git](https://git-scm.com/)
+- NodeJS (LTS version)
+- yarn
+- Git
 - **❗ IMPORTANT ❗** -> https://www.npmjs.com/package/node-gyp#installation
 
 ## Getting the source
@@ -21,14 +22,13 @@ git clone https://github.com/Graviton-Code-Editor/Graviton-App.git --depth 1
 
 **Important**: There are 3 different branches:
 
-- `master`: Daily source (default).
-- `stable`: This doesn't mean it's ready to be released as stable build, but it doesn't have as many bugs as master, and is overall more stable.
-- `1.3.0`: The old Graviton source code.
+- `master`: Daily changes (default)
+- `stable`: Stable branch, but, does't mean it's released
+- `1.3.0`: Old Graviton Source Code
 
+## Setuping
 
-## Installing dependencies
-
-Navigate into the folder:
+Go inside the folder:
 
 ```shell
 cd Graviton-App
@@ -37,7 +37,7 @@ cd Graviton-App
 Install the dependencies:
 
 ```shell
-npm install
+yarn
 ```
 
 ## Developing (optional)
@@ -46,20 +46,31 @@ In case you just want to test it in development mode, run:
 
 ### Desktop
 
+This will open the app's window:
+
 ```shell
-npm start
+yarn start
 ```
 
 ### Browser (experimental)
 
+This will launch a web server in port 7500 (http://localhost:7500):
+
 ```shell
-npm start:experimental:browser
+yarn start:experimental:browser
+```
+
+### Self-hosted server (experimental)
+
+This will launch a web server in port 7500 (http://localhost:7500):
+
+```shell
+yarn start:experimental:server
 ```
 
 If shows an empty dark screen wait some seconds and if Graviton doesn't load try reloading the window (Ctrl+R).
 
-
-## Building the installer
+## Building
 
 You can build Graviton as a browser app or as a desktop app, you probably want the second option.
 
@@ -70,7 +81,7 @@ This will generate a static website, which includes the whole Graviton UI, Arcti
 Run:
 
 ```shell
-npm run build:experimental:browser
+yarn build:experimental:browser
 ```
 
 ### Desktop App
@@ -86,27 +97,26 @@ Default formats for each platform:
 Run:
 
 ```shell
-npm run build
+yarn build
 ```
 
 You can override the default outputs in the package.json, or just skip to the next section.
 
+#### Building specific Linux installers
 
-#### Building another linux installers
-
-If you want to build a specific linux package for your linux distribution you can run:
+If you want to build a specific linux Installer for your distro you can run:
 
 ```shell
-npm run build:your_extension
+yarn build:electron  platform=X
 ```
 
 For example, if you are an Arch Linux user, run:
 
 ```shell
-npm run build:pacman
+yarn build:electron  platform=arch
 ```
 
-The following is a list of supported packages:
+Here is the list of the supported packages:
 
 - snap
 - pacman
@@ -117,13 +127,22 @@ The following is a list of supported packages:
 - rpm
 - AppImage
 
-Please keep in mind that any OS can build for ***any*** platform. For example, you can build an AppImage and Deb in a Debian-based distro like Ubuntu.
+Please keep in mind that any distribution can build for every platform. For example, you can build for AppImage and Deb in Debian-based distros, like Ubuntu.
 
 #### Building out-packed
 
 In case you want to test Graviton in a production build but don't want to create an installer, you can build an outpacked version, this builds faster than an installer.
 
 Run:
+
 ```shell
-npm run build:outpacked
+yarn build:electron outpacked=true
+```
+
+## API Documentation
+
+To generate a static website with documentation about the plugins API, run:
+
+```shell
+yarn build:docs
 ```
