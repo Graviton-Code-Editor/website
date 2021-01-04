@@ -2,3 +2,4 @@
   command   = "npm run build"
   functions = "out_functions"
   publish   = "out_publish"
+  NETLIFY_USE_YARN = true
