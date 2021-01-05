@@ -30,7 +30,7 @@ interface WindowInstance {
 
 Example:
 ```js
-function entry({ Windowm, puffin }){
+function entry({ Window, puffin }){
 	const windowExample = new Window({
 		component(){
 			return puffin.element`<button>Hello World</button>`
