@@ -77,12 +77,13 @@ async function installGravitonDeps(){
 }
 
 async function buildGravitonBrowser(){
-	return new Promise(res => {
+	return new Promise((res, rej) => {
 		exec('npm run build:experimental:browser', {
 			cwd: path.join(__dirname, 'graviton_repo')
 		}, (err) => {
 			if(err) {
 				console.log(err)
+				rej()
 			}
 			res()
 		})
