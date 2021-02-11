@@ -52,6 +52,8 @@ This will open the app's window:
 yarn start
 ```
 
+If shows an empty dark screen wait some seconds and if Graviton doesn't load try reloading the window (Ctrl+R).
+
 ### Browser (experimental)
 
 This will launch a web server in port 7500 (http://localhost:7500):
@@ -67,8 +69,6 @@ This will launch a web server in port 7500 (http://localhost:7500):
 ```shell
 yarn start:experimental:server
 ```
-
-If shows an empty dark screen wait some seconds and if Graviton doesn't load try reloading the window (Ctrl+R).
 
 ## Building
 
@@ -107,13 +107,13 @@ You can override the default outputs in the package.json, or just skip to the ne
 If you want to build a specific linux Installer for your distro you can run:
 
 ```shell
-yarn build:electron  platform=X
+yarn build:electron --info platform=X
 ```
 
 For example, if you are an Arch Linux user, run:
 
 ```shell
-yarn build:electron  platform=arch
+yarn build:electron --info platform=arch
 ```
 
 Here is the list of the supported packages:
@@ -136,8 +136,24 @@ In case you want to test Graviton in a production build but don't want to create
 Run:
 
 ```shell
-yarn build:electron outpacked=true
+yarn build:electron --info outpacked=true
 ```
+
+### Server binary
+
+This will make a Graviton Server binary.
+
+
+Compiling:
+```shell
+yarn build:server
+```
+
+Packaging:
+```shell
+yarn package:server
+```
+
 
 ## API Documentation
 
