@@ -55,7 +55,8 @@ const SidebarContainer = styled.div`
 			margin-bottom: 4px;
 			font-size: 12px;
 			transition 0.15s;
-			box-shadow: inset 0px 1px 5px rgba(0,0,0,0.25), 0px 0px 0px 0px rgb(200, 200, 200);
+			outline: 0;
+			box-shadow: inset 0px 0px 5px rgba(0,0,0,0.25), 0px 0px 0px 0px rgb(200, 200, 200);
 			:focus{
 				transition 0.15s;
 				box-shadow: inset 0px 1px 3px rgba(0,0,0,0.15), 0px 0px 0px 3px rgb(200, 200, 200);
