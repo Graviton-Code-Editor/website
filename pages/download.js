@@ -23,23 +23,23 @@ function Download() {
 					<Title>Download</Title>
 					<p className="note">Last release is version 2.0.92</p>
 					<div className="horizontal">
-						<DownloadCard href="https://github.com/Graviton-Code-Editor/Graviton-App/releases/download/2.0.92/GravitonEditor_Installer_2.0.92_win.exe">
+						<DownloadCard href="https://github.com/Graviton-Code-Editor/Graviton-App/releases/download/v2.3.0/Graviton-Editor_Installer_2.3.0_win.exe">
 							<IoLogoWindows></IoLogoWindows>
 							Windows
 						</DownloadCard>
-						<DownloadCard href="https://github.com/Graviton-Code-Editor/Graviton-App/releases/download/2.0.92/GravitonEditor_Installer_2.0.92_linux.deb">
+						<DownloadCard href="https://github.com/Graviton-Code-Editor/Graviton-App/releases/download/v2.3.0/Graviton.Editor_Installer_2.3.0_linux_amd64.deb">
 							<GrDebian></GrDebian>
 							Debian
 						</DownloadCard>
-						<DownloadCard href="https://github.com/Graviton-Code-Editor/Graviton-App/releases/download/2.0.92/GravitonEditor_Installer_2.0.92_linux.AppImage">
+						<DownloadCard href="https://github.com/Graviton-Code-Editor/Graviton-App/releases/download/v2.3.0/Graviton-Editor_Installer_2.3.0_linux_x86_64.AppImage">
 							<FaLinux></FaLinux>
 							AppImage
 						</DownloadCard>
-						<DownloadCard href="https://github.com/Graviton-Code-Editor/Graviton-App/releases/download/2.0.92/GravitonEditor_Installer_2.0.92_linux.rpm">
+						<DownloadCard href="https://github.com/Graviton-Code-Editor/Graviton-App/releases/download/v2.3.0/Graviton.Editor_Installer_2.3.0_linux_x86_64.rpm">
 							<FaLinux></FaLinux>
 							RPM
 						</DownloadCard>
-						<DownloadCard href="https://github.com/Graviton-Code-Editor/Graviton-App/releases/download/2.0.92/GravitonEditor_Installer_2.0.92_mac.dmg">
+						<DownloadCard href="https://github.com/Graviton-Code-Editor/Graviton-App/releases/download/v2.3.0/Graviton-Editor_Installer_2.3.0_mac.dmg">
 							<IoLogoApple></IoLogoApple>
 							<span>MacOS</span>
 						</DownloadCard>
