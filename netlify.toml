@@ -1,5 +1,5 @@
 [build]
-  command   = "npm run build"
+  command   = "cargo install mdbook && npm run build"
   publish   = ".next"
  
 [build.environment]
