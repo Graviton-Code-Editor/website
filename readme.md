@@ -30,7 +30,6 @@ yarn install
 
 Run locally:
 ```
-yarn run dev:tasks
 yarn run dev
 ```
 
