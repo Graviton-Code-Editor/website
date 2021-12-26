@@ -7,7 +7,6 @@ module.exports = withPlugins([
 		optimizeImagesInDev: true
 	}]
 ],{
-	target: 'serverless',
 	webpack: (config) => {
         config.resolve.fallback = { fs: false, path: false };
         return config
@@ -31,7 +30,7 @@ module.exports = withPlugins([
 			},
 			{
 				source: '/docs',
-				destination: '/book/index.html',
+				destination: '/introduction.html',
 				permanent: true,
 			}
 		]
