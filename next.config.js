@@ -30,7 +30,7 @@ module.exports = withPlugins([
 			},
 			{
 				source: '/docs',
-				destination: '/introduction.html',
+				destination: '/book/index.html',
 				permanent: true,
 			}
 		]
