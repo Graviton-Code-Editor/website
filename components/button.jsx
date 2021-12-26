@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 
 const Button = styled.button`
-	padding: 11px 12px;
+	padding: 15px;
 	background: rgb(0, 102, 255);
 	border: 0;
 	color: white;
@@ -9,11 +9,7 @@ const Button = styled.button`
 	cursor: pointer;
 	transition: 0.1s;
 	margin: 1px;
-	letter-spacing: ${props => props.noSpacing ? '0px':'1px'};
-	& *{
-		color: white;
-		text-decoration: inherit;
-	}
+	font-weight: 500;
 	:hover {
 		box-shadow: 0px 2px 7px rgba(0,0,0,0.2);
 		background: rgba(0, 102, 255,0.85);
@@ -24,6 +20,10 @@ const Button = styled.button`
 	}
 	&[noSpacing="true"]{
 		letter-spacing: 0px;
+	}
+	& * {
+		color: white;
+		text-decoration: inherit;
 	}
 `
 

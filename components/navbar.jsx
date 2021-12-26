@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import styled from '@emotion/styled'
 import { useRouter } from "next/router";
-import Logo from '../public/logo.png'
+import Image from 'next/image'
 
 const NavBarContainer = styled.div`
 	display: flex;
@@ -25,7 +25,7 @@ const NavBarContainer = styled.div`
 			padding: 0px 15px;
 			margin-bottom: 5px;
 			text-decoration: none;
-			color: rgb(75,75,75);
+			color: rgb(125,125,125);
 			font-size: 16px;
 			font-weight: 500;
 			outline: 0;
@@ -33,11 +33,13 @@ const NavBarContainer = styled.div`
 			white-space: nowrap;
 			margin: 0;
 			margin-bottom: 5px;
+			font-weight: 600;
 			&[active="true"]{
 				color: black;
+
 			}
 			&[active=""]:hover {
-				color: gray;
+				color: rgb(50, 50, 50);
 			}
 			&.img{
 				margin-bottom: 0px;
@@ -68,20 +70,15 @@ function Navbar() {
 			<div>
 				<Link href="/">
 					<a className="img">
-						<img alt="Graviton Logo" src={Logo}/>
+						<Image alt="Graviton Logo" src="/logo.png" width={512} height={129}/>
 					</a>
 				</Link>
 				<Link href="/">
 					<a active={router.asPath.split('/')[1] === '' ? 'true' : ''}>Home</a>
 				</Link>
+				<a href="/docs">Docs</a>
 				<Link href="/blog">
 					<a active={router.asPath.split('/')[1] === 'blog' ? 'true' : ''}>Blog</a>
-				</Link>
-				<Link href="/store">
-					<a active={router.asPath.split('/')[1] === 'store' ? 'true' : ''}>Store</a>
-				</Link>
-				<Link href="/docs" >
-					<a active={router.asPath.split('/')[1] === 'docs' ? 'true' : ''}>Docs</a>
 				</Link>
 				<Link href="/about" >
 					<a active={router.asPath.split('/')[1] === 'about' ? 'true' : ''}>About</a>

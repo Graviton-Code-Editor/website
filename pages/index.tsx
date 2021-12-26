@@ -1,12 +1,12 @@
 import Navbar from '../components/navbar.jsx'
-import HomeLayout from '../components/home.layout.jsx'
+import HomeLayout from '../components/home_layout.jsx'
 import Title from '../components/title.jsx'
 import Footer from '../components/footer.jsx'
 import Button from '../components/button.jsx'
 import SecondButton from '../components/second_button.jsx'
 import Head from 'next/head'
 import Link from 'next/link'
-import GravitonScreenshot from '../public/screenshot.png'
+import Image from 'next/image'
 
 function Home() {
 	return (
@@ -18,18 +18,14 @@ function Home() {
 			<HomeLayout>
 				<div className="container">
 					<div className="horizontal" style={{ 'padding': '50px 5px'}}>
-						<div className="image">
-							<img alt="Gravitonn Screenshot" src={GravitonScreenshot}/>
-						</div>
 						<div className="right-text"> 
 							<Title>Built for all kind of developers</Title>
 							<p>Graviton Editor is an open source, free and cross-platform code editor</p>
 							<Link href="/download">
-								<Button>DOWNLOAD</Button>
+								<Button>DOWNLOAD ALPHA</Button>
 							</Link>
-							
-							<Link href="/browser" >
-								<SecondButton>Use Browser version</SecondButton>
+							<Link href="https://github.com/Graviton-Code-Editor/Graviton-App" >
+								<SecondButton>Contribute {'->'}</SecondButton>
 							</Link>
 						</div>
 					</div>
@@ -46,7 +42,7 @@ function Home() {
 							</a>
 						</div>
 						<div>
-							<p>Available for Windows, MacOS, Linux and any device running the Web.</p>
+							<p>Available for Windows, MacOS, Linux.</p>
 						</div>
 						<Footer/>
 					</div>

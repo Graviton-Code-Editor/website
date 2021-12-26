@@ -1,7 +1,7 @@
 ---
 title: Graviton Remake
 date: "2020-02-15"
-slug: graviton_remake
+slug: 1_graviton_remake
 description: "Graviton v2 is coming"
 ---
 

@@ -2,7 +2,7 @@ import fs from 'fs'
 import matter from 'gray-matter'
 import Navbar from '../../components/navbar.jsx'
 import Layout from '../../components/layout.jsx'
-import BlogLayout from '../../components/blog.layout.jsx'
+import BlogLayout from '../../components/blog_layout.jsx'
 import Title from '../../components/title.jsx'
 import unified from 'unified'
 import markdown from 'remark-parse'
@@ -44,7 +44,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }) {
-	const { content, data } =  matter(fs.readFileSync(`${process.cwd()}/blog/${slug}.md`, 'UTF-8'))
+	const { content, data } =  matter(fs.readFileSync(`${process.cwd()}/blog/${slug}.md`))
 
 	const result = await unified()
 		.use(markdown)

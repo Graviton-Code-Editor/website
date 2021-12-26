@@ -16,8 +16,13 @@ const DownloadCardStyle = styled.div`
 	cursor: pointer;
 	transition: 0.15s;
 	text-align: center;
+	:hover{
+		transition: 0.15s;
+		background: rgb(230,230,230);
+		box-shadow: 0px 1px 7px rgba(0,0,0, 0.17);
+	}
 	& svg {
-		margin-bottom: 5px;
+		margin-bottom: 10px;
 	}
 	& span {
 		margin-right: 8px;
@@ -25,11 +30,6 @@ const DownloadCardStyle = styled.div`
 	& * {
 		text-decoration: none;
 		color: rgb(40,40,40);
-	}
-	:hover{
-		transition: 0.15s;
-		background: rgb(230,230,230);
-		box-shadow: 0px 1px 7px rgba(0,0,0, 0.17);
 	}
 `
 

@@ -1,6 +1,6 @@
 ---
 title: Graviton v2 summary
-slug: graviton2_changes
+slug: 2_graviton2_changes
 date: "2020-06-08"
 description: "Summary of Graviton v2 changes"
 ---

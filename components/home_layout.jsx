@@ -47,11 +47,8 @@ const HomeLayout = styled.div`
 			text-align: center;
 			margin-bottom: 15px;
 			margin-right: 30px;
-			img {
-				filter: drop-shadow(0px 5px 15px rgba(0,0,0,0.35));
-				width: 450px;
-				max-width: 100%;
-			}
+			width: 60%;
+			filter: drop-shadow(0px 5px 15px rgba(0,0,0,0.35));
 		}
 		.footer {
 			display: flex;

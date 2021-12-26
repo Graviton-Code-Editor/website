@@ -8,16 +8,12 @@
 body * {
 	font-family: 'Inter', sans-serif;
 }
-body {
+body, html {
 	margin: 0;
 	padding: 0;
 }
 
-html {
-	margin: 0;
-	padding: 0;
-}
-h1, h2, {
+h1, h2 {
 	font-weight: bold;
 	color: rgb(30,30,30);
 }
@@ -26,8 +22,6 @@ h3 {
 	font-size: 17px;
 	font-weight: bold;
 }
-
-
 
 .markdown-container {
 	max-width: 100%;
@@ -95,9 +89,9 @@ h3 {
 	h1,
 	h2,
 	h3,
-	h4{
+	h4 {
 		margin-top: 2em;
 		margin-bottom: 1em;
-}
+	}
 	
 }

@@ -1,5 +1,5 @@
 import Navbar from '../components/navbar.jsx'
-import HomeLayout from '../components/home.layout.jsx'
+import HomeLayout from '../components/home_layout.jsx'
 import Title from '../components/title.jsx'
 import Footer from '../components/footer.jsx'
 import Button from '../components/button.jsx'

@@ -2,8 +2,8 @@ import fs from 'fs'
 import matter from 'gray-matter'
 import Navbar from '../../components/navbar.jsx'
 import Link from 'next/link'
-import BlogList from '../../components/blog.list.jsx'
-import BlogCard from '../../components/blog.card.jsx'
+import BlogList from '../../components/blog_list.jsx'
+import BlogCard from '../../components/blog_card.jsx'
 import Title from '../../components/title.jsx'
 import Head from 'next/head'
 
@@ -36,19 +36,17 @@ function Blog({ posts }) {
 
 
 export async function getStaticProps(context) {
-	let posts = fs.readdirSync(`${process.cwd()}/blog`)
+	const posts = fs.readdirSync(`${process.cwd()}/blog`)
 	
-	posts = posts.map(post => {
-		const { content, data } =  matter(fs.readFileSync(`${process.cwd()}/blog/${post}`, 'UTF-8'))
-		return {
-			...data,
-			content
-		}
+	const postsData = posts.reverse().map(post => {
+		const { data } =  matter(fs.readFileSync(`${process.cwd()}/blog/${post}`))
+
+		return data;
 	})
 
 	return {
 		props: {
-			posts
+			posts: postsData
 		}
 	}
 }

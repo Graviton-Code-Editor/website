@@ -1,8 +1,7 @@
 ---
 title: Website revamp!
 date: "2020-01-04"
-slug: website_revamp
-
+slug: 0_website_revamp
 description: "New website and blog"
 ---
 
