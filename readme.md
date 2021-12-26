@@ -11,6 +11,12 @@ Markdown usage:
 ```![MadeForGraviton](https://raw.githubusercontent.com/marc2332/website-1/master/src/badges/made_for_graviton.svg?sanitize=true)```
 
 ### 🥽 Development
+
+Requisites:
+- NodeJS
+- Yarn
+- mdbook
+
 1. Fork the repo
 2. Clone the repository:
 ```
@@ -19,16 +25,16 @@ git clone https://github.com/<YOUR USERNAME>/website.git
 
 Install dependencies:
 ```
-npm install
+yarn install
 ```
 
 Run locally:
 ```
-npm run dev:tasks
-npm run dev
+yarn run dev:tasks
+yarn run dev
 ```
 
 Building:
 ```
-npm run build
+yarn run build
 ```

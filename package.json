@@ -20,7 +20,6 @@
 		"imagemin-svgo": "^8.0.0",
 		"jake": "^10.8.2",
 		"marked": "^2.0.0",
-		"ncp": "^2.0.0",
 		"next": "^12.0.4",
 		"next-compose-plugins": "^2.2.1",
 		"next-optimized-images": "^2.6.2",
@@ -33,12 +32,12 @@
 		"webp-loader": "^0.6.0"
 	},
 	"dependencies": {
-		"@emotion/core": "^10.0.34",
-		"@emotion/styled": "^10.0.27",
+		"@emotion/core": "^11.0.0",
+		"@emotion/react": "^11.7.1",
+		"@emotion/styled": "^11.6.0",
 		"@fontsource/inter": "^4.5.1",
-		"critters": "0.0.6",
 		"react": "^17.0.1",
 		"react-dom": "^17.0.1",
-		"react-icons": "^3.11.0"
+		"react-icons": "^4.3.1"
 	}
 }
