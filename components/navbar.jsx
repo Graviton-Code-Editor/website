@@ -33,10 +33,8 @@ const NavBarContainer = styled.div`
 			white-space: nowrap;
 			margin: 0;
 			margin-bottom: 5px;
-			font-weight: 600;
 			&[active="true"]{
 				color: black;
-
 			}
 			&[active=""]:hover {
 				color: rgb(50, 50, 50);
@@ -46,14 +44,7 @@ const NavBarContainer = styled.div`
 				margin-right: 75px;
 				@media only screen and (max-width: 600px) {
 					margin-right: 0px;
-					margin-left: 150px;
-				}
-				& > img {
-					cursor: pointer;
-					max-width: 100px;
-					@media only screen and (max-width: 600px) {
-						max-width: 60px;
-					}
+					min-width: 75px;
 				}
 			}
 		}

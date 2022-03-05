@@ -6,7 +6,7 @@ import Button from '../components/button.jsx'
 import SecondButton from '../components/second_button.jsx'
 import Head from 'next/head'
 import Link from 'next/link'
-import Image from 'next/image'
+import Note from '../components/note.jsx'
 
 function Home() {
 	return (
@@ -19,14 +19,15 @@ function Home() {
 				<div className="container">
 					<div className="horizontal" style={{ 'padding': '50px 5px'}}>
 						<div className="right-text"> 
-							<Title>Built for all kind of developers</Title>
-							<p>Graviton Editor is an open source, free and cross-platform code editor</p>
+							<Title>Minimalist & fast code editor</Title>
+							<p>Graviton Editor is an open source, free and cross-platform code editor.</p>
 							<Link href="/download">
-								<Button>DOWNLOAD ALPHA</Button>
+								<Button>DOWNLOAD BETA</Button>
 							</Link>
 							<Link href="https://github.com/Graviton-Code-Editor/Graviton-App" >
 								<SecondButton>Contribute {'->'}</SecondButton>
 							</Link>
+							<Note>Note: Graviton is currently being rewriten.</Note>
 						</div>
 					</div>
 					<div className="footer">
