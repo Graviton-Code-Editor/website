@@ -18,38 +18,26 @@ const HomeLayout = styled.div`
 		}
 		.horizontal {
 			display: flex;
-			flex-direction: row;
-			@media only screen and (max-width: 600px) {
-				display: block;
-				& .image {
-					margin: 15px;
-				}
-			}
+			justify-content: center;
 		}
-		.right-text{
+		.center{
 			align-items: center;
 			margin: 20px auto;
 			margin-bottom: 35px;
-			max-width: 270px;
-			@media only screen and (max-width: 600px) {
-				margin: 0 auto;
-			}
 			p {
 				text-align: center;
 				flex: 1;
 				line-height: 25px;
 			}
+			@media only screen and (max-width: 600px) {
+				margin: 0 auto;
+				display: block;
+			}
+			& > span {
+				filter: drop-shadow(0px 5px 15px rgba(0,0,0,0.35));
+			}
 		}
-		.image {
-			display: flex;
-			justify-content: center;
-			flex-direction: column;
-			text-align: center;
-			margin-bottom: 15px;
-			margin-right: 30px;
-			width: 60%;
-			filter: drop-shadow(0px 5px 15px rgba(0,0,0,0.35));
-		}
+		
 		.footer {
 			display: flex;
 			flex-direction: column;

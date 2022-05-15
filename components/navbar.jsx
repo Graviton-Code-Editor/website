@@ -18,12 +18,13 @@ const NavBarContainer = styled.div`
 		width: 100%;
 		max-width: 600px;
 		padding: 25px;
-		border-bottom: 1px solid rgb(180,180,180);
+		background: rgba(245, 245, 245);
+		border-radius: 10px;
 		& > * {
+			transition: background 0.2s color 0.2s;
 			display: inline-block;
 			max-width: 100px;
-			padding: 0px 15px;
-			margin-bottom: 5px;
+			padding: 13px 17px;
 			text-decoration: none;
 			color: rgb(125,125,125);
 			font-size: 16px;
@@ -31,13 +32,15 @@ const NavBarContainer = styled.div`
 			outline: 0;
 			font-family: 'Fira Sans', sans-serif;
 			white-space: nowrap;
-			margin: 0;
-			margin-bottom: 5px;
+			margin: 0px 5px;
+			border-radius: 10px;
 			&[active="true"]{
 				color: black;
+				background: rgba(235, 235, 235);
 			}
 			&[active=""]:hover {
 				color: rgb(50, 50, 50);
+				background: rgba(235, 235, 235);
 			}
 			&.img{
 				margin-bottom: 0px;
@@ -67,8 +70,10 @@ function Navbar() {
 				<Link href="/">
 					<a active={router.asPath.split('/')[1] === '' ? 'true' : ''}>Home</a>
 				</Link>
-				<a href="/docs">Docs</a>
-				<Link href="/blog">
+				<Link href="/docs">
+					<a active="">Docs</a>
+				</Link>
+				<Link  href="/blog">
 					<a active={router.asPath.split('/')[1] === 'blog' ? 'true' : ''}>Blog</a>
 				</Link>
 				<Link href="/about" >
