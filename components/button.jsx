@@ -9,7 +9,6 @@ const Button = styled.button`
 	cursor: pointer;
 	transition: 0.1s;
 	margin: 1px;
-	font-weight: 500;
 	:hover {
 		box-shadow: 0px 2px 7px rgba(0,0,0,0.2);
 		background: rgba(0, 102, 255,0.85);

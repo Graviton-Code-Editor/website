@@ -18,7 +18,6 @@ const NavBarContainer = styled.div`
 		width: 100%;
 		max-width: 600px;
 		padding: 25px;
-		background: rgba(245, 245, 245);
 		border-radius: 10px;
 		& > * {
 			transition: background 0.2s color 0.2s;
