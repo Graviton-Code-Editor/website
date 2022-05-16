@@ -1,4 +1,4 @@
-import styled from '@emotion/styled'
+import styled from "@emotion/styled";
 
 const BlogList = styled.div`
 	padding: 0 5px;
@@ -9,6 +9,6 @@ const BlogList = styled.div`
 	@media only screen and (max-width: 600px) {
 		display: block;
 	}
-`
+`;
 
-export default BlogList
+export default BlogList;

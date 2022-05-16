@@ -1,4 +1,4 @@
-import styled from '@emotion/styled'
+import styled from "@emotion/styled";
 
 const BlogCard = styled.div`
 	padding: 15px;
@@ -26,6 +26,6 @@ const BlogCard = styled.div`
 		font-weight: bold;
 		font-size: 15px;
 	}	
-`
+`;
 
-export default BlogCard
+export default BlogCard;

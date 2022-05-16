@@ -1,6 +1,6 @@
-import styled from '@emotion/styled'
+import styled from "@emotion/styled";
 
-const SecondButton = styled.button`
+const SecondaryButton = styled.button`
 	padding: 11px 12px;
 	background: transparent;
 	border: 0;
@@ -17,6 +17,6 @@ const SecondButton = styled.button`
 		color: rgb(65, 65, 65);
 		transition: 0.1s;
 	}
-`
+`;
 
-export default SecondButton
+export default SecondaryButton;

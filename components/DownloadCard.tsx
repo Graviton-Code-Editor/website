@@ -1,6 +1,5 @@
-import styled from '@emotion/styled'
-import Link from 'next/link'
-
+import styled from "@emotion/styled";
+import Link from "next/link";
 
 const DownloadCardStyle = styled.div`
 	padding: 20px 25px;
@@ -9,17 +8,15 @@ const DownloadCardStyle = styled.div`
 	margin: 7px;
 	min-width: 65px;
 	max-width: 65px;
-	display:flex;
-	flex-direction: column;
-	justify-content: center;
 	align-items: center;
 	cursor: pointer;
 	transition: 0.15s;
 	text-align: center;
+	display: inline-block;
 	:hover{
 		transition: 0.15s;
-		background: rgb(230,230,230);
-		box-shadow: 0px 1px 7px rgba(0,0,0, 0.17);
+		background: rgb(245, 245, 245);
+		box-shadow: 0px 4px 10px rgba(0,0,0, 0.2);
 	}
 	& svg {
 		margin-bottom: 10px;
@@ -31,14 +28,14 @@ const DownloadCardStyle = styled.div`
 		text-decoration: none;
 		color: rgb(40,40,40);
 	}
-`
+`;
 
-export default function DownloadCard({ children, href }){
-	return (
-		<Link href={href}>
-			<DownloadCardStyle>
-				{children}
-			</DownloadCardStyle>
-		</Link>
-	)
+export default function DownloadCard({ children, href }) {
+  return (
+    <Link href={href}>
+      <DownloadCardStyle>
+        {children}
+      </DownloadCardStyle>
+    </Link>
+  );
 }

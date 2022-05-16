@@ -1,4 +1,4 @@
-import styled from '@emotion/styled'
+import styled from "@emotion/styled";
 
 const BlogLayout = styled.div`
 	padding: 0 5px;
@@ -13,6 +13,6 @@ const BlogLayout = styled.div`
 			max-width: 100%;
 		}
 	}
-`
+`;
 
-export default BlogLayout
+export default BlogLayout;
