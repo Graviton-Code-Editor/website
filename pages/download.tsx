@@ -35,7 +35,7 @@ function Download() {
               </DownloadCard>
               <DownloadCard href="https://github.com/Graviton-Code-Editor/Graviton-App/releases/download/v2.3.0/Graviton.Editor_Installer_2.3.0_linux_x86_64.rpm">
                 <FaLinux></FaLinux>
-                RPM
+                <br/>RPM
               </DownloadCard>
               <DownloadCard href="https://github.com/Graviton-Code-Editor/Graviton-App/releases/download/v2.3.0/Graviton-Editor_Installer_2.3.0_mac.dmg">
                 <IoLogoApple></IoLogoApple>
