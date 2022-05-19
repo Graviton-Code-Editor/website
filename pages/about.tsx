@@ -19,7 +19,7 @@ function About() {
             for Desktop, since 2018.
             <br />
             <br />
-            Only maintainer:{" "}
+            Creator and maintainer:{" "}
             <Link href="https://github.com/marc2332">
               Marc Espín Sanz
             </Link>

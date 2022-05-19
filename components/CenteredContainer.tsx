@@ -6,6 +6,7 @@ const CenteredContainer = styled.div`
     flex-direction: column;
     text-align: center;
     max-width: 80%;
+    min-width: 70%;
 `;
 
 export default CenteredContainer;

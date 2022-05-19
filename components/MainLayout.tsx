@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 export const Header = styled.div`
 	align-items: center;
-	margin: 20px auto;
+	margin: 20px 20%;
 	margin-bottom: 35px;
 	p {
 		text-align: center;
@@ -13,8 +13,11 @@ export const Header = styled.div`
 		margin: 0 auto;
 		display: block;
 	}
-	& > span {
+	& > span, & > div > span {
 		filter: drop-shadow(0px 5px 15px rgba(0,0,0,0.35));
+	}
+	& .small {
+		margin: 20px 15%;
 	}
 `;
 

@@ -7,6 +7,7 @@ import { IoLogoApple, IoLogoWindows } from "react-icons/io";
 import { GrDebian } from "react-icons/gr";
 import { FaLinux } from "react-icons/fa";
 import CenteredContainer from "../components/CenteredContainer";
+import Image from "next/image";
 
 function Download() {
   return (
@@ -19,7 +20,17 @@ function Download() {
         <CenteredContainer>
           <MainLayout.Header>
             <Title>Download</Title>
-            <p className="note">Last release is version 2.3.0</p>
+            <p className="note">Last release is beta v2.3.0</p>
+            <div  className="small">
+            <Image
+             
+              src="/screenshot.png"
+              width="812"
+              height="585"
+              layout="responsive"
+              alt="Graviton Screenshot"
+            />
+            </div>
             <div>
               <DownloadCard href="https://github.com/Graviton-Code-Editor/Graviton-App/releases/download/v2.3.0/Graviton-Editor_Installer_2.3.0_win.exe">
                 <IoLogoWindows></IoLogoWindows>

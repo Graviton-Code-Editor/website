@@ -24,7 +24,9 @@ function Home() {
             <Title>Minimalist & fast code editor</Title>
             <p>
               Graviton Editor is an open source, free and cross-platform code
-              editor.
+              editor. 
+              <br/>
+              Powered by Rust 🦀, Tauri 🖥️, Deno 🦕 and React ⚛️.
             </p>
             <Link href="/download">
               <Button>DOWNLOAD BETA</Button>
@@ -32,12 +34,12 @@ function Home() {
             <Link href="https://github.com/Graviton-Code-Editor/Graviton-App">
               <SecondaryButton>Contribute {"->"}</SecondaryButton>
             </Link>
-            <Note>Note: Graviton is currently being reworked.</Note>
+            <Note>Graviton is currently being redone, this is how it looks like:</Note>
             <br />
             <Image
-              src="/screenshot.png"
-              width="812"
-              height="585"
+              src="/screenshot2.png"
+              width="6028"
+              height="3624"
               layout="responsive"
               alt="Graviton Screenshot"
             />
