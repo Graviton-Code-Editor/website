@@ -1,6 +1,6 @@
 [build]
-  command   = "npm run build"
-  publish   = "out_publish"
+  command   = "cargo install mdbook && npm run build"
+  publish   = ".next"
  
 [build.environment]
   NETLIFY_USE_YARN = "true"

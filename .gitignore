@@ -9,5 +9,5 @@ graviton.wp.json
 store_repo
 repos
 graviton_repo
-public/graviton
-public/api_docs
+public/book
+temp_graviton
